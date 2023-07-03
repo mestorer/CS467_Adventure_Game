@@ -29,6 +29,8 @@ class Room(GameObject):
         #self.name = room_data['name']
         self.description = room_data['description']
         self.short_description = room_data['short_description']
+        # The items list would contain the name property of the
+        # object rather than a reference to it. Just a thought.
         self.items = room_data['items']
         self.adjacent_rooms = room_data['adjacent_rooms']
 
