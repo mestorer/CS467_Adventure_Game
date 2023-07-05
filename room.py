@@ -1,52 +1,17 @@
 from game_object import GameObject
 
-#class Room:
-#    def __init__(self, room_data):
-#        self.name = room_data['name']
-#        self.description = room_data['description']
-#        self.short_description = room_data['short_description']
-#        self.items = room_data['items']
-#        self.adjacent_rooms = room_data['adjacent_rooms']
-#
-#    def to_string(self):
-#        print(self.name, self.description, self.short_description, 
-#              self.items, self.adjacent_rooms, sep='\n')
-#    
-#    def serialize_attributes(self, room_json):
-#        return {'name': room_json.name, 
-#            'description': room_json.description, 
-#            'short_description': room_json.short_description,
-#            'items': room_json.items, 
-#            'adjacent_rooms':room_json.adjacent_rooms}
-    
-
-# Example class based on brainstorming discussion
-# An "Item" class could also inherit the serialize_attributes_as_json 
-# method
 class Room(GameObject):
     def __init__(self, room_data):
         super().__init__(room_data['name'])
-        #self.name = room_data['name']
         self.description = room_data['description']
         self.short_description = room_data['short_description']
-        # The items list would contain the name property of the
-        # object rather than a reference to it. Just a thought.
         self.items = room_data['items']
         self.adjacent_rooms = room_data['adjacent_rooms']
-
-    def to_string(self):
-        print(self.name, self.description, self.short_description, 
-              self.items, self.adjacent_rooms, sep='\n')
-
 
 if __name__ == '__main__':
     import os
     import json
 
-    # Most of the functionality below would probably have to be carried
-    # out in a GameManager object that manages the game loop.
-    # Apologies for the disorganized code below, I just needed it to
-    # work so I could share it with you both
     cur_path = os.path.dirname(__file__)
     new_rooms_path = cur_path + '/new_room_data/'
     saved_rooms_path = cur_path + '/saved_room_data/'
@@ -58,10 +23,7 @@ if __name__ == '__main__':
             file = filename.path.split('/')[-1]
             room_files.append(file)
 
-    #print(room_files)
-
-    # Read all files and build room objects, same could be done for 
-    # items and any other objects.
+    # Read all files and build room objects
     rooms_list = []
     # Build rooms from json file
     for room_file in room_files:

@@ -1,0 +1,5 @@
+{
+    "name": "key",
+    "description": "a key that opens somtehing",
+    "is_takeable": "True"
+}
