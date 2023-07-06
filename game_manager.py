@@ -20,14 +20,7 @@ class GamaManager:
             '/item_data/']
 
     def instantiate_objects(self):
-        obj_files = []
-        for dir_name in self.new_data_dirs:
-            new_obj_path = self.cur_path + dir_name
-            # Get all filenames in folder that end in 'json'
-            for filename in os.scandir(new_obj_path):
-                if filename.is_file() and str(filename.path)[-4:] == 'json':
-                    obj_files.append(filename.path)  
-                    #print(obj_files)
+        obj_files = self._get_new_obj_file_list()  
         # Read all files and build game objects from json files
         for obj_file in obj_files:
             with open(obj_file, "r") as read_file:
@@ -44,18 +37,27 @@ class GamaManager:
     def save_objects_to_file(self):
         # Save player
         saved_obj_path = self.cur_path + '/saved_player_data/'
-        with open(saved_obj_path + file_name, "w") as write_file:
-                json.dump(self.player, write_file, 
-                          default=self.player.serialize_as_json)
-                
+        self._save_object(saved_obj_path, self.player) 
         # Save rooms
         saved_obj_path = self.cur_path + '/saved_room_data/'
         for room in self.room_list:
-            file_name = (room.name.replace(" ", "_") + '.json').lower()
-            print(file_name)
-            with open(saved_obj_path + file_name, "w") as write_file:
-                json.dump(room, write_file, 
-                          default=room.serialize_as_json)
+            self._save_object(saved_obj_path, room)
+
+    def _save_object(self, saved_obj_path, obj):
+        file_name = (obj.name.replace(" ", "_") + '.json').lower()
+        with open(saved_obj_path + file_name, "w") as write_file:
+                json.dump(obj, write_file, 
+                          default=obj.serialize_as_json)
+
+    def _get_new_obj_file_list(self):
+        obj_files = []
+        for dir_name in self.new_data_dirs:
+            new_obj_path = self.cur_path + dir_name
+            # Get all filenames in folder that end in 'json'
+            for filename in os.scandir(new_obj_path):
+                if filename.is_file() and str(filename.path)[-4:] == 'json':
+                    obj_files.append(filename.path)
+        return obj_files
 
 
 if __name__ == '__main__':
