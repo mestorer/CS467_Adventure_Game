@@ -4,7 +4,7 @@ from room import Room
 from item import Item
 from player import Player
 
-class GamaManager:
+class GameManager:
     def __init__(self):
         self.cur_path = os.path.dirname(__file__)
         self.player = None
@@ -58,15 +58,3 @@ class GamaManager:
                 if filename.is_file() and str(filename.path)[-4:] == 'json':
                     obj_files.append(filename.path)
         return obj_files
-
-
-if __name__ == '__main__':
-    game = GamaManager()
-    game.instantiate_objects()
-    print(game.room_list)
-    for item in game.room_list:
-        item.to_string()
-    for item in game.item_list:
-        item.to_string()
-    game.player.to_string()
-    game.save_objects_to_file()
