@@ -23,16 +23,17 @@ class GameManager:
         obj_files = self._get_new_obj_file_list()  
         # Read all files and build game objects from json files
         for obj_file in obj_files:
+            file_name = obj_file.split('/')[-1]
             with open(obj_file, "r") as read_file:
                 data = json.load(read_file)
             if 'room_data' in obj_file:
-                room = Room(data)
+                room = Room(file_name, data)
                 self.room_list.append(room)
             elif 'item_data' in obj_file:
-                item = Item(data)
+                item = Item(file_name, data)
                 self.item_list.append(item)
             else:
-                self.player = Player(data)
+                self.player = Player(file_name, data)
 
     def save_objects_to_file(self):
         # Save player
@@ -44,10 +45,9 @@ class GameManager:
             self._save_object(saved_obj_path, room)
 
     def _save_object(self, saved_obj_path, obj):
-        file_name = (obj.name.replace(" ", "_") + '.json').lower()
+        file_name = (obj.file_name)
         with open(saved_obj_path + file_name, "w") as write_file:
-                json.dump(obj, write_file, 
-                          default=obj.serialize_as_json)
+                json.dump(obj, write_file, default=obj.serialize_as_json)
 
     def _get_new_obj_file_list(self):
         obj_files = []
@@ -58,3 +58,4 @@ class GameManager:
                 if filename.is_file() and str(filename.path)[-4:] == 'json':
                     obj_files.append(filename.path)
         return obj_files
+    

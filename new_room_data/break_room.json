@@ -1,7 +1,0 @@
-{
-    "name": "Break Room",
-    "description": "Where you chill for a long time",
-    "short_description": "Chilling place",
-    "items": ["item1"],
-    "adjacent_rooms": ["Reception Area"]
-}
