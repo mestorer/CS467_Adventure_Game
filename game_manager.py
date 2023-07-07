@@ -16,8 +16,7 @@ class GameManager:
             '/item_data/']
         self.saved_data_dirs = [
             '/saved_player_data/',
-            '/saved_room_data/',
-            '/item_data/']
+            '/saved_room_data/']
 
     def instantiate_objects(self):
         obj_files = self._get_new_obj_file_list()  
@@ -58,4 +57,3 @@ class GameManager:
                 if filename.is_file() and str(filename.path)[-4:] == 'json':
                     obj_files.append(filename.path)
         return obj_files
-    
