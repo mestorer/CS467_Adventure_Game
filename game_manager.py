@@ -1,5 +1,6 @@
 import os
 import json
+import constants
 from room import Room
 from item import Item
 from player import Player
@@ -10,13 +11,8 @@ class GameManager:
         self.player = None
         self.room_list = []
         self.item_list = []
-        self.new_data_dirs = [
-            '/new_player_data/',
-            '/new_room_data/',
-            '/item_data/']
-        self.saved_data_dirs = [
-            '/saved_player_data/',
-            '/saved_room_data/']
+        self.new_data_dirs = constants.NEW_DATA_DIRS
+        self.saved_data_dirs = constants.SAVED_DATA_DIRS
 
     def instantiate_objects(self):
         obj_files = self._get_new_obj_file_list()  
@@ -36,10 +32,10 @@ class GameManager:
 
     def save_objects_to_file(self):
         # Save player
-        saved_obj_path = self.cur_path + '/saved_player_data/'
+        saved_obj_path = self.cur_path + self.saved_data_dirs[0]
         self._save_object(saved_obj_path, self.player) 
         # Save rooms
-        saved_obj_path = self.cur_path + '/saved_room_data/'
+        saved_obj_path = self.cur_path + self.saved_data_dirs[1]
         for room in self.room_list:
             self._save_object(saved_obj_path, room)
 
