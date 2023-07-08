@@ -7,5 +7,6 @@ class Room(GameObject):
         self.description = room_data['description']
         self.short_description = room_data['short_description']
         self.items = room_data['items']
+        self.dropped_items = room_data['dropped_items']
         self.directions = room_data['directions']
         self.locations = room_data['locations']
