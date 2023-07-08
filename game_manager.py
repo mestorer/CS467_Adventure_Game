@@ -8,11 +8,11 @@ from player import Player
 class GameManager:
     def __init__(self):
         self.cur_path = os.path.dirname(__file__)
+        self.new_data_dirs = constants.NEW_DATA_DIRS
+        self.saved_data_dirs = constants.SAVED_DATA_DIRS
         self.player = None
         self.room_list = []
         self.item_list = []
-        self.new_data_dirs = constants.NEW_DATA_DIRS
-        self.saved_data_dirs = constants.SAVED_DATA_DIRS
 
     def instantiate_objects(self):
         obj_files = self._get_new_obj_file_list()  
