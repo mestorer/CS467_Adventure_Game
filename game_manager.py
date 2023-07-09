@@ -60,7 +60,34 @@ class GameManager:
                 if filename.is_file() and str(filename.path)[-4:] == 'json':
                     obj_files.append(filename.path)
         return obj_files
+    
+    def pick_up_item(self, item_name):
+       item = self._get_game_object_by_name(item_name, self.item_list)
+       if item.is_takeable:
+           self.transfer_room_item_to_player(self.player.location, item_name)
+           return True
+       return False
 
+    def transfer_room_item_to_player(self, room_name, item_name):
+        room = self._get_game_object_by_name(room_name, self.room_list)
+        room.items.remove(item_name)
+        self.player.inventory.append(item_name)
+
+    def drop_inventory_item_in_room(self, room_name, item_name):
+        room = self._get_game_object_by_name(room_name, self.room_list)
+        room.dropped_items.append(item_name)
+        self.player.inventory.remove(item_name)
+
+    def _get_game_object_by_name(self, name, obj_list):
+        for obj in obj_list:
+            if obj.name == name:
+                return obj
+            
+    def can_item_be_taken(self, item):
+        return item.is_takeable
+    
+    def move_player_to_new_roow(self, room_name):
+        self.player.location = room_name
+            
     def start_game(self):
         pass
-    

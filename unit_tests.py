@@ -12,7 +12,7 @@ if __name__ == '__main__':
             self.player_file_name = 'player.json'
             self.player_json = {"name": "player", 
                            "inventory": ["inventory"], 
-                           "location": ["Reception Area"]}
+                           "location": "Reception Area"}
             self.player_object = Player(self.player_file_name, self.player_json)
             
         def test_constructor(self):
@@ -62,7 +62,7 @@ if __name__ == '__main__':
             self.room_json = {"name": "Reception Area",
                          "description": "Where you check in as a visitor",
                          "short_description": "Check in",
-                         "items": [],
+                         "items": ["key"],
                          "dropped_items": [],
                          "directions": "The Reception Area is connected to \
                             the Main Hallway to the north, the Financial \
@@ -101,53 +101,114 @@ if __name__ == '__main__':
 
     class GameManagerClass(unittest.TestCase):
         def setUp(self):
-            self.gm_const = GameManager()
-            self.gm_inst = GameManager()
             self.player_file_name = 'player.json'
             self.player_json = {"name": "player", 
-                           "inventory": ["item1"], 
-                           "location": ["Reception Area"]}
-            self.room_file_name = 'room1.json'
-            self.room_json = {"name": "Reception Area",
-                         "description": "Where you check in as a visitor",
-                         "short_description": "Check in",
-                         "items": [],
-                         "dropped_items": [],
-                         "directions": "The Reception Area is connected to " + 
-                            "the Main Hallway to the north, the Financial " + 
-                            "Department to the east, the Parking Lot to the " + 
-                            "south and a Supply Closet to the west.",
-                         "locations": {"N": "Main Hallway", 
-                                       "E": "Financial Department", 
-                                       "S": "Parking Lot", 
-                                       "W": "Supply Closet"}
-                         }
+                           "inventory": [], 
+                           "location": "Test Room 1"}
+            self.room1_file_name = 'room1.json'
+            self.room1_json = {
+                        "name": "Test Room 1",
+                        "description": "Where you check in as a visitor",
+                        "short_description": "Check in", 
+                        "items": ["key"],
+                        "dropped_items": [] ,
+                        "directions": "The Test Room is connected to the Main Hallway to the north",
+                        "locations": {"N": "Main Hallway"}
+            }
+            self.room2_file_name = 'room2.json'
+            self.room2_json = {
+                        "name": "Main Hallway",
+                        "description": "Where you check in as a visitor",
+                        "short_description": "Check in", 
+                        "items": ["id card"],
+                        "dropped_items": [] ,
+                        "directions": "The Main Hallway is connected to the Test Room to the south",
+                        "locations": {"S": "Test Room 1"}
+            }
+            self.item1_file_name = 'item1.json'
+            self.item1_json = {"name": "key",
+                              "description": "a key that opens somtehing",
+                              "is_takeable": True}
+            self.item2_file_name = 'item2.json'
+            self.item2_json = {"name": "id card",
+                              "description": "a card that opens somtehing",
+                              "is_takeable": True}
 
         def test_constructor(self):
-            self.gm_const.cur_path = os.path.dirname(__file__)
-            self.assertEqual(self.gm_const.player, None)
-            self.assertEqual(self.gm_const.room_list, [])
-            self.assertEqual(self.gm_const.item_list, [])
-            self.assertEqual(self.gm_const.new_data_dirs, 
+            self.gm = GameManager()
+            self.gm.cur_path = os.path.dirname(__file__)
+            self.assertEqual(self.gm.player, None)
+            self.assertEqual(self.gm.room_list, [])
+            self.assertEqual(self.gm.item_list, [])
+            self.assertEqual(self.gm.new_data_dirs, 
                              constants.NEW_DATA_DIRS)
-            self.assertEqual(self.gm_const.saved_data_dirs, 
+            self.assertEqual(self.gm.saved_data_dirs, 
                              constants.SAVED_DATA_DIRS)
             
         def test_instanciated_new_obj_against_json_data(self):
-            self.gm_inst.instantiate_objects()
-            self.assertEqual(self.gm_inst.player.serialize_as_json(self
-                                .gm_inst.player), 
+            self.gm = GameManager()
+            self.gm.instantiate_objects()
+            self.gm.player = Player(self.player_file_name, self.player_json)
+            self.assertEqual(self.gm.player.serialize_as_json(self
+                                .gm.player), 
                                 self.player_json)
-            self.assertEqual(self.gm_inst.room_list[0].serialize_as_json(self
-                                .gm_inst.room_list[0]), self.room_json)
+            self.assertEqual(self.gm.room_list[0].serialize_as_json(self
+                                .gm.room_list[0]), self.room1_json)
             
         def test_instanciated_saved_obj_against_json_data(self):
-            self.gm_inst.instantiate_objects(load_saved_game = True)
-            self.assertEqual(self.gm_inst.player.serialize_as_json(self
-                                .gm_inst.player), 
+            self.gm = GameManager()
+            self.gm.instantiate_objects(load_saved_game = True)
+            self.gm.player = Player(self.player_file_name, self.player_json)
+            self.assertEqual(self.gm.player.serialize_as_json(self
+                                .gm.player), 
                                 self.player_json)
-            self.assertEqual(self.gm_inst.room_list[0].serialize_as_json(self
-                                .gm_inst.room_list[0]), self.room_json)
+            self.assertEqual(self.gm.room_list[0].serialize_as_json(self
+                                .gm.room_list[0]), self.room1_json)
+            
+        def test_item_pick_up_by_player(self):
+            self.gm = GameManager()
+            self.gm.player = Player(self.player_file_name, self.player_json)
+            room = Room(self.room1_file_name, self.room1_json)
+            self.gm.room_list.append(room)
+            room = Room(self.room2_file_name, self.room2_json)
+            self.gm.room_list.append(room)
+            item = Item(self.item1_file_name, self.item1_json)
+            self.gm.item_list.append(item)
+            item = Item(self.item2_file_name, self.item2_json)
+            self.gm.item_list.append(item)
+            self.gm.pick_up_item('key')
+            self.assertEqual(self.gm.room_list[0].items, [])
+            self.assertEqual(self.gm.player.inventory, ['key'])
 
+        def test_item_drop_by_player(self):
+            self.gm = GameManager()
+            self.gm.player = Player(self.player_file_name, self.player_json)
+            room = Room(self.room1_file_name, self.room1_json)
+            self.gm.room_list.append(room)
+            room = Room(self.room2_file_name, self.room2_json)
+            self.gm.room_list.append(room)
+            item = Item(self.item1_file_name, self.item1_json)
+            self.gm.item_list.append(item)
+            item = Item(self.item2_file_name, self.item2_json)
+            self.gm.item_list.append(item)
+            self.gm.pick_up_item('key')
+            self.gm.drop_inventory_item_in_room('Test Room 1', 'key')
+            self.assertEqual(self.gm.room_list[0].dropped_items, ['key'])
+            self.assertEqual(self.gm.player.inventory, [])
+
+        def test_move_player_to_new_room(self):
+            self.gm = GameManager()
+            self.gm.player = Player(self.player_file_name, self.player_json)
+            room = Room(self.room1_file_name, self.room1_json)
+            self.gm.room_list.append(room)
+            room = Room(self.room2_file_name, self.room2_json)
+            self.gm.room_list.append(room)
+            item = Item(self.item1_file_name, self.item1_json)
+            self.gm.item_list.append(item)
+            item = Item(self.item2_file_name, self.item2_json)
+            self.gm.item_list.append(item)
+            self.gm.move_player_to_new_roow(self.room2_json["name"])
+            self.assertEqual(self.room2_json["name"], self.gm.player.location)
+            
 
     unittest.main()
