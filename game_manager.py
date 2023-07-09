@@ -19,7 +19,11 @@ class GameManager:
             obj_files = self._get_obj_file_list(self.new_data_dirs)
         else:
             obj_files = self._get_obj_file_list(self.saved_data_dirs)
-        # Read all files and build game objects from json files
+            if len(obj_files) == 1:
+                obj_files = self._get_obj_file_list(self.new_data_dirs)
+        self._build_objects(obj_files)
+
+    def _build_objects(self, obj_files):
         for obj_file in obj_files:
             file_name = obj_file.split('/')[-1]
             with open(obj_file, "r") as read_file:
