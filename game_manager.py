@@ -14,8 +14,11 @@ class GameManager:
         self.room_list = []
         self.item_list = []
 
-    def instantiate_objects(self):
-        obj_files = self._get_new_obj_file_list()  
+    def instantiate_objects(self, load_saved_game = False):
+        if not load_saved_game:
+            obj_files = self._get_obj_file_list(self.new_data_dirs)
+        else:
+            obj_files = self._get_obj_file_list(self.saved_data_dirs)
         # Read all files and build game objects from json files
         for obj_file in obj_files:
             file_name = obj_file.split('/')[-1]
@@ -44,9 +47,9 @@ class GameManager:
         with open(saved_obj_path + file_name, "w") as write_file:
                 json.dump(obj, write_file, default=obj.serialize_as_json)
 
-    def _get_new_obj_file_list(self):
+    def _get_obj_file_list(self, data_dirs):
         obj_files = []
-        for dir_name in self.new_data_dirs:
+        for dir_name in data_dirs:
             new_obj_path = self.cur_path + dir_name
             # Get all filenames in folder that end in 'json'
             for filename in os.scandir(new_obj_path):
