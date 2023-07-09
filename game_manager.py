@@ -60,3 +60,7 @@ class GameManager:
                 if filename.is_file() and str(filename.path)[-4:] == 'json':
                     obj_files.append(filename.path)
         return obj_files
+
+    def start_game(self):
+        pass
+    
