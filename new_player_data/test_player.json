@@ -1,1 +1,1 @@
-{"name": "player", "items": ["item1"], "location": ["Reception Area"]}
+{"name": "player", "inventory": ["item1"], "location": ["Reception Area"]}
