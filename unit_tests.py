@@ -104,10 +104,10 @@ if __name__ == '__main__':
             self.player_file_name = 'player.json'
             self.player_json = {"name": "player", 
                            "inventory": [], 
-                           "location": "Test Room 1"}
+                           "location": "Reception Area"}
             self.room1_file_name = 'room1.json'
             self.room1_json = {
-                        "name": "Test Room 1",
+                        "name": "Reception Area",
                         "description": "Where you check in as a visitor",
                         "short_description": "Check in", 
                         "items": ["key"],
@@ -192,7 +192,7 @@ if __name__ == '__main__':
             item = Item(self.item2_file_name, self.item2_json)
             self.gm.item_list.append(item)
             self.gm.pick_up_item('key')
-            self.gm.drop_inventory_item_in_room('Test Room 1', 'key')
+            self.gm.drop_inventory_item_in_room('Reception Area', 'key')
             self.assertEqual(self.gm.room_list[0].dropped_items, ['key'])
             self.assertEqual(self.gm.player.inventory, [])
 

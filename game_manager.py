@@ -116,10 +116,17 @@ class GameManager:
     
     def move_player_to_new_roow(self, room_name):
         self.player.location = room_name
+
+    def describe_location(self):
+        location = self._get_game_object_by_name(self.player.location, 
+                                                 self.room_list)
+        print(location.description)
             
     def start_game(self):
         # Some ASCII art about the game or a basic despcription should go here.
         # Before the game starts...
+        # Also need to clear screen, make sure size is adequate, etc
+        # Maybe offer a short tutorial when a new game is started
         new_or_saved = input("Do you want to start a new or a saved game? " +
                             "(new / loadgame) ")
         if new_or_saved.lower() == 'new':
@@ -128,4 +135,8 @@ class GameManager:
             self.instantiate_objects(load_saved_game = True)
         else:
             print("I'm sorry but I didn't understand your response. Exiting...")
-
+            exit(1)
+        os.system('clear')  # Clear screen
+        self.describe_location()  # Describe location of starting room.
+        # The game continues from here once we have at least a couple detailed
+        # rooms with descriptions, etc.
