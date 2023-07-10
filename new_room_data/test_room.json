@@ -1,5 +1,5 @@
 {
-    "name": "Test Room 1",
+    "name": "Reception Area",
     "description": "Where you check in as a visitor",
     "short_description": "Check in", 
     "items": ["key"],
