@@ -14,7 +14,7 @@ class GameManager:
         self.room_list = []
         self.item_list = []
 
-    def instantiate_objects(self, load_saved_game = False):
+    def instantiate_objects(self, load_saved_game=False):
         """
         Instantiates all the game objects from data files.
         If load_saved_game is True, it loads objects from files that contain
@@ -66,7 +66,7 @@ class GameManager:
         """
         file_name = (obj.file_name)
         with open(saved_obj_path + file_name, "w") as write_file:
-                json.dump(obj, write_file, default=obj.serialize_as_json)
+            json.dump(obj, write_file, default=obj.serialize_as_json)
 
     def _get_obj_file_list(self, data_dirs):
         """
@@ -80,17 +80,17 @@ class GameManager:
                 if filename.is_file() and str(filename.path)[-4:] == 'json':
                     obj_files.append(filename.path)
         return obj_files
-    
+
     def pick_up_item(self, item_name):
-       """
-       Adds passed item to player's inventory attribute and removes it from
-       the room it was in.
-       """
-       item = self._get_game_object_by_name(item_name, self.item_list)
-       if item.is_takeable:
-           self.transfer_room_item_to_player(self.player.location, item_name)
-           return True
-       return False
+        """
+        Adds passed item to player's inventory attribute and removes it from
+        the room it was in.
+        """
+        item = self._get_game_object_by_name(item_name, self.item_list)
+        if item.is_takeable:
+            self.transfer_room_item_to_player(self.player.location, item_name)
+            return True
+        return False
 
     def transfer_room_item_to_player(self, room_name, item_name):
         room = self._get_game_object_by_name(room_name, self.room_list)
@@ -104,16 +104,16 @@ class GameManager:
 
     def _get_game_object_by_name(self, name, obj_list):
         """
-        Returns the actual game object with the matching name attribute or 
+        Returns the actual game object with the matching name attribute or
         None if there's no match.
         """
         for obj in obj_list:
             if obj.name == name:
                 return obj
-            
+
     def can_item_be_taken(self, item):
         return item.is_takeable
-    
+
     def move_player_to_new_roow(self, room_name):
         self.player.location = room_name
 
@@ -122,24 +122,30 @@ class GameManager:
         # considering adding a counter to the room for number of visits so we
         # can display a different description (short), or making a list a short
         # descriptions with progressively helpful hints.
-        location = self._get_game_object_by_name(self.player.location, 
+        location = self._get_game_object_by_name(self.player.location,
                                                  self.room_list)
         print(location.description)
-            
+
     def start_game(self):
         # Some ASCII art about the game or a basic despcription should go here.
         # Before the game starts...
         # Also need to clear screen, make sure size is adequate, etc
         # Maybe offer a short tutorial when a new game is started
-        new_or_saved = input("Do you want to start a new or a saved game? " +
-                            "(new / loadgame) ")
-        if new_or_saved.lower() == 'new':
-            self.instantiate_objects()
-        elif new_or_saved.lower() == 'loadgame':
-            self.instantiate_objects(load_saved_game = True)
-        else:
-            print("I'm sorry but I didn't understand your response. Exiting...")
-            exit(1)
+        while True:
+            new_or_saved = input("Do you want to start a new or a saved " +
+                                 "game? (new / loadgame / exit) ")
+            new_or_saved = new_or_saved.strip().lower()
+            match new_or_saved:
+                case 'new':
+                    self.instantiate_objects()
+                    break
+                case 'loadgame':
+                    self.instantiate_objects(load_saved_game=True)
+                    break
+                case 'exit':
+                    exit(0)
+                case _:
+                    print("I'm sorry but I didn't understand your response")
         os.system('clear')  # Clear screen
         self.describe_location()  # Describe location of starting room.
         # The game continues from here once we have at least a couple detailed
