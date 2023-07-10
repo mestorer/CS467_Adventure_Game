@@ -1,24 +1,8 @@
-class NlParser:
-    def __init__(self):
-        # defined language rules 
-        self.language = {
-            'look': ['at', 'target'], # can be used with or without target
-            'go': ['location', 'location'], # exact location names always have two words
-            'take': ['item'],
-            'help': [],
-            'inventory': [],
-            'savegame': [],
-            'loadgame': [],
-            'use': ['item', 'on', 'target'], # need at least 9 more verbs
-        }
+from language_library import LanguageLibrary
 
-        # all valid locations in the game
-        self.locations = ['north', 'south', 'east', 'west', 
-                    'n', 's', 'e', 'w',
-                    'parking lot', 'reception area', 'supply closet', 'main hallway',
-                    'it room', 'server room', 'executive elevator', 'executive office',
-                    'marketing department', 'conference room', 'research lab', 'financial department',
-                    'archives room']
+class NlParser(LanguageLibrary):
+    def __init__(self):
+        super().__init__()
 
     # break input into tokens
     def _tokenize(self,input_text):
@@ -27,9 +11,33 @@ class NlParser:
     # unsplit location names for easier command execution
     def _unsplit_location_name(self, tokens):
         if len(tokens) == 2:
-            return [tokens[0] + " " + tokens[1]]
+            return ['go', tokens[0] + " " + tokens[1]]
         if len(tokens) == 3:
             return [tokens[0], tokens[1] + " " + tokens[2]]
+    
+    # handle 'go' special case
+    def _handle_go(self, tokens):
+        if (len(tokens) == 2): # handles 'go' + cardinal direction
+            if tokens[1] not in self.locations:
+                return None
+            else:
+                return tokens
+        elif (len(tokens) == 3): # unsplit location name for 'go' command
+            if tokens[1] + " " + tokens[2] in self.locations:
+                modified_tokens = self._unsplit_location_name(tokens)
+                return modified_tokens
+            else:
+                return None
+    
+    # handle 'look' special case
+    def _handle_look(self, tokens):
+        if (len(tokens) == 1): # handles 'look' command with no target
+            return tokens
+        elif (len(tokens) == 3): # handles 'look at' command
+            if tokens[1] == "at":
+                return ['look at', tokens[2]]
+            if tokens[1] != "at":
+                return None
 
     # Check if tokenized input matches established language rules
     def parse_command(self, input_text):
@@ -38,15 +46,12 @@ class NlParser:
         
         if command in self.language:
             #special cases
-            if ((command == 'look') and (len(tokens) == 1)): # handles 'look' command with no target
-                return tokens
-            if ((command == 'go') and (len(tokens) == 2)): # handles 'go' + cardinal direction
-                return tokens
-            if ((command == 'go') and (len(tokens) == 3)): # unsplit location name for 'go' command
-                modified_tokens = self._unsplit_location_name(tokens)
-                return modified_tokens
+            if command == 'look':
+                return self._handle_look(tokens)
+            if command == 'go':
+                return self._handle_go(tokens)
             
-            #default
+            # default - detects correct length command
             if len(tokens) == len(self.language[command]) + 1:
                 return tokens
         
@@ -58,8 +63,7 @@ class NlParser:
             return modified_tokens
         
         # not a valid command
-        else:
-            return None
+        return None
 
     '''# validate command usage and execute respective action
     def execute_command(command, player):

@@ -13,6 +13,7 @@ class GameManager:
         self.new_data_dirs = constants.NEW_DATA_DIRS
         self.saved_data_dirs = constants.SAVED_DATA_DIRS
         self.parser = NlParser() # instance allows for potential adding/ removing from language rules
+        self.command_processor = CommandProcessor()
         self.player = None
         self.room_list = []
         self.item_list = []
@@ -96,7 +97,7 @@ class GameManager:
         """
         Executes the command passed in the argument.
         """
-        CommandProcessor.execute_command(command)
+        self.command_processor.execute_command(command)
         
     def pick_up_item(self, item_name):
         """
@@ -166,16 +167,17 @@ class GameManager:
                 case 'exit':
                     exit(0)
                 case _:
-                    print("I'm sorry but I didn't understand your response")
+                    print("I'm sorry, but I didn't understand your response")
                     
         os.system('clear')  # Clear screen       
         while True:
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
-                print(command)
+                print(command) # debug/demo
+                self.execute_user_command(command)
             else:
-                print("I'm sorry but I didn't understand your response")
+                print("I'm sorry, but I didn't understand your response")
         
         self.describe_location()  # Describe location of starting room.
         # The game continues from here once we have at least a couple detailed
