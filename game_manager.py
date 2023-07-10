@@ -4,12 +4,16 @@ import constants
 from room import Room
 from item import Item
 from player import Player
+from nl_parser import NlParser
+from command_processor import CommandProcessor
 
 class GameManager:
     def __init__(self):
         self.cur_path = os.path.dirname(__file__)
         self.new_data_dirs = constants.NEW_DATA_DIRS
         self.saved_data_dirs = constants.SAVED_DATA_DIRS
+        self.parser = NlParser() # instance allows for potential adding/ removing from language rules
+        self.command_processor = CommandProcessor()
         self.player = None
         self.room_list = []
         self.item_list = []
@@ -81,6 +85,20 @@ class GameManager:
                     obj_files.append(filename.path)
         return obj_files
 
+    def parse_user_input(self, user_input):
+        """
+        Returns array of command tokens from user input if valid.
+        If invalid, returns None.
+        """
+        command = self.parser.parse_command(user_input)
+        return command
+    
+    def execute_user_command(self, command):
+        """
+        Executes the command passed in the argument.
+        """
+        self.command_processor.execute_command(command)
+        
     def pick_up_item(self, item_name):
         """
         Adds passed item to player's inventory attribute and removes it from
@@ -131,9 +149,13 @@ class GameManager:
         # Before the game starts...
         # Also need to clear screen, make sure size is adequate, etc
         # Maybe offer a short tutorial when a new game is started
+        
+        os.system('clear')  # Clear screen
+        
+        # Ask player if they want to start a new game or load a saved game
         while True:
             new_or_saved = input("Do you want to start a new or a saved " +
-                                 "game? (new / loadgame / exit) ")
+                                    "game? (new / loadgame / exit)\n" + ">")
             new_or_saved = new_or_saved.strip().lower()
             match new_or_saved:
                 case 'new':
@@ -145,8 +167,18 @@ class GameManager:
                 case 'exit':
                     exit(0)
                 case _:
-                    print("I'm sorry but I didn't understand your response")
-        os.system('clear')  # Clear screen
+                    print("I'm sorry, but I didn't understand your response")
+                    
+        os.system('clear')  # Clear screen       
+        while True:
+            user_input = input(">")
+            command = self.parse_user_input(user_input)
+            if command:
+                print(command) # debug/demo
+                self.execute_user_command(command)
+            else:
+                print("I'm sorry, but I didn't understand your response")
+        
         self.describe_location()  # Describe location of starting room.
         # The game continues from here once we have at least a couple detailed
         # rooms with descriptions, etc.
