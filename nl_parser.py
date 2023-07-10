@@ -41,6 +41,10 @@ class NlParser(LanguageLibrary):
 
     # Check if tokenized input matches established language rules
     def parse_command(self, input_text):
+        
+        if len(input_text) == 0:
+            return None
+        
         tokens = self._tokenize(input_text)
         command = tokens[0]
         
