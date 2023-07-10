@@ -118,6 +118,10 @@ class GameManager:
         self.player.location = room_name
 
     def describe_location(self):
+        # This will also get more deteiled as we develop the game. Maybe worth
+        # considering adding a counter to the room for number of visits so we
+        # can display a different description (short), or making a list a short
+        # descriptions with progressively helpful hints.
         location = self._get_game_object_by_name(self.player.location, 
                                                  self.room_list)
         print(location.description)
