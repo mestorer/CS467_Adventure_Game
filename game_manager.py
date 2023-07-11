@@ -164,7 +164,7 @@ class GameManager:
                 self.instantiate_objects(load_saved_game=True)
                 break
             elif new_or_saved == 'exit':
-                    exit(0)
+                exit(0)
             else:
                 print("I'm sorry, but I didn't understand your response")
                     
