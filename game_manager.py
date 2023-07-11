@@ -97,7 +97,7 @@ class GameManager:
         """
         Executes the command passed in the argument.
         """
-        self.command_processor.execute_command(command)
+        self.command_processor.execute_command(command,self.player,self.room_list,self.item_list)
         
     def pick_up_item(self, item_name):
         """
