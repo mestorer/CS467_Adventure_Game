@@ -6,5 +6,6 @@
     "dropped_items": [] ,
     "directions": "The Test Room is connected to the Main Hallway to the north",
     "locations": {"N": "Main Hallway"},
+    "transitions": {},
     "visited": false
 }

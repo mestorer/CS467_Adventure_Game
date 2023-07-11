@@ -10,4 +10,5 @@ class Room(GameObject):
         self.dropped_items = room_data['dropped_items']
         self.directions = room_data['directions']
         self.locations = room_data['locations']
+        self.transitions = room_data['transitions']
         self.visited = room_data['visited']

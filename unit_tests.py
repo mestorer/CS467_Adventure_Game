@@ -72,6 +72,7 @@ if __name__ == '__main__':
                                        "E": "Financial Department", \
                                         "S": "Parking Lot", \
                                             "W": "Supply Closet"},
+                        "transitions": {},
                         "visited": False
                          }
             self.room_object = Room(self.room_file_name, self.room_json)
@@ -115,6 +116,7 @@ if __name__ == '__main__':
                         "dropped_items": [] ,
                         "directions": "The Test Room is connected to the Main Hallway to the north",
                         "locations": {"N": "Main Hallway"},
+                        "transitions": {},
                         "visited": False
 }
             self.room2_file_name = 'room2.json'
@@ -125,6 +127,7 @@ if __name__ == '__main__':
                         "items": ["id card"],
                         "dropped_items": [] ,
                         "directions": "The Main Hallway is connected to the Test Room to the south",
+                        "transitions": {},
                         "locations": {"S": "Test Room 1"},
                         "visited": False
             }
