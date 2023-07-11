@@ -157,17 +157,16 @@ class GameManager:
             new_or_saved = input("Do you want to start a new or a saved " +
                                     "game? (new / loadgame / exit)\n" + ">")
             new_or_saved = new_or_saved.strip().lower()
-            match new_or_saved:
-                case 'new':
-                    self.instantiate_objects()
-                    break
-                case 'loadgame':
-                    self.instantiate_objects(load_saved_game=True)
-                    break
-                case 'exit':
-                    exit(0)
-                case _:
-                    print("I'm sorry, but I didn't understand your response")
+            if new_or_saved == 'new':
+                self.instantiate_objects()
+                break
+            elif new_or_saved == 'loadgame':
+                self.instantiate_objects(load_saved_game=True)
+                break
+            elif new_or_saved == 'exit':
+                exit(0)
+            else:
+                print("I'm sorry, but I didn't understand your response")
                     
         os.system('clear')  # Clear screen       
         while True:
