@@ -1,0 +1,10 @@
+{
+    "name": "Reception Area",
+    "description": "Where you check in as a visitor",
+    "short_description": "Check in", 
+    "items": ["key"],
+    "dropped_items": [] ,
+    "directions": "The Test Room is connected to the Main Hallway to the north",
+    "locations": {"N": "Main Hallway"},
+    "visited": "False"
+}

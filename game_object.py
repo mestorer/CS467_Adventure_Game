@@ -1,13 +1,14 @@
 class GameObject:
-    def __init__(self, name = 'None'):
-        self.name = name
+    def __init__(self, file_name):
+        self.file_name = file_name
 
-    def serialize_as_json(self, room_json):
+    def serialize_as_json(self, obj_json):
         """
         Serializes all attributes as JSON to save as a JSON
         formatted text file
         """
-        attributes = vars(room_json)
+        attributes = vars(obj_json)
+        attributes.pop("file_name")
         return attributes
     
     def to_string(self):
