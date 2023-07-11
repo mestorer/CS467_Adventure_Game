@@ -71,7 +71,8 @@ if __name__ == '__main__':
                          "locations": {"N": "Main Hallway", \
                                        "E": "Financial Department", \
                                         "S": "Parking Lot", \
-                                            "W": "Supply Closet"}
+                                            "W": "Supply Closet"},
+                        "visited": False
                          }
             self.room_object = Room(self.room_file_name, self.room_json)
 
@@ -113,8 +114,9 @@ if __name__ == '__main__':
                         "items": ["key"],
                         "dropped_items": [] ,
                         "directions": "The Test Room is connected to the Main Hallway to the north",
-                        "locations": {"N": "Main Hallway"}
-            }
+                        "locations": {"N": "Main Hallway"},
+                        "visited": False
+}
             self.room2_file_name = 'room2.json'
             self.room2_json = {
                         "name": "Main Hallway",
@@ -123,7 +125,8 @@ if __name__ == '__main__':
                         "items": ["id card"],
                         "dropped_items": [] ,
                         "directions": "The Main Hallway is connected to the Test Room to the south",
-                        "locations": {"S": "Test Room 1"}
+                        "locations": {"S": "Test Room 1"},
+                        "visited": False
             }
             self.item1_file_name = 'item1.json'
             self.item1_json = {"name": "key",
@@ -137,6 +140,10 @@ if __name__ == '__main__':
         def test_constructor(self):
             self.gm = GameManager()
             self.gm.cur_path = os.path.dirname(__file__)
+            self.assertTrue(str(type(self.gm.parser)) 
+                            == "<class 'nl_parser.NlParser'>")
+            self.assertTrue(str(type(self.gm.command_processor)) 
+                            == "<class 'command_processor.CommandProcessor'>")
             self.assertEqual(self.gm.player, None)
             self.assertEqual(self.gm.room_list, [])
             self.assertEqual(self.gm.item_list, [])
@@ -147,6 +154,12 @@ if __name__ == '__main__':
             
         def test_instanciated_new_obj_against_json_data(self):
             self.gm = GameManager()
+            self.gm.new_data_dirs = ['/test_data/new_player_data/', 
+                                     '/test_data/new_room_data/', 
+                                     '/test_data/item_data/']
+            self.gm.saved_data_dirs = ['/test_data/saved_player_data/', 
+                                       '/test_data/saved_room_data/', 
+                                       '/test_data/item_data/']
             self.gm.instantiate_objects()
             self.gm.player = Player(self.player_file_name, self.player_json)
             self.assertEqual(self.gm.player.serialize_as_json(self
@@ -157,6 +170,12 @@ if __name__ == '__main__':
             
         def test_instanciated_saved_obj_against_json_data(self):
             self.gm = GameManager()
+            self.gm.new_data_dirs = ['/test_data/new_player_data/', 
+                                     '/test_data/new_room_data/', 
+                                     '/test_data/item_data/']
+            self.gm.saved_data_dirs = ['/test_data/saved_player_data/', 
+                                       '/test_data/saved_room_data/', 
+                                       '/test_data/item_data/']
             self.gm.instantiate_objects(load_saved_game = True)
             self.gm.player = Player(self.player_file_name, self.player_json)
             self.assertEqual(self.gm.player.serialize_as_json(self
