@@ -1,0 +1,12 @@
+{
+    "name": "Archives Room",
+    "description": "TBD - Archives Room long description",
+    "short_description": "TBD - Archives Room short description", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "The Archives Room is connected to the Financial Department to the north.",
+    "locations": {
+        "N": "Financial Department"
+    },
+    "visited": false
+}

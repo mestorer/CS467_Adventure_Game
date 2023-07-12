@@ -1,0 +1,13 @@
+{
+    "name": "Server Room",
+    "description": "TBD - Server Room long description",
+    "short_description": "TBD - Server Room short description", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "The Server Room is connected to the IT Room to the east.",
+    "locations": {
+        "E": "IT Room",
+        "S": "Supply Closet"
+    },
+    "visited": false
+}

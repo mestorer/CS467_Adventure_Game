@@ -1,0 +1,13 @@
+{
+    "name": "Supply Closet",
+    "description": "TBD - Supply Closet long description",
+    "short_description": "TBD - Supply Closet short description", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "The Supply Closet is connected to the Reception Area to the east.",
+    "locations": {
+        "N": "Server Room",
+        "E": "Reception Area"
+    },
+    "visited": false
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Research Lab",
+    "description": "TBD - Research Lab long description",
+    "short_description": "TBD - Research Lab short description", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "The Research Lab is connected to the Marketing Department to the west.",
+    "locations": {
+        "W": "Marketing Department"
+    },
+    "visited": false
+}
