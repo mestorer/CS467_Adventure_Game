@@ -7,7 +7,7 @@ class GameObject:
         Serializes all attributes as JSON to save as a JSON
         formatted text file
         """
-        attributes = vars(obj_json)
+        attributes = dict(vars(obj_json))
         attributes.pop("file_name")
         return attributes
     

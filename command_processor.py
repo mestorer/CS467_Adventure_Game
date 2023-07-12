@@ -122,7 +122,8 @@ savegame: save the game
 loadgame: load the game\n""")     
             
             
-    def execute_command(self, command, player, room_list, item_list):
+    def execute_command(self, command, player, room_list,
+                        item_list, load_game, save_game):
         if command[0] == 'look':
             self._describe_location(player, room_list)
             
@@ -144,6 +145,7 @@ loadgame: load the game\n""")
             self._check_inventory(player)
                 
         elif command[0] == 'savegame':
-            pass
+            save_game()
+            
         elif command[0] == 'loadgame':
-            pass
+            load_game(load_saved_game=True)
