@@ -61,7 +61,7 @@ class NlParser(LanguageLibrary):
         
         # movement without explicit 'go' command
         elif len(tokens) == 1 and command in self.locations: # just a cardinal direction
-            return tokens
+            return ['go', tokens[0]]
         elif len(tokens) == 2 and (tokens[0] + " " + tokens[1]) in self.locations: #just a location name;unsplit
             modified_tokens = self._unsplit_location_name(tokens)
             return modified_tokens
