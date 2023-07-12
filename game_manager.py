@@ -97,7 +97,9 @@ class GameManager:
         """
         Executes the command passed in the argument.
         """
-        self.command_processor.execute_command(command, self.player, self.room_list, self.item_list)
+        self.command_processor.execute_command(command, self.player, 
+                self.room_list, self.item_list, self.instantiate_objects, 
+                self.save_objects_to_file)
 
     def start_game(self):
         # Some ASCII art about the game or a basic despcription should go here.
@@ -116,7 +118,7 @@ class GameManager:
                 self.instantiate_objects()
                 break
             elif new_or_saved == 'loadgame':
-                self.instantiate_objects(load_saved_game=True)
+                self.execute_user_command(['loadgame'])
                 break
             elif new_or_saved == 'exit':
                 exit(0)
@@ -132,7 +134,3 @@ class GameManager:
                 self.execute_user_command(command)
             else:
                 print("I'm sorry, but I didn't understand your response")
-        
-        self.describe_location()  # Describe location of starting room.
-        # The game continues from here once we have at least a couple detailed
-        # rooms with descriptions, etc.
