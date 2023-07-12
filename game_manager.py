@@ -117,6 +117,9 @@ class GameManager:
             if new_or_saved == 'new':
                 self.instantiate_objects()
                 break
+            elif new_or_saved == 'loadgame':
+                self.execute_user_command(['loadgame'])
+                break
             elif new_or_saved == 'exit':
                 exit(0)
             else:
