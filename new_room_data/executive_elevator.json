@@ -9,6 +9,6 @@
         "N": "Executive Office",
         "S": "Main Hallway"
     },
-    "transitions": [],
+    "doors": [],
     "visited": false
 }

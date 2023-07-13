@@ -8,6 +8,6 @@
     "locations": {
         "S": "Executive Elevator"
     },
-    "transitions": [],
+    "doors": [],
     "visited": false
 }

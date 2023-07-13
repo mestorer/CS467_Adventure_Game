@@ -1,0 +1,8 @@
+{
+    "name": "S Door to Reception",
+    "is_locked": true,
+    "key": "key",
+    "locked_message": "You walk towards the reception area but the door is locked, you need a key to open it.",
+    "unlocked_after_key_message": "You walk towards the reception area, the door opens as you turn the key...",
+    "unlocked_message": "You walk towards the reception area and open the door..."
+}

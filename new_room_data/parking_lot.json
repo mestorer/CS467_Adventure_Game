@@ -6,6 +6,6 @@
     "dropped_items": [] ,
     "directions": "The Parking Lot is connected to the Reception Area to the north.",
     "locations": {"N": "Reception Area"},
-    "transitions": {"N": "S Door to Reception"},
+    "doors": {"N": "S Door to Reception"},
     "visited": false
 }

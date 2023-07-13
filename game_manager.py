@@ -3,7 +3,7 @@ import json
 import constants
 from room import Room
 from item import Item
-from transition import Transition
+from door import Door
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
@@ -18,7 +18,7 @@ class GameManager:
         self.player = None
         self.room_list = []
         self.item_list = []
-        self.transition_list = []
+        self.door_list = []
 
     def instantiate_objects(self, load_saved_game=False):
         """
@@ -32,6 +32,7 @@ class GameManager:
             self.player = None
             self.room_list = []
             self.item_list = []
+            self.door_list = []
             obj_files = self._get_obj_file_list(self.saved_data_dirs)
             if len(obj_files) == 0:
                 obj_files = self._get_obj_file_list(self.new_data_dirs)
@@ -53,9 +54,9 @@ class GameManager:
             elif 'item_data' in obj_file:
                 item = Item(file_name, data)
                 self.item_list.append(item)
-            elif 'transition_data' in obj_file:
-                trans = Transition(file_name, data)
-                self.transition_list.append(trans)
+            elif 'door_data' in obj_file:
+                door = Door(file_name, data)
+                self.door_list.append(door)
             else:
                 self.player = Player(file_name, data)
 
@@ -77,7 +78,7 @@ class GameManager:
             self._save_object(saved_obj_path, item)
         # Save transitions
         saved_obj_path = self.cur_path + self.saved_data_dirs[3]
-        for trans in self.transition_list:
+        for trans in self.door_list:
             self._save_object(saved_obj_path, trans)
 
     def _save_object(self, saved_obj_path, obj):
@@ -114,7 +115,7 @@ class GameManager:
         Executes the command passed in the argument.
         """
         self.command_processor.execute_command(command, self.player, 
-                self.room_list, self.item_list, self.transition_list,
+                self.room_list, self.item_list, self.door_list,
                 self.instantiate_objects, self.save_objects_to_file)
 
     def start_game(self):

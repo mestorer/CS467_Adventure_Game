@@ -84,7 +84,7 @@ class CommandProcessor(LanguageLibrary):
     
     
     # TODO: refactor this method to add lock checks and check boundaries
-    def _move_player_to_new_room(self, destination, player, room_list, trans_list):
+    def _move_player_to_new_room(self, destination, player, room_list, doors_list):
         """
         Changes the player's location attribute to the destination passed if it is a valid location.
         """
@@ -96,19 +96,17 @@ class CommandProcessor(LanguageLibrary):
         for key, value in current_room.locations.items():
             if destination in (key, value.lower()) and value != None:
                 # Check to see if there is a transition
-                for key2, value2 in current_room.transitions.items():
-                    if destination in (key2, value2.lower()) and value2 != None:
-                        transition = self._get_game_object_by_name(value2, trans_list)
-                        if transition.is_locked:
-                            if transition.key in player.inventory:
-                                transition.is_locked = False
-                                print(transition.unlocked_message + '\n')
-                            else:
-                                print(transition.locked_message + '\n')
-                                move_player = False
-                        else:
-                            print(transition.locked_message + '\n')
+                for key2, value2 in current_room.doors.items():
+                    if destination in (key2, value2) and value2 != None:
+                        door = self._get_game_object_by_name(value2, doors_list)
+                        if door.is_locked and not door.key in player.inventory:
+                            print(door.locked_message + '\n')
                             move_player = False
+                        elif door.is_locked and door.key in player.inventory:
+                            print(door.unlocked_after_key_message + '\n')
+                            door.is_locked = False
+                        else:
+                            print(door.unlocked_message + '\n')
                 if move_player:
                     player.location = value
                     print(f"You are now in the {player.location}.\n")

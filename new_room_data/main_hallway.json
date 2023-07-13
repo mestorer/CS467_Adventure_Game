@@ -11,6 +11,6 @@
         "S": "Reception Area",
         "W": "IT Room"
     },
-    "transitions": [],
+    "doors": [],
     "visited": false
 }

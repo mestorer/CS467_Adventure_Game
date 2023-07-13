@@ -11,6 +11,11 @@
         "S": "Parking Lot",
         "W": "Supply Closet"
     },
-    "transitions": [],
+    "doors": {
+        "N": null,
+        "E": null,
+        "S": "N Door to Parking Lot",
+        "W": null
+    },
     "visited": false
 }

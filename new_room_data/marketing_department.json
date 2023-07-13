@@ -11,6 +11,6 @@
         "S": "Financial Department",
         "W": "Main Hallway"
     },
-    "transitions": [],
+    "doors": [],
     "visited": false
 }
