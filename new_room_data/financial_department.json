@@ -2,7 +2,7 @@
     "name": "Financial Department",
     "description": "TBD - Financial Department long description",
     "short_description": "TBD - Financial Department short description", 
-    "items": [],
+    "items": ["silver_key"],
     "dropped_items": [] ,
     "directions": "The Financial Department is connected to the Marketing Department to the north, the Archives Room to the south and the Reception Area to the west.",
     "locations": {
@@ -10,6 +10,10 @@
         "S": "Archives Room",
         "W": "Reception Area"
     },
-    "doors": [],
+    "doors": {
+        "N": "Marketing Department S",
+        "S": "Archives Room N",
+        "W": "Reception Area E"
+    },
     "visited": false
 }

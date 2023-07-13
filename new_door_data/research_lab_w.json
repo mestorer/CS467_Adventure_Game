@@ -1,0 +1,8 @@
+{
+    "name": "Research Lab W",
+    "is_locked": true,
+    "key": "research_lab_key",
+    "locked_message": "You need a key to open this room...",
+    "unlocked_after_key_message": "You use the research lab key to open the door...",
+    "unlocked_message": "You walk towards the door and open it..."
+}

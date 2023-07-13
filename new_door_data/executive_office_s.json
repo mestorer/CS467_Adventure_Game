@@ -1,6 +1,6 @@
 {
-    "name": "Unlocked door",
-    "is_locked": false,
+    "name": "Executive Office S",
+    "is_locked": true,
     "key": null,
     "locked_message": null,
     "unlocked_after_key_message": null,

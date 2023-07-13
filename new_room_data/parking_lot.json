@@ -2,10 +2,14 @@
     "name": "Parking Lot",
     "description": "TBD - Parking lot long description",
     "short_description": "TBD - Parking lot short description", 
-    "items": ["key"],
+    "items": [],
     "dropped_items": [] ,
     "directions": "The Parking Lot is connected to the Reception Area to the north.",
-    "locations": {"N": "Reception Area"},
-    "doors": {"N": "S Door to Reception"},
+    "locations": {
+        "N": "Reception Area"
+    },
+    "doors": {
+        "N": "Reception Area S"
+    },
     "visited": false
 }

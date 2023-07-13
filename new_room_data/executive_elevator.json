@@ -9,6 +9,9 @@
         "N": "Executive Office",
         "S": "Main Hallway"
     },
-    "doors": [],
+    "doors": {
+        "N": "Executive Office S",
+        "S": "Main Hallway N"
+    },
     "visited": false
 }

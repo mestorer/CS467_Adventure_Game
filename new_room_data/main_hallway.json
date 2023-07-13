@@ -11,6 +11,11 @@
         "S": "Reception Area",
         "W": "IT Room"
     },
-    "doors": [],
+    "doors": {
+        "N": "Executive Elevator S",
+        "E": "Marketing Department W",
+        "S": "Reception Area N",
+        "W": "IT Room E"
+    },
     "visited": false
 }

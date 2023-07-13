@@ -151,7 +151,7 @@ quitgame: quits the game\n""")
             
             
     def execute_command(self, command, player, room_list,
-                        item_list, trans_list, load_game, save_game):
+                        item_list, door_list, load_game, save_game):
         if command[0] == 'look':
             self._describe_location(player, room_list, 'long')
             
@@ -160,7 +160,7 @@ quitgame: quits the game\n""")
                 
         elif command[0] == 'go':
             destination = command[1]
-            self._move_player_to_new_room(destination, player, room_list, trans_list)
+            self._move_player_to_new_room(destination, player, room_list, door_list)
         
         elif command[0] == 'take':
             item_to_take = command[1]

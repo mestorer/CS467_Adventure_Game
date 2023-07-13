@@ -1,0 +1,5 @@
+{
+    "name": "cooling_vent",
+    "description": "a cooling vent for the server room",
+    "is_takeable": false
+}

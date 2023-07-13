@@ -12,10 +12,10 @@
         "W": "Supply Closet"
     },
     "doors": {
-        "N": null,
-        "E": null,
-        "S": "N Door to Parking Lot",
-        "W": null
+        "N": "Main Hallway S",
+        "E": "Financial Department W",
+        "S": "Parking Lot N",
+        "W": "Supply Closet E"
     },
     "visited": false
 }
