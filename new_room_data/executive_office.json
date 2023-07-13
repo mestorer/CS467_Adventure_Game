@@ -1,0 +1,12 @@
+{
+    "name": "Executive Office",
+    "description": "TBD - Executive Office long description",
+    "short_description": "TBD - Executive Office short description", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "The Executive Office is connected to the Executive Elevator to the south.",
+    "locations": {
+        "S": "Executive Elevator"
+    },
+    "visited": false
+}

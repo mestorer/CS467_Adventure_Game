@@ -10,6 +10,7 @@ class LanguageLibrary:
             'inventory': [],
             'savegame': [],
             'loadgame': [],
+            'quitgame': [],
             # Action verbs (not yet implemented)
             'use': ['item'], # need at least 9 more verbs
         }

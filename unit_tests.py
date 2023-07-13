@@ -198,7 +198,9 @@ if __name__ == '__main__':
             self.gm.item_list.append(item)
             item = Item(self.item2_file_name, self.item2_json)
             self.gm.item_list.append(item)
-            self.gm.pick_up_item('key')
+            #self.gm.pick_up_item('key')
+            self.gm.command_processor._pick_up_item('key', self.gm.player, 
+                    self.gm.room_list, self.gm.item_list)
             self.assertEqual(self.gm.room_list[0].items, [])
             self.assertEqual(self.gm.player.inventory, ['key'])
 
@@ -213,8 +215,11 @@ if __name__ == '__main__':
             self.gm.item_list.append(item)
             item = Item(self.item2_file_name, self.item2_json)
             self.gm.item_list.append(item)
-            self.gm.pick_up_item('key')
-            self.gm.drop_inventory_item_in_room('Reception Area', 'key')
+            self.gm.command_processor._pick_up_item('key', self.gm.player, 
+                    self.gm.room_list, self.gm.item_list)
+            self.gm.command_processor._drop_inventory_item_in_room(
+                'Reception Area', 'key', self.gm.player, 
+                    self.gm.room_list)
             self.assertEqual(self.gm.room_list[0].dropped_items, ['key'])
             self.assertEqual(self.gm.player.inventory, [])
 
@@ -229,7 +234,8 @@ if __name__ == '__main__':
             self.gm.item_list.append(item)
             item = Item(self.item2_file_name, self.item2_json)
             self.gm.item_list.append(item)
-            self.gm.move_player_to_new_roow(self.room2_json["name"])
+            self.gm.command_processor._move_player_to_new_room(
+                "N", self.gm.player, self.gm.room_list)
             self.assertEqual(self.room2_json["name"], self.gm.player.location)
             
 

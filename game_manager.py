@@ -27,8 +27,11 @@ class GameManager:
         if not load_saved_game:
             obj_files = self._get_obj_file_list(self.new_data_dirs)
         else:
+            self.player = None
+            self.room_list = []
+            self.item_list = []
             obj_files = self._get_obj_file_list(self.saved_data_dirs)
-            if len(obj_files) == 1:
+            if len(obj_files) == 0:
                 obj_files = self._get_obj_file_list(self.new_data_dirs)
         self._build_objects(obj_files)
 
@@ -63,6 +66,10 @@ class GameManager:
         saved_obj_path = self.cur_path + self.saved_data_dirs[1]
         for room in self.room_list:
             self._save_object(saved_obj_path, room)
+        # Save items
+        saved_obj_path = self.cur_path + self.saved_data_dirs[2]
+        for item in self.item_list:
+            self._save_object(saved_obj_path, item)
 
     def _save_object(self, saved_obj_path, obj):
         """

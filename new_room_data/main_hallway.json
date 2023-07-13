@@ -1,0 +1,15 @@
+{
+    "name": "Main Hallway",
+    "description": "TBD - Main Hallway long description",
+    "short_description": "TBD - Main Hallway short description", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "The Main Hallway is connected to the Executive Elevator to the north, the Marketing Department to the east, the Reception Area to the south and the IT Room to the west.",
+    "locations": {
+        "N": "Executive Elevator",
+        "E": "Marketing Department",
+        "S": "Reception Area",
+        "W": "IT Room"
+    },
+    "visited": false
+}
