@@ -13,13 +13,19 @@ class CommandProcessor(LanguageLibrary):
             if obj.name == name:
                 return obj
             
-    def _describe_location(self, player, room_list):
+    def _describe_location(self, player, room_list, length):
         """
         Returns the long description of the room the player is in.
-        Informs player of directions available to them.
+        Informs player of directions and dropped items available to them.
         """
         location = self._get_game_object_by_name(player.location, room_list)
-        print(location.description + '\n' + location.directions)
+        if length == 'long':
+            print(location.description)
+        else:
+            print(location.short_description)
+        if location.dropped_items != []:
+            print(f"You see the following items scattered about on the floor: {location.dropped_items}")
+        print(location.directions + '\n')
 
     def _describe_item(self, item_name, player, room_list, item_list ):
         """
@@ -29,9 +35,9 @@ class CommandProcessor(LanguageLibrary):
         location = self._get_game_object_by_name(player.location, room_list)
         if item_name in location.items or item_name in location.dropped_items or item_name in player.inventory:
             item = self._get_game_object_by_name(item_name, item_list)
-            print(item.description)
+            print(item.description + '\n')
         else:
-            print('There is no ' + item_name + ' here.')
+            print('There is no ' + item_name + ' here.\n')
     
     def _pick_up_item(self, item_name, player, room_list, item_list):
         """
@@ -41,12 +47,12 @@ class CommandProcessor(LanguageLibrary):
         item = self._get_game_object_by_name(item_name, item_list)
         room = self._get_game_object_by_name(player.location, room_list)
         if item is None or (item_name not in room.items and item_name not in room.dropped_items):
-            print(f"There is no {item_name} here.")
+            print(f"There is no {item_name} here.\n")
         elif item.is_takeable and (item_name in room.items or item_name in room.dropped_items):
             self._transfer_room_item_to_player(player.location, item_name, player, room_list)
-            print(f"You picked up the {item_name}.")
+            print(f"You picked up the {item_name}.\n")
         else:
-            print(f"You can't pick up the {item_name}.")
+            print(f"You can't pick up the {item_name}.\n")
 
     def _transfer_room_item_to_player(self, room_name, item_name, player, room_list):
         """
@@ -89,19 +95,25 @@ class CommandProcessor(LanguageLibrary):
         for key, value in current_room.locations.items():
             if destination in (key, value.lower()) and value != None:
                 player.location = value
-                print(f"You are now in the {player.location}.")
+                print(f"You are now in the {player.location}.\n")
+                room = self._get_game_object_by_name(player.location, room_list)
+                if room.visited == False:
+                    self._describe_location(player, room_list, 'long')
+                    room.visited = True
+                else:
+                    self._describe_location(player, room_list, 'short')
                 break
         else:
-            print("You can't go that way.")
+            print("You can't go that way.\n")
     
     def _check_inventory(self, player):
         """
         Prints the items in the player's inventory if they have any.
         """
         if player.inventory == []:
-            print("Your pockets are empty.")
+            print("Your pockets are empty.\n")
         else:
-            print(f"Your pockets contain: {player.inventory}")
+            print(f"Your pockets contain: {player.inventory}\n")
             
     def _print_help_guide(self):
         """
@@ -119,16 +131,17 @@ take <item>: take the item specified
 help: print this help guide
 inventory: print the items in your inventory
 savegame: save the game
-loadgame: load the game\n""")     
+loadgame: load the game
+quitgame: quits the game\n""")     
             
             
     def execute_command(self, command, player, room_list,
                         item_list, load_game, save_game):
         if command[0] == 'look':
-            self._describe_location(player, room_list)
+            self._describe_location(player, room_list, 'long')
             
         elif command[0] == 'look at':
-            self._describe_item(command[1], player, room_list, item_list)
+            self._describe_item(command[1], player, room_list, item_list,)
                 
         elif command[0] == 'go':
             destination = command[1]
@@ -146,6 +159,11 @@ loadgame: load the game\n""")
                 
         elif command[0] == 'savegame':
             save_game()
+            print("Game saved!\n")
             
         elif command[0] == 'loadgame':
             load_game(load_saved_game=True)
+            print("Game loaded!\n")
+            
+        elif command[0] == 'quitgame':
+            exit(0)
