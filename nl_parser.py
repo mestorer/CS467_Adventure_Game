@@ -38,6 +38,26 @@ class NlParser(LanguageLibrary):
                 return ['look at', tokens[2]]
             if tokens[1] != "at":
                 return None
+    
+    # combine tokens into item names       
+    def _merge_item_names(self, tokens):
+        if len(tokens) == 1:
+            return None
+        
+        modified_tokens = [tokens[0]]
+        item_name = ""
+        
+        for i in range(1,len(tokens)):
+            if tokens[i] == "on":       # handles 'use <item> on <item>' once implemented
+                modified_tokens.append(item_name[0:len(item_name)-1]) #take off the extra space
+                modified_tokens.append(tokens[i])
+                item_name = ""
+                continue
+            item_name += tokens[i]
+            if i != len(tokens) - 1:
+                item_name += " "
+        modified_tokens.append(item_name)
+        return modified_tokens
 
     # Check if tokenized input matches established language rules
     def parse_command(self, input_text):
@@ -54,6 +74,8 @@ class NlParser(LanguageLibrary):
                 return self._handle_look(tokens)
             if command == 'go':
                 return self._handle_go(tokens)
+            if command == 'take': # add commands that require item names here
+                return self._merge_item_names(tokens)
             
             # default - detects correct length command
             if len(tokens) == len(self.language[command]) + 1:
@@ -68,48 +90,4 @@ class NlParser(LanguageLibrary):
         
         # not a valid command
         return None
-
-    '''# validate command usage and execute respective action
-    def execute_command(command, player):
-        if command[0] == 'go':
-            direction = command[1]
-            print(f'You go {direction}')
-            #add logic
-            
-        elif command[0] == 'use':
-            item = command[1]
-            target = command[3]
-            print(f'You use the {item} on the {target}')
-            # add logic
-        
-        elif command[0] == 'take':
-            item = command[1]
-            player.inventory.append(item)
-            print(f'You take the {item}')
-            print(f'You now have {player.inventory}')
-            # add logic
-            
-        # need to add logic for other commands
-        
-    def user_input(player):
-        """ Gets user input and executes command if available. Modifies player object as needed."""
-        input_text = input("Enter a command: ")
-        tokens = tokenize(input_text)
-        command = parse_command(tokens)
-        if command:
-            execute_command(command, player)
-        else:
-            print('I do not understand')'''
-
-
-'''if __name__ == '__main__':
     
-    class Player:
-        def __init__(self, name, location):
-            self.name = name
-            self.location = location # location could be an object so that it can be easily modified
-            self.inventory = []
-    
-    player_1 = Player('John', 'room1')    
-    while True:
-        user_input(player_1)'''
