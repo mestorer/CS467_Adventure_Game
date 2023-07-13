@@ -84,7 +84,7 @@ class CommandProcessor(LanguageLibrary):
     
     
     # TODO: refactor this method to add lock checks and check boundaries
-    def _move_player_to_new_room(self, destination, player, room_list):
+    def _move_player_to_new_room(self, destination, player, room_list, trans_list):
         """
         Changes the player's location attribute to the destination passed if it is a valid location.
         """
@@ -92,19 +92,36 @@ class CommandProcessor(LanguageLibrary):
         destination = self._convert_cardinal_direction(destination)
         
         # check if destination in keys or values of current_room.directions
+        move_player = True
         for key, value in current_room.locations.items():
             if destination in (key, value.lower()) and value != None:
-                player.location = value
-                print(f"You are now in the {player.location}.\n")
-                room = self._get_game_object_by_name(player.location, room_list)
-                if room.visited == False:
-                    self._describe_location(player, room_list, 'long')
-                    room.visited = True
-                else:
-                    self._describe_location(player, room_list, 'short')
-                break
+                # Check to see if there is a transition
+                for key2, value2 in current_room.transitions.items():
+                    if destination in (key2, value2.lower()) and value2 != None:
+                        transition = self._get_game_object_by_name(value2, trans_list)
+                        if transition.is_locked:
+                            if transition.key in player.inventory:
+                                transition.is_locked = False
+                                print(transition.unlocked_message + '\n')
+                            else:
+                                print(transition.locked_message + '\n')
+                                move_player = False
+                        else:
+                            print(transition.locked_message + '\n')
+                            move_player = False
+                if move_player:
+                    player.location = value
+                    print(f"You are now in the {player.location}.\n")
+                    room = self._get_game_object_by_name(player.location, room_list)
+                    if room.visited == False:
+                        self._describe_location(player, room_list, 'long')
+                        room.visited = True
+                    else:
+                        self._describe_location(player, room_list, 'short')
+                    break
         else:
-            print("You can't go that way.\n")
+            if move_player:
+                print("You can't go that way.\n")
     
     def _check_inventory(self, player):
         """
@@ -136,7 +153,7 @@ quitgame: quits the game\n""")
             
             
     def execute_command(self, command, player, room_list,
-                        item_list, load_game, save_game):
+                        item_list, trans_list, load_game, save_game):
         if command[0] == 'look':
             self._describe_location(player, room_list, 'long')
             
@@ -145,7 +162,7 @@ quitgame: quits the game\n""")
                 
         elif command[0] == 'go':
             destination = command[1]
-            self._move_player_to_new_room(destination, player, room_list)
+            self._move_player_to_new_room(destination, player, room_list, trans_list)
         
         elif command[0] == 'take':
             item_to_take = command[1]

@@ -9,5 +9,6 @@
         "N": "Server Room",
         "E": "Reception Area"
     },
+    "transitions": [],
     "visited": false
 }

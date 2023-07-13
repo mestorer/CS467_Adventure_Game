@@ -8,5 +8,6 @@
     "locations": {
         "W": "Marketing Department"
     },
+    "transitions": [],
     "visited": false
 }

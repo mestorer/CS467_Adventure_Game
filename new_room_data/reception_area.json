@@ -9,6 +9,8 @@
         "N": "Main Hallway",
         "E": "Financial Department",
         "S": "Parking Lot",
-        "W": "Supply Closet"},
+        "W": "Supply Closet"
+    },
+    "transitions": [],
     "visited": false
 }

@@ -9,5 +9,6 @@
         "E": "Main Hallway",
         "W": "Server Room"
     },
+    "transitions": [],
     "visited": false
 }

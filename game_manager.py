@@ -3,6 +3,7 @@ import json
 import constants
 from room import Room
 from item import Item
+from transition import Transition
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
@@ -17,6 +18,7 @@ class GameManager:
         self.player = None
         self.room_list = []
         self.item_list = []
+        self.transition_list = []
 
     def instantiate_objects(self, load_saved_game=False):
         """
@@ -51,6 +53,9 @@ class GameManager:
             elif 'item_data' in obj_file:
                 item = Item(file_name, data)
                 self.item_list.append(item)
+            elif 'transition_data' in obj_file:
+                trans = Transition(file_name, data)
+                self.transition_list.append(trans)
             else:
                 self.player = Player(file_name, data)
 
@@ -70,6 +75,10 @@ class GameManager:
         saved_obj_path = self.cur_path + self.saved_data_dirs[2]
         for item in self.item_list:
             self._save_object(saved_obj_path, item)
+        # Save transitions
+        saved_obj_path = self.cur_path + self.saved_data_dirs[3]
+        for trans in self.transition_list:
+            self._save_object(saved_obj_path, trans)
 
     def _save_object(self, saved_obj_path, obj):
         """
@@ -105,8 +114,8 @@ class GameManager:
         Executes the command passed in the argument.
         """
         self.command_processor.execute_command(command, self.player, 
-                self.room_list, self.item_list, self.instantiate_objects, 
-                self.save_objects_to_file)
+                self.room_list, self.item_list, self.transition_list,
+                self.instantiate_objects, self.save_objects_to_file)
 
     def start_game(self):
         # Some ASCII art about the game or a basic despcription should go here.

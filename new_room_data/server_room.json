@@ -9,5 +9,6 @@
         "E": "IT Room",
         "S": "Supply Closet"
     },
+    "transitions": [],
     "visited": false
 }
