@@ -6,7 +6,7 @@
     "dropped_items": [] ,
     "directions": "The Archives Room is connected to the Financial Department to the north.",
     "locations": {
-        "N": "Financial Department"
+        "N": ["Financial Department","Financial","Finance"]
     },
     "doors": {
         "N": "Financial Department S"

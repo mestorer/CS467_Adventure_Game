@@ -118,9 +118,9 @@ class CommandProcessor(LanguageLibrary):
                     else:
                         self._describe_location(player, room_list, 'short')
                     break
-            else:
-                if move_player:
-                    print("You can't go that way.\n")
+        else:
+            if move_player:
+                print("You can't go that way.\n")
 
     def _check_inventory(self, player):
         """

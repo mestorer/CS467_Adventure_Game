@@ -6,10 +6,10 @@
     "dropped_items": [] ,
     "directions": "The Main Hallway is connected to the Executive Elevator to the north, the Marketing Department to the east, the Reception Area to the south and the IT Room to the west.",
     "locations": {
-        "N": "Executive Elevator",
-        "E": "Marketing Department",
-        "S": "Reception Area",
-        "W": "IT Room"
+        "N": ["Executive Elevator","Elevator"],
+        "E": ["Marketing Department","Marketing"],
+        "S": ["Reception Area","Reception"],
+        "W": ["IT Room","IT"]
     },
     "doors": {
         "N": "Executive Elevator S",

@@ -6,8 +6,8 @@
     "dropped_items": [] ,
     "directions": "The Server Room is connected to the IT Room to the east.",
     "locations": {
-        "E": "IT Room",
-        "S": "Supply Closet"
+        "E": ["IT Room","IT"],
+        "S": ["Supply Closet","Supply","Closet"]
     },
     "doors": {
         "E": "IT Room W",
