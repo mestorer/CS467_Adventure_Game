@@ -6,10 +6,10 @@
     "dropped_items": [] ,
     "directions": "The Reception Area is connected to the Main Hallway to the north, the Financial Department to the east, the Parking Lot to the south and a Supply Closet to the west.",
     "locations": {
-        "N": "Main Hallway",
-        "E": "Financial Department",
-        "S": "Parking Lot",
-        "W": "Supply Closet"
+        "N": ["Main Hallway"],
+        "E": ["Financial Department"],
+        "S": ["Parking Lot"],
+        "W": ["Supply Closet"]
     },
     "doors": {
         "N": "Main Hallway S",

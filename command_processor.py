@@ -94,10 +94,11 @@ class CommandProcessor(LanguageLibrary):
         # check if destination in keys or values of current_room.directions
         move_player = True
         for key, value in current_room.locations.items():
-            if destination in (key, value.lower()) and value != None:
+            if value is not None and destination == key \
+                    or destination in [x.lower() for x in value]:
                 # Check to see if there is a transition
                 for key2, value2 in current_room.doors.items():
-                    if destination in (key2, value2) and value2 != None:
+                    if value2 is not None and key2 == key:
                         door = self._get_game_object_by_name(value2, doors_list)
                         if door.is_locked and not door.key in player.inventory:
                             print(door.locked_message + '\n')
@@ -108,7 +109,7 @@ class CommandProcessor(LanguageLibrary):
                         else:
                             print(door.unlocked_message + '\n')
                 if move_player:
-                    player.location = value
+                    player.location = current_room.locations[key][0]
                     print(f"You are now in the {player.location}.\n")
                     room = self._get_game_object_by_name(player.location, room_list)
                     if room.visited == False:
@@ -117,10 +118,10 @@ class CommandProcessor(LanguageLibrary):
                     else:
                         self._describe_location(player, room_list, 'short')
                     break
-        else:
-            if move_player:
-                print("You can't go that way.\n")
-    
+            else:
+                if move_player:
+                    print("You can't go that way.\n")
+
     def _check_inventory(self, player):
         """
         Prints the items in the player's inventory if they have any.
