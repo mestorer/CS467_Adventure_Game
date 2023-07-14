@@ -1,0 +1,5 @@
+{
+    "name": "access_badge",
+    "description": "a badge that opens a door",
+    "is_takeable": true
+}

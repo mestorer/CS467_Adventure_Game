@@ -8,5 +8,8 @@
     "locations": {
         "N": "Financial Department"
     },
+    "doors": {
+        "N": "Financial Department S"
+    },
     "visited": false
 }

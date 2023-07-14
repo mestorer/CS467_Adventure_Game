@@ -1,0 +1,8 @@
+{
+    "name": "Parking Lot N",
+    "is_locked": false,
+    "key": null,
+    "locked_message": null,
+    "unlocked_after_key_message": null,
+    "unlocked_message": "You walk towards the parking lot and open the door..."
+}

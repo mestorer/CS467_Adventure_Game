@@ -1,0 +1,8 @@
+{
+    "name": "Main Hallway N",
+    "is_locked": false,
+    "key": null,
+    "locked_message": null,
+    "unlocked_after_key_message": null,
+    "unlocked_message": "You walk towards the door and open it..."
+}

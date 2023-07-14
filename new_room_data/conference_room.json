@@ -8,5 +8,8 @@
     "locations": {
         "S": "Marketing Department"
     },
+    "doors": {
+        "S": "Marketing Department N"
+    },
     "visited": false
 }
