@@ -6,8 +6,8 @@
     "dropped_items": [] ,
     "directions": "The IT Room is connected to the Main Hallway to the east and the Server Room to the west.",
     "locations": {
-        "E": "Main Hallway",
-        "W": "Server Room"
+        "E": ["Main Hallway","Hallway"],
+        "W": ["Server Room","Server", "Room"]
     },
     "doors": {
         "E": "Main Hallway W",

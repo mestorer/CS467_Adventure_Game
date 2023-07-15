@@ -6,7 +6,7 @@
     "dropped_items": [] ,
     "directions": "The Research Lab is connected to the Marketing Department to the west.",
     "locations": {
-        "W": "Marketing Department"
+        "W": ["Marketing Department", "Marketing"]
     },
     "doors": {
         "W": "Marketing Department E"

@@ -6,7 +6,7 @@
     "dropped_items": [] ,
     "directions": "The Executive Office is connected to the Executive Elevator to the south.",
     "locations": {
-        "S": "Executive Elevator"
+        "S": ["Executive Elevator","Elevator"]
     },
     "doors": {
         "S": "Executive Elevator N"

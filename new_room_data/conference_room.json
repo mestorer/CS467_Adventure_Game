@@ -6,7 +6,7 @@
     "dropped_items": [] ,
     "directions": "The Conference Room is connected to the Marketing Department to the south.",
     "locations": {
-        "S": "Marketing Department"
+        "S": ["Marketing Department","Marketing"]
     },
     "doors": {
         "S": "Marketing Department N"

@@ -6,8 +6,8 @@
     "dropped_items": [] ,
     "directions": "The Supply Closet is connected to the Reception Area to the east.",
     "locations": {
-        "N": "Server Room",
-        "E": "Reception Area"
+        "N": ["Server Room", "Server"],
+        "E": ["Reception Area", "Reception"]
     },
     "doors": {
         "N": "Server Room S",
