@@ -4,8 +4,22 @@ NEW_DATA_DIRS = ['/new_player_data/', '/new_room_data/',
 SAVED_DATA_DIRS = ['/saved_player_data/', '/saved_room_data/', 
                    '/saved_item_data/', '/saved_door_data/']
 
+# Terminal size
 MIN_TERM_SIZE_COLS = 80
 MIN_TERM_SIZE_LINES = 24
+
+# Terminal text colors
+class colors:
+  PURPLE = '\033[95m'
+  BLUE = '\033[94m'
+  CYAN = '\033[96m'
+  GREEN = '\033[92m'
+  YELLOW = '\033[93m'
+  RED = '\033[91m'
+  BOLD = '\033[1m'
+  UNDERLINE = '\033[4m'
+  ENDCOLOR = '\033[0m'
+  NOCOLOR = '\033[0m'
 
 OPENING_TITLE = '''
   _____                                          _         
