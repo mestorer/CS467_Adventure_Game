@@ -1,5 +1,6 @@
 import sys
 import time
+import constants
 
 def print_slowly(str, pause=0.1):
     print('\033[95m')
@@ -9,7 +10,7 @@ def print_slowly(str, pause=0.1):
         time.sleep(pause)
     print('\033[0m')
 
-def print_long_text(text, max_width=78):
+def print_long_text(text, max_width=constants.MIN_TERM_SIZE_COLS):
     words = text.split()
     lines = []
     current_line = ""
