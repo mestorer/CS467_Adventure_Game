@@ -7,7 +7,7 @@ from door import Door
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
-from helper_functions import print_slowly
+from helper_functions import print_slowly, print_text
 
 class GameManager:
     def __init__(self):

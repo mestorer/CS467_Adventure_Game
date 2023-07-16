@@ -1,5 +1,6 @@
 from language_library import LanguageLibrary
 from helper_functions import print_text
+import constants as c
 
 class CommandProcessor(LanguageLibrary):
     def __init__(self):
@@ -14,19 +15,13 @@ class CommandProcessor(LanguageLibrary):
             if obj.name == name:
                 return obj
             
-    def _describe_location(self, player, room_list, length):
+    def _describe_location(self, player, room_list, long_desc):
         """
         Returns the long description of the room the player is in.
         Informs player of directions and dropped items available to them.
         """
         location = self._get_game_object_by_name(player.location, room_list)
-        if length == 'long':
-            print_text(location.description)
-        else:
-            print_text(location.short_description)
-        if location.dropped_items != []:
-            print_text(f"You see the following items scattered about on the floor: {location.dropped_items}")
-        print_text(location.directions + '\n')
+        location.describe(long_desc=long_desc)
 
     def _describe_item(self, item_name, player, room_list, item_list ):
         """
@@ -34,7 +29,8 @@ class CommandProcessor(LanguageLibrary):
         it is in the player's inventory or in the room they are in.
         """
         location = self._get_game_object_by_name(player.location, room_list)
-        if item_name in location.items or item_name in location.dropped_items or item_name in player.inventory:
+        if item_name in location.items or item_name in location.dropped_items \
+                or item_name in player.inventory:
             item = self._get_game_object_by_name(item_name, item_list)
             print(item.description + '\n')
         else:
@@ -55,22 +51,26 @@ class CommandProcessor(LanguageLibrary):
         else:
             print(f"You can't pick up the {item_name}.\n")
 
-    def _transfer_room_item_to_player(self, room_name, item_name, player, room_list):
+    def _transfer_room_item_to_player(self, room_name, item_name, 
+                                      player, room_list):
         """
-        Removes the item from the room it is in and adds it to the player's inventory.
+        Removes the item from the room it is in and adds it to the player's 
+        inventory.
         """
         room = self._get_game_object_by_name(room_name, room_list)
         room.items.remove(item_name)
         player.inventory.append(item_name)
 
-    def _drop_inventory_item_in_room(self, room_name, item_name, player, room_list):
+    def _drop_inventory_item_in_room(self, room_name, item_name, player, 
+                                     room_list):
         room = self._get_game_object_by_name(room_name, room_list)
         room.dropped_items.append(item_name)
         player.inventory.remove(item_name)
         
     def _convert_cardinal_direction(self, direction):
         """
-        Converts a cardinal direction to a direction name matching Room.locations keys.
+        Converts a cardinal direction to a direction name matching Room 
+        locations keys.
         """
         if direction == 'n' or direction == 'north':
             return 'N'
@@ -85,9 +85,11 @@ class CommandProcessor(LanguageLibrary):
     
     
     # TODO: refactor this method to add lock checks and check boundaries
-    def _move_player_to_new_room(self, destination, player, room_list, doors_list):
+    def _move_player_to_new_room(self, destination, player, room_list, 
+                                 doors_list):
         """
-        Changes the player's location attribute to the destination passed if it is a valid location.
+        Changes the player's location attribute to the destination passed 
+        if it is a valid location.
         """
         current_room = self._get_game_object_by_name(player.location, room_list)
         destination = self._convert_cardinal_direction(destination)
@@ -101,27 +103,23 @@ class CommandProcessor(LanguageLibrary):
                 for key2, value2 in current_room.doors.items():
                     if value2 is not None and key2 == key:
                         door = self._get_game_object_by_name(value2, doors_list)
-                        if door.is_locked and not door.key in player.inventory:
-                            print(door.locked_message + '\n')
-                            move_player = False
-                        elif door.is_locked and door.key in player.inventory:
-                            print(door.unlocked_after_key_message + '\n')
-                            door.is_locked = False
-                        else:
-                            print(door.unlocked_message + '\n')
+                        move_player, message = door.try_open_door(player)
+                        print_text(message)
+                        print()
                 if move_player:
                     player.location = current_room.locations[key][0]
-                    print(f"You are now in the {player.location}.\n")
-                    room = self._get_game_object_by_name(player.location, room_list)
-                    if room.visited == False:
-                        self._describe_location(player, room_list, 'long')
-                        room.visited = True
-                    else:
-                        self._describe_location(player, room_list, 'short')
+                    print(f"You are now in the {player.location}")
+                    room = self._get_game_object_by_name(player.location, 
+                                                         room_list)
+                    messages = room.describe()
+                    room.mark_as_visited()
+                    for message in messages:
+                        print_text(message)
+                    print()
                     break
         else:
             if move_player:
-                print("You can't go that way.\n")
+                print_text("You can't go that way.\n", color=c.colors.RED)
 
     def _check_inventory(self, player):
         """
@@ -134,7 +132,8 @@ class CommandProcessor(LanguageLibrary):
             
     def _print_help_guide(self):
         """
-        Prints a help guide for the player describing the commands available to them.
+        Prints a help guide for the player describing the commands available 
+        to them.
         """
         print(
 """-----------------------------------Help Guide-----------------------------------
@@ -155,14 +154,15 @@ quitgame: quits the game\n""")
     def execute_command(self, command, player, room_list,
                         item_list, door_list, load_game, save_game):
         if command[0] == 'look':
-            self._describe_location(player, room_list, 'long')
+            self._describe_location(player, room_list, long_desc=True)
             
         elif command[0] == 'look at':
             self._describe_item(command[1], player, room_list, item_list,)
                 
         elif command[0] == 'go':
             destination = command[1]
-            self._move_player_to_new_room(destination, player, room_list, door_list)
+            self._move_player_to_new_room(destination, player, room_list, 
+                                          door_list)
         
         elif command[0] == 'take':
             item_to_take = command[1]
