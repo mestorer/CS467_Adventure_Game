@@ -7,6 +7,7 @@ from door import Door
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
+from helper_functions import print_slowly
 
 class GameManager:
     def __init__(self):
@@ -125,6 +126,18 @@ class GameManager:
         # Maybe offer a short tutorial when a new game is started
         
         os.system('clear')  # Clear screen
+
+        # Check for the right terminal size
+        term_size = os.get_terminal_size()
+        if term_size.columns < constants.MIN_TERM_SIZE_COLS:
+            print(f"Error: Please resize your terminal to the at least {constants.MIN_TERM_SIZE_COLS} columns required for game!")
+            exit(0)
+        if term_size.lines < constants.MIN_TERM_SIZE_LINES:
+            print(f"Error: Please resize your terminal to the at least {constants.MIN_TERM_SIZE_COLS} lines required for game!")
+            exit(0)
+
+        # Show game title
+        self.show_title()
         
         # Ask player if they want to start a new game or load a saved game
         while True:
@@ -132,6 +145,9 @@ class GameManager:
                                     "game? (new / loadgame / exit)\n" + ">")
             new_or_saved = new_or_saved.strip().lower()
             if new_or_saved == 'new':
+                see_intro = input("Would you line to see a short intro to the game if you're playing it for the first time? (y/n): \n" + ">")
+                if see_intro.lower() == 'y':
+                    self.show_intro()
                 self.instantiate_objects()
                 break
             elif new_or_saved == 'loadgame':
@@ -142,7 +158,7 @@ class GameManager:
             else:
                 print("I'm sorry, but I didn't understand your response")
                     
-        os.system('clear')  # Clear screen       
+        #os.system('clear')  # Clear screen       
         while True:
             user_input = input(">")
             command = self.parse_user_input(user_input)
@@ -151,3 +167,9 @@ class GameManager:
                 self.execute_user_command(command)
             else:
                 print("I'm sorry, but I didn't understand your response")
+
+    def show_title(self):
+        print(constants.OPENING_TITLE)
+
+    def show_intro(self):
+        print_slowly(constants.GAME_INTRO, pause=0.05)
