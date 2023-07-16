@@ -1,5 +1,5 @@
 from language_library import LanguageLibrary
-from helper_functions import print_long_text
+from helper_functions import print_text
 
 class CommandProcessor(LanguageLibrary):
     def __init__(self):
@@ -21,12 +21,12 @@ class CommandProcessor(LanguageLibrary):
         """
         location = self._get_game_object_by_name(player.location, room_list)
         if length == 'long':
-            print_long_text(location.description)
+            print_text(location.description)
         else:
-            print_long_text(location.short_description)
+            print_text(location.short_description)
         if location.dropped_items != []:
-            print_long_text(f"You see the following items scattered about on the floor: {location.dropped_items}")
-        print_long_text(location.directions + '\n')
+            print_text(f"You see the following items scattered about on the floor: {location.dropped_items}")
+        print_text(location.directions + '\n')
 
     def _describe_item(self, item_name, player, room_list, item_list ):
         """
