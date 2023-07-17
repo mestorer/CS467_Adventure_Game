@@ -8,7 +8,6 @@ from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
 from helper_functions import print_slowly, print_text
-import types
 
 class GameManager:
     def __init__(self):
@@ -150,7 +149,6 @@ class GameManager:
                 if see_intro.lower() == 'y':
                     self.show_intro()
                 self.instantiate_objects()
-                self.add_func_test()
                 break
             elif new_or_saved == 'loadgame':
                 self.execute_user_command(['loadgame'])
@@ -175,13 +173,3 @@ class GameManager:
 
     def show_intro(self):
         print_slowly(constants.GAME_INTRO, pause=0.05)
-
-    
-    def add_func_test(self):
-        obj = self.command_processor._get_game_object_by_name("Reception Area", self.room_list)
-        print(obj)
-
-        def describeFunc(self, long_desc=False):
-            return['Hello', 'World']
-
-        obj.describe = types.MethodType(describeFunc, obj)
