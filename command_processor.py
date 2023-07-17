@@ -21,7 +21,10 @@ class CommandProcessor(LanguageLibrary):
         Informs player of directions and dropped items available to them.
         """
         location = self._get_game_object_by_name(player.location, room_list)
-        location.describe(long_desc=long_desc)
+        messages = location.describe(long_desc=long_desc)
+        for message in messages:
+            print_text(message)
+        print()
 
     def _describe_item(self, item_name, player, room_list, item_list ):
         """
