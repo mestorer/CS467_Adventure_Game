@@ -66,3 +66,19 @@ RESULT_TEXT = {"bottle of match dust": "Using the rim of the plastic bottle, you
                "access card" : "You swipe the access card through the card reader.  The light turns green and the door unlocks with a click.",
                "compromising document" : "You look back and forth between the Executive's information and the safe, plugging in various dates, phone numbers - even his social security number - anything that could be used in some form as a combination.  When you try the date he started at the company, the door clicks loudly and squeaks open.  You wonder how much of a tool he really is."
                }
+
+HELP_GUIDE = """-----------------------------------Help Guide-----------------------------------
+look: look around the room you are in
+look at <item>: look at the item in the room you are in or in your inventory
+go <direction>: move in the direction specified
+<direction>: move in the direction specified
+go <location>: move to the location specified
+<location>: move to the location specified
+take <item>: take the item specified
+use <item>: use the item specified
+use <item> on <item>: combine the two items specified
+inventory: print the items in your inventory
+help: print this help guide
+savegame: save the game
+loadgame: load the game
+quitgame: quits the game\n"""

@@ -213,22 +213,7 @@ class CommandProcessor(LanguageLibrary):
         Prints a help guide for the player describing the commands available 
         to them.
         """
-        print(
-"""-----------------------------------Help Guide-----------------------------------
-look: look around the room you are in
-look at <item>: look at the item in the room you are in or in your inventory
-go <direction>: move in the direction specified
-<direction>: move in the direction specified
-go <location>: move to the location specified
-<location>: move to the location specified
-take <item>: take the item specified
-use <item>: use the item specified
-use <item> on <item>: combine the two items specified
-inventory: print the items in your inventory
-help: print this help guide
-savegame: save the game
-loadgame: load the game
-quitgame: quits the game\n""")    
+        print(constants.HELP_GUIDE)
 
             
     def execute_command(self, command, player, room_list,
