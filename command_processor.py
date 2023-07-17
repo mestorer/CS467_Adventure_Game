@@ -1,6 +1,6 @@
 from language_library import LanguageLibrary
 from helper_functions import print_text
-import constants as c
+import constants
 
 class CommandProcessor(LanguageLibrary):
     def __init__(self):
@@ -122,7 +122,7 @@ class CommandProcessor(LanguageLibrary):
                     break
         else:
             if move_player:
-                print_text("You can't go that way.\n", color=c.colors.RED)
+                print_text("You can't go that way.\n", color=constants.colors.RED)
 
     def _check_inventory(self, player):
         """
