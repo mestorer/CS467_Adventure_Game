@@ -12,6 +12,9 @@ class Door(GameObject):
         self.key = data['key']
 
     def try_open_door(self, player):
+        '''
+        Returns a True or False if the door unlocks and the appropriate
+        message for printing'''
         move_player = True
         if self.is_locked and not self.key in player.inventory:
             message = self.locked_message

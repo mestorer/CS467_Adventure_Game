@@ -15,6 +15,8 @@ class Room(GameObject):
         self.visited = room_data['visited']
 
     def describe(self, long_desc=False):
+        '''
+        Returns a list of messages that describe the room'''
         messages = []
         if long_desc or not self.visited:
             messages.append(self.description)

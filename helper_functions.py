@@ -3,14 +3,21 @@ import time
 import constants
 
 def print_slowly(str, color=constants.colors.PURPLE, pause=0.1):
-    print(color)
+    '''
+    Prints the passed string in the passed color with the passed interval.
+    The defaults are purple and 0.1 seconds.'''
+    print(color)  # Sets the color
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush(),
         time.sleep(pause)
-    print(constants.colors.ENDCOLOR)
+    print(constants.colors.ENDCOLOR)  # Ends the color effect
 
-def print_text(text, color=constants.colors.ENDCOLOR, max_width=constants.MIN_TERM_SIZE_COLS, pause=0):
+def print_text(text, color=constants.colors.ENDCOLOR, 
+               max_width=constants.MIN_TERM_SIZE_COLS, pause=0):
+    '''
+    Prints text within the limits of the terminal width
+    '''
     words = text.split()
     lines = []
     current_line = ""
