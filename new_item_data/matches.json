@@ -1,0 +1,8 @@
+{
+    "name": "box of matches",
+    "description": "A box of strike-anywhere matches",
+    "use": "You strike a match.  The flame burns brightly for a brief moment before slowly flickering out.",
+    "is_takeable": true,
+    "combine": {"plastic bottle" : "bottle of match dust",
+                "bottle of ammonia" : "stink bomb"}
+}

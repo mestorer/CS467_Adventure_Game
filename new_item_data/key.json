@@ -1,5 +1,7 @@
 {
     "name": "key",
     "description": "a key that opens a door",
-    "is_takeable": true
+    "use": "",
+    "is_takeable": true,
+    "combine": {}
 }

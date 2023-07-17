@@ -74,7 +74,7 @@ class NlParser(LanguageLibrary):
                 return self._handle_look(tokens)
             if command == 'go':
                 return self._handle_go(tokens)
-            if command == 'take': # add commands that require item names here
+            if command == 'take' or command == 'use': # add commands that require item names here
                 return self._merge_item_names(tokens)
             
             # default - detects correct length command

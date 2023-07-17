@@ -1,0 +1,7 @@
+{
+    "name": "keycard terminal",
+    "description": "the machine that makes access cards to various parts of the facility.",
+    "use": "The receptionist would be mad if I used this.",
+    "is_takeable": false,
+    "combine": {}
+}

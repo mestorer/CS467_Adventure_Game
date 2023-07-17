@@ -59,3 +59,10 @@ As you head to your desk in the Marketing Department, you discover a dreaded
 who might be trying to sabotage you and how you can turn the tables on them.\n
 Welcome, and good luck!
 '''
+
+RESULT_TEXT = {"bottle of match dust": "Using the rim of the plastic bottle, you scrape the heads of the matches into the opening.  The sulfur dust settles neatly onto the bottom.",
+               "bottle of ammonia" : "You pour the ammonia into the plastic bottle.  The noxious fumes begin to make your eyes water before you quickly close the lid.",
+               "stink bomb" : "You combine the items in the plastic bottle and quickly replace the lid, but not before you catch a whiff of the foul, gut-wrenching reaction occurring within.  This will undoubtedly clear any room.",
+               "access card" : "You swipe the access card through the card reader.  The light turns green and the door unlocks with a click.",
+               "compromising document" : "You look back and forth between the Executive's information and the safe, plugging in various dates, phone numbers - even his social security number - anything that could be used in some form as a combination.  When you try the date he started at the company, the door clicks loudly and squeaks open.  You wonder how much of a tool he really is."
+               }
