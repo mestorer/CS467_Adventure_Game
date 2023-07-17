@@ -7,7 +7,7 @@ from door import Door
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
-from helper_functions import print_slowly
+from helper_functions import print_slowly, print_text
 
 class GameManager:
     def __init__(self):
@@ -118,6 +118,12 @@ class GameManager:
         self.command_processor.execute_command(command, self.player, 
                 self.room_list, self.item_list, self.door_list,
                 self.instantiate_objects, self.save_objects_to_file)
+        
+    def show_title(self):
+        print(constants.OPENING_TITLE)
+
+    def show_intro(self):
+        print_slowly(constants.GAME_INTRO, pause=0.05)
 
     def start_game(self):
         # Some ASCII art about the game or a basic despcription should go here.
@@ -168,8 +174,3 @@ class GameManager:
             else:
                 print("I'm sorry, but I didn't understand your response")
 
-    def show_title(self):
-        print(constants.OPENING_TITLE)
-
-    def show_intro(self):
-        print_slowly(constants.GAME_INTRO, pause=0.05)

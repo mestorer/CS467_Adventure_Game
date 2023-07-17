@@ -1,4 +1,5 @@
 from game_object import GameObject
+from helper_functions import print_text
 
 class Room(GameObject):
     def __init__(self, file_name, room_data):
@@ -12,3 +13,20 @@ class Room(GameObject):
         self.locations = room_data['locations']
         self.doors = room_data['doors']
         self.visited = room_data['visited']
+
+    def describe(self, long_desc=False):
+        '''
+        Returns a list of messages that describe the room'''
+        messages = []
+        if long_desc or not self.visited:
+            messages.append(self.description)
+        else:
+            messages.append(self.short_description)
+        if self.dropped_items != []:
+            messages.append(f"You see the following items scattered about \
+                       on the floor: {self.dropped_items}")
+        messages.append(self.directions + '\n')
+        return messages
+
+    def mark_as_visited(self):
+        self.visited = True
