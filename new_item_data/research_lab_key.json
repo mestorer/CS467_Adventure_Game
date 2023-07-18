@@ -3,5 +3,6 @@
     "description": "a key that opens the door to the research lab",
     "use": "",
     "is_takeable": true,
-    "combine": {}
+    "combine": {},
+    "throw": "throw words go here"
 }

@@ -78,6 +78,25 @@ class CommandProcessor(LanguageLibrary):
         else:
             self._transfer_player_item_to_room(player.location, item_name, player, room_list)
             print(f"You dropped the {item_name} on the floor.\n")
+            
+    def _throw_item(self, item_name, player, room_list, item_list):
+        """
+        Adds passed item to room's dropped items attribute and removes it from player's inventory.
+        Same as _drop_item, but with different dialogue.
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if item is not None and (item_name in room.items or item_name in room.dropped_items):
+            print("You need to take the " + item_name + " first.\n")
+        elif item is None or item_name not in player.inventory:
+            print(f"You don't have a {item_name} to throw. But you wish you did...\n")
+        else:
+            if item_name == 'stink bomb': #special case for stink bomb in receptionist area
+                self._execute_stink_bomb(item, player, room, item_list) #does not drop stink bomb
+            else:
+                self._transfer_player_item_to_room(player.location, item_name, player, room_list)
+                print_text(f"You throw the {item_name} on the floor..." + item.throw)
+                print()
 
     def _transfer_player_item_to_room(self, room_name, item_name, player, 
                                      room_list):
@@ -259,6 +278,9 @@ class CommandProcessor(LanguageLibrary):
                 
         elif command[0] == 'drop':
             self._drop_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'throw':
+            self._throw_item(command[1], player, room_list, item_list)
                 
         elif command[0] == 'help':
             self._print_help_guide()

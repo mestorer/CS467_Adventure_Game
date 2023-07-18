@@ -8,3 +8,4 @@ class Item(GameObject):
         self.use = item_data['use']
         self.is_takeable = item_data['is_takeable']
         self.combine = item_data['combine']
+        self.throw = item_data['throw']

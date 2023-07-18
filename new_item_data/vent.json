@@ -3,5 +3,6 @@
     "description": "an air conditioning vent that's barely hanging on...",
     "use": "",
     "is_takeable": true,
-    "combine": {}
+    "combine": {},
+    "throw": "throw words go here"
 }
