@@ -158,7 +158,7 @@ class CommandProcessor(LanguageLibrary):
         else:
             print_text(item.use)
             print()
-            player.inventory.remove('stink bomb')
+            self._remove_prereqs('stink bomb', player, room, items_list)
             room.description = "The reception area is a mess. The receptionist is nowhere to be seen."
             room.short_description = "The reception area is a mess."
             keycard_terminal = self._get_game_object_by_name('keycard terminal', items_list)
