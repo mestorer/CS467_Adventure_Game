@@ -10,9 +10,8 @@ class LanguageLibrary:
             'inventory': [],
             'savegame': [],
             'loadgame': [],
-            'quitgame': [],
-            # Action verbs (not yet implemented)
-            'use': ['item'],  # need at least 9 more verbs
+            'quitgame': [], 
+            'use': ['item', 'on', 'item'], # can be used as 'use item' or 'use item on item'
         }
 
         # all valid locations in the game

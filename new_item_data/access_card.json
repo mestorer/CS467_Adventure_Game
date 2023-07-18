@@ -1,0 +1,7 @@
+{
+    "name": "access card",
+    "description": "This can get you where you need to go",
+    "use": "This doesn't have much use on it's own.",
+    "is_takeable": true,
+    "combine": {}
+}

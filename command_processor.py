@@ -133,25 +133,87 @@ class CommandProcessor(LanguageLibrary):
         else:
             print(f"Your pockets contain: {player.inventory}\n")
             
+    def _use_item(self, item_name, player, room_list, item_list):
+        """
+        Prints the use message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if item is None or (item_name not in room.items and item_name not in room.dropped_items and item_name not in player.inventory):
+            print(f"There is no {item_name} to use.\n")
+        elif item_name == 'stink bomb':
+            self._execute_stink_bomb(item, player, room, item_list)
+        else:
+            print_text(item.use)
+            print()
+    
+    # this is a unique interaction. It is the only one in the game that I know of.
+    # can be handled elsewhere if more interactions like this are added
+    def _execute_stink_bomb(self, item, player, room, items_list):
+        """
+        Changes the state of Reception Area if stink bomb is used
+        """
+        if room.name != 'Reception Area':
+            print("There is probably a better place to use this.\n")
+        else:
+            print_text(item.use)
+            print()
+            player.inventory.remove('stink bomb')
+            room.description = "The reception area is a mess. The receptionist is nowhere to be seen."
+            room.short_description = "The reception area is a mess."
+            keycard_terminal = self._get_game_object_by_name('keycard terminal', items_list)
+            keycard_terminal.use = "I should be able to use this now. If only I had a blank keycard."
+            keycard_terminal.combine["blank keycard"] = "access card"
+                
+    def _combine_items(self, item1_name, item2_name, player, room_list, item_list):
+        """
+        Combines two items if they can be combined. Remove prereqs if in inventory
+        """
+        item_1 = self._get_game_object_by_name(item1_name, item_list)
+        item_2 = self._get_game_object_by_name(item2_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if item_1 is None or item_2 is None:
+            print("You can't combine those items.\n")
+            
+        elif (item_1.name not in player.inventory and
+              item_1.name not in room.items and
+              item_1.name not in room.dropped_items and
+              item_2.name not in player.inventory and
+              item_2.name not in room.items and
+              item_2.name not in room.dropped_items):
+            print("Not all items in inventory or room.\n")
+            
+        elif item_1.name not in item_2.combine or item_2.name not in item_1.combine:
+            print("You can't combine those items.\n")
+            
+        else:
+            self._remove_prereqs(item_1.name, player, room, item_list)
+            self._remove_prereqs(item_2.name, player, room, item_list)
+            player.inventory.append(item_1.combine[item_2.name])
+            print_text(constants.RESULT_TEXT[item_1.combine[item_2.name]])
+            print()
+            print(f"You now have a {item_1.combine[item_2.name]}!\n")
+            
+    def _remove_prereqs(self, item_name,  player, room, item_list):  
+        """
+        Removes the prereq item from the appropriate location if takeable.
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        if item.name in player.inventory:
+            player.inventory.remove(item.name)
+        elif item.name in room.items:
+            if item.is_takeable:
+                room.items.remove(item.name)
+        elif item.name in room.dropped_items:
+            room.dropped_items.remove(item.name)
+            
+    
     def _print_help_guide(self):
         """
         Prints a help guide for the player describing the commands available 
         to them.
         """
-        print(
-"""-----------------------------------Help Guide-----------------------------------
-look: look around the room you are in
-look at <item>: look at the item in the room you are in or in your inventory
-go <direction>: move in the direction specified
-<direction>: move in the direction specified
-go <location>: move to the location specified
-<location>: move to the location specified
-take <item>: take the item specified
-help: print this help guide
-inventory: print the items in your inventory
-savegame: save the game
-loadgame: load the game
-quitgame: quits the game\n""")    
+        print(constants.HELP_GUIDE)
 
             
     def execute_command(self, command, player, room_list,
@@ -170,7 +232,16 @@ quitgame: quits the game\n""")
         elif command[0] == 'take':
             item_to_take = command[1]
             self._pick_up_item(item_to_take, player, room_list, item_list)
-             
+                
+        elif command[0] == 'use':
+            if len(command) == 2:
+                item_to_use = command[1]
+                self._use_item(item_to_use, player, room_list, item_list)
+            elif len(command) == 4 and command[2] == 'on':
+                self._combine_items(command[1], command[3], player, room_list, item_list)
+            else:
+                print("Items can't be used like that.\n")
+                
         elif command[0] == 'help':
             self._print_help_guide()
         

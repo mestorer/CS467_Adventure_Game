@@ -162,8 +162,8 @@ class GameManager:
             elif new_or_saved == 'exit':
                 exit(0)
             else:
-                print("I'm sorry, but I didn't understand your response")
-                    
+                print("I'm sorry, but I didn't understand your response\n")
+        print() # blank line       
         #os.system('clear')  # Clear screen       
         while True:
             user_input = input(">")
@@ -172,5 +172,5 @@ class GameManager:
                 print(command) # debug/demo
                 self.execute_user_command(command)
             else:
-                print("I'm sorry, but I didn't understand your response")
+                print("I'm sorry, but I didn't understand your response\n")
 
