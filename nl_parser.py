@@ -59,6 +59,9 @@ class NlParser(LanguageLibrary):
         modified_tokens.append(item_name)
         return modified_tokens
 
+    # keeps track of commands that target items
+    item_commands = ['take', 'use', 'drop', 'throw', 'taste', 'touch', 'smell', 'shake', 'break']
+
     # Check if tokenized input matches established language rules
     def parse_command(self, input_text):
         
@@ -74,7 +77,7 @@ class NlParser(LanguageLibrary):
                 return self._handle_look(tokens)
             if command == 'go':
                 return self._handle_go(tokens)
-            if command == 'take' or command == 'use': # add commands that require item names here
+            if command in self.item_commands: 
                 return self._merge_item_names(tokens)
             
             # default - detects correct length command
