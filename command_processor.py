@@ -72,7 +72,7 @@ class CommandProcessor(LanguageLibrary):
         Adds passed item to room's dropped items attribute and removes it from player's inventory.
         """
         item = self._get_game_object_by_name(item_name, item_list)
-        room = self._get_game_object_by_name(player.location, room_list)
+        
         if item is None or item_name not in player.inventory:
             print(f"You don't have a {item_name} to drop.\n")
         else:
@@ -95,7 +95,7 @@ class CommandProcessor(LanguageLibrary):
                 self._execute_stink_bomb(item, player, room, item_list) #does not drop stink bomb
             else:
                 self._transfer_player_item_to_room(player.location, item_name, player, room_list)
-                print_text(f"You throw the {item_name} on the floor..." + item.throw)
+                print_text(item.throw)
                 print()
 
     def _transfer_player_item_to_room(self, room_name, item_name, player, 
