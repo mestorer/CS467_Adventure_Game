@@ -160,11 +160,11 @@ cython_debug/
 #.idea/
 
 # Ignore contents of saved game directories.
-saved.door_data/*
-!saved.door_data/.gitkeep
-saved.item_data/*
-!saved.item_data/.gitkeep
-saved.player_data/*
-!saved.player_data/.gitkeep
-saved.room_data/*
-!saved.room_data/.gitkeep
+saved_door_data/*
+!saved_door_data/.gitkeep
+saved_item_data/*
+!saved_item_data/.gitkeep
+saved_player_data/*
+!saved_player_data/.gitkeep
+saved_room_data/*
+!saved_room_data/.gitkeep
