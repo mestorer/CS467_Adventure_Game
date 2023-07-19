@@ -251,22 +251,82 @@ class CommandProcessor(LanguageLibrary):
             return True
             
     def _taste_item(self, item_name, player, room_list, item_list):
-        pass
+        """
+        Returns the taste message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if (item is None or 
+            self._check_item_in_same_room(item, player, room) == False):
+            print("There is no such item to taste here.\n")
+        else:
+            print_text(item.taste)
+            print()
     
     def _touch_item(self, item_name, player, room_list, item_list):
-        pass
+        """
+        Returns the touch message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if (item is None or 
+            self._check_item_in_same_room(item, player, room) == False):
+            print("There is no such item to touch here.\n")
+        else:
+            print_text(item.touch)
+            print()
     
     def _smell_item(self, item_name, player, room_list, item_list):
-        pass
+        """
+        Returns the smell message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if (item is None or 
+            self._check_item_in_same_room(item, player, room) == False):
+            print("There is no such item to smell here.\n")
+        else:
+            print_text(item.smell)
+            print()
     
     def _shake_item(self, item_name, player, room_list, item_list):
-        pass
+        """
+        Returns the shake message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if (item is None or 
+            self._check_item_in_same_room(item, player, room) == False):
+            print("There is no such item to shake here.\n")
+        else:
+            print_text(item.shake)
+            print()
     
     def _break_item(self, item_name, player, room_list, item_list):
-        pass
+        """
+        Returns the break message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if (item is None or 
+            self._check_item_in_same_room(item, player, room) == False):
+            print("There is no such item to break here.\n")
+        else:
+            print_text(item.break_item)
+            print()
     
     def _read_item(self, item_name, player, room_list, item_list):
-        pass
+        """
+        Returns the read message of the item passed in the argument
+        """
+        item = self._get_game_object_by_name(item_name, item_list)
+        room = self._get_game_object_by_name(player.location, room_list)
+        if (item is None or 
+            self._check_item_in_same_room(item, player, room) == False):
+            print("There is no such item to read here.\n")
+        else:
+            print_text(item.read)
+            print()
     
     def _print_help_guide(self):
         """
@@ -307,6 +367,24 @@ class CommandProcessor(LanguageLibrary):
             
         elif command[0] == 'throw':
             self._throw_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'taste':
+            self._taste_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'touch':
+            self._touch_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'smell':
+            self._smell_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'shake':
+            self._shake_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'break':
+            self._break_item(command[1], player, room_list, item_list)
+            
+        elif command[0] == 'read':
+            self._read_item(command[1], player, room_list, item_list)
                 
         elif command[0] == 'help':
             self._print_help_guide()
