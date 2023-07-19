@@ -4,5 +4,6 @@
     "use": "This ammonia isn't very useful by itself and it doesn't make a great beverage.  You might be able to use it on something else though if you think back to your middle school science fair.",
     "is_takeable": true,
     "combine": {"plastic bottle" : "bottle of ammonia",
-                "bottle of match dust" : "stink bomb"}
+                "bottle of match dust" : "stink bomb"},
+    "throw": "throw words go here"
 }

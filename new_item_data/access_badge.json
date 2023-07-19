@@ -3,5 +3,6 @@
     "description": "a badge that opens a door",
     "use": "",
     "is_takeable": true,
-    "combine": {}
+    "combine": {},
+    "throw": "throw words go here"
 }

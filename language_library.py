@@ -11,7 +11,14 @@ class LanguageLibrary:
             'savegame': [],
             'loadgame': [],
             'quitgame': [], 
-            'use': ['item', 'on', 'item'], # can be used as 'use item' or 'use item on item'
+            'use': ['item', 'on', 'item'], # can be used as 'use item' or 'use item on item',
+            'drop': ['item'],
+            'throw' : ['item'],
+            'taste' : ['item'],
+            'touch' : ['item'],
+            'smell' : ['item'],
+            'shake' : ['item'],
+            'break' : ['item'],
         }
 
         # all valid locations in the game

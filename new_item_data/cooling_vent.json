@@ -3,5 +3,6 @@
     "description": "a cooling vent for the server room",
     "use": "",
     "is_takeable": false,
-    "combine": {}
+    "combine": {},
+    "throw": "throw words go here"
 }
