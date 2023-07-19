@@ -60,7 +60,7 @@ class NlParser(LanguageLibrary):
         return modified_tokens
 
     # keeps track of commands that target items
-    item_commands = ['take', 'use', 'drop', 'throw', 'taste', 'touch', 'smell', 'shake', 'break']
+    item_commands = ['take', 'use', 'drop', 'throw', 'taste', 'touch', 'smell', 'shake', 'break', 'read']
 
     # Check if tokenized input matches established language rules
     def parse_command(self, input_text):

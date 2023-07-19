@@ -19,6 +19,7 @@ class LanguageLibrary:
             'smell' : ['item'],
             'shake' : ['item'],
             'break' : ['item'],
+            'read' : ['item'],
         }
 
         # all valid locations in the game
