@@ -1,0 +1,1 @@
+{"name": "Locked door", "is_locked": true, "locked_message": "You walk towards the door but it is locked, you need a key to open it.", "unlocked_after_key_message": "You walk towards the door, it opens as you turn the key...", "unlocked_message": "You walk towards the door and open it...", "key": "key"}
