@@ -1,1 +1,0 @@
-{"name": "bottle of ammonia", "description": "A small plastic bottle of ammonia.  Your eyes begin watering at the thought of the smell. You don't dare open the lid again yet.", "use": "This doesn't have much use on it's own.", "is_takeable": true, "combine": {"box of matches": "stink bomb"}}

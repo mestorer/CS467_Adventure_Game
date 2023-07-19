@@ -1,1 +1,0 @@
-{"name": "Server Room E", "is_locked": true, "locked_message": "The door to the server room is locked, you need a key...", "unlocked_after_key_message": "After scanning the access badge the door opens...", "unlocked_message": "You walk towards the door and open it...", "key": "access_badge"}

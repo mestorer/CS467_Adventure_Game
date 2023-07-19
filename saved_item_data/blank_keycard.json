@@ -1,1 +1,0 @@
-{"name": "blank keycard", "description": "a blank keycard with a magnetic strip on the back", "use": "it seems pretty useless right now", "is_takeable": true, "combine": {"keycard terminal": "access card"}}
