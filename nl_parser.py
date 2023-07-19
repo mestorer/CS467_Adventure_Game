@@ -33,9 +33,10 @@ class NlParser(LanguageLibrary):
     def _handle_look(self, tokens):
         if (len(tokens) == 1): # handles 'look' command with no target
             return tokens
-        elif (len(tokens) == 3): # handles 'look at' command
+        else:
             if tokens[1] == "at":
-                return ['look at', tokens[2]]
+                new_command = ['look at'] + tokens[2:]
+                return self._merge_item_names(new_command)
             if tokens[1] != "at":
                 return None
     
