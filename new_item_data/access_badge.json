@@ -1,5 +1,14 @@
 {
     "name": "access_badge",
     "description": "A NFC-equipped badge that grants access to the most secure rooms in the building.",
-    "is_takeable": true
+    "is_takeable": true,
+    "use": "",
+    "combine": {},
+    "throw": "throw words go here",
+    "taste": "taste words go here",
+    "touch": "touch words go here",
+    "smell": "smell words go here",
+    "shake": "shake words go here",
+    "break_item": "break words go here",
+    "read": "read words go here"
 }

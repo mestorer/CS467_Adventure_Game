@@ -1,0 +1,14 @@
+{
+    "name": "stink bomb",
+    "description": "A stinky trick that could easily clear a room.",
+    "use": "Mustering up as much covert craftiness as you can, you unscrew the cap and toss the bottle in an inconspicuous corner of the room.  It doesn't take long before pandemonium breaks and the unfortunate victims flee the odorous onslaught.  You should be free to poke around for a bit, but maybe not longer than you can hold your breath.",
+    "is_takeable": true,
+    "combine": {},
+    "throw": "throw words go here",
+    "taste": "taste words go here",
+    "touch": "touch words go here",
+    "smell": "smell words go here",
+    "shake": "shake words go here",
+    "break_item": "break words go here",
+    "read": "read words go here"
+}

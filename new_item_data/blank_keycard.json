@@ -1,9 +1,9 @@
 {
-    "name": "key",
-    "description": "A rough brass key that's seen some abuse.  It has the words 'supply closet' stamped into the side",
+    "name": "blank keycard",
+    "description": "a blank keycard with a magnetic strip on the back",
+    "use": "it seems pretty useless right now",
     "is_takeable": true,
-    "use": "",
-    "combine": {},
+    "combine": {"keycard terminal" : "access card"},
     "throw": "throw words go here",
     "taste": "taste words go here",
     "touch": "touch words go here",

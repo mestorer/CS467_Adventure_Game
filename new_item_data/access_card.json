@@ -1,8 +1,8 @@
 {
-    "name": "key",
-    "description": "A rough brass key that's seen some abuse.  It has the words 'supply closet' stamped into the side",
+    "name": "access card",
+    "description": "This can get you where you need to go",
+    "use": "This doesn't have much use on it's own.",
     "is_takeable": true,
-    "use": "",
     "combine": {},
     "throw": "throw words go here",
     "taste": "taste words go here",

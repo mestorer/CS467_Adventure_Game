@@ -1,5 +1,14 @@
 {
     "name": "research_lab_key",
     "description": "a key that opens the door to the research lab",
-    "is_takeable": true
+    "use": "",
+    "is_takeable": true,
+    "combine": {},
+    "throw": "throw words go here",
+    "taste": "taste words go here",
+    "touch": "touch words go here",
+    "smell": "smell words go here",
+    "shake": "shake words go here",
+    "break_item": "break words go here",
+    "read": "read words go here"
 }

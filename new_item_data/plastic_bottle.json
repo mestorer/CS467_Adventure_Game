@@ -1,0 +1,15 @@
+{
+    "name": "plastic bottle",
+    "description": "A small, mostly opaque plastic bottle with a decently sized opening.  The blue and white label reads 'envita', a brand you don't recognize.",
+    "use": "You screw open the lid of the small plastic bottle and find it completely empty. This would make a great container for mixing something.  You screw the lid back on.",
+    "is_takeable": true,
+    "combine": {"box of matches" : "bottle of match dust",
+                "ammonia" : "bottle of ammonia"},
+    "throw": "throw words go here",
+    "taste": "taste words go here",
+    "touch": "touch words go here",
+    "smell": "smell words go here",
+    "shake": "shake words go here",
+    "break_item": "break words go here",
+    "read": "read words go here"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "ammonia",
+    "description": "An industrial-sized bottle of ammonia.  This could be useful with something else, but probably not in this large a quantity.",
+    "use": "This ammonia isn't very useful by itself and it doesn't make a great beverage.  You might be able to use it on something else though if you think back to your middle school science fair.",
+    "is_takeable": true,
+    "combine": {"plastic bottle" : "bottle of ammonia",
+                "bottle of match dust" : "stink bomb"},
+    "throw": "throw words go here",
+    "taste": "taste words go here",
+    "touch": "touch words go here",
+    "smell": "smell words go here",
+    "shake": "shake words go here",
+    "break_item": "break words go here",
+    "read": "read words go here"
+}
