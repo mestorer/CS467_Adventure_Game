@@ -75,8 +75,16 @@ go <direction>: move in the direction specified
 go <location>: move to the location specified
 <location>: move to the location specified
 take <item>: take the item specified
+drop <item>: drop the item specified
+throw <item>: throw the item specified
 use <item>: use the item specified
 use <item> on <item>: combine the two items specified
+taste <item>: taste the item specified
+touch <item>: touch the item specified
+smell <item>: smell the item specified
+shake <item>: shake the item specified
+break <item>: break the item specified
+read <item>: read the item specified
 inventory: print the items in your inventory
 help: print this help guide
 savegame: save the game

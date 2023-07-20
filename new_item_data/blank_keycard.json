@@ -4,5 +4,11 @@
     "use": "it seems pretty useless right now",
     "is_takeable": true,
     "combine": {"keycard terminal" : "access card"},
-    "throw": "throw words go here"
+    "throw": "throw words go here",
+    "taste": "taste words go here",
+    "touch": "touch words go here",
+    "smell": "smell words go here",
+    "shake": "shake words go here",
+    "break_item": "break words go here",
+    "read": "read words go here"
 }
