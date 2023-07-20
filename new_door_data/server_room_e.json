@@ -2,7 +2,7 @@
     "name": "Server Room E",
     "is_locked": true,
     "key": "access_badge",
-    "locked_message": "The door to the server room is locked, you need a key...",
-    "unlocked_after_key_message": "After scanning the access badge the door opens...",
-    "unlocked_message": "You walk towards the door and open it..."
+    "locked_message": "The thick metal door to the server room holds fast, with a red circular badge reader next to it.  You'll need a badge with higher privileges than your own to get in.",
+    "unlocked_after_key_message": "You place the new badge against the reader, and with a few beeps and a flash of green, the server room door slowly swings open...",
+    "unlocked_message": "You place your master access badge against the reader, and the door slowly swings open..."
 }

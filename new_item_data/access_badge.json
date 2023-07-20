@@ -1,8 +1,8 @@
 {
     "name": "access_badge",
-    "description": "a badge that opens a door",
-    "use": "",
+    "description": "A NFC-equipped badge that grants access to the most secure rooms in the building.",
     "is_takeable": true,
+    "use": "",
     "combine": {},
     "throw": "throw words go here",
     "taste": "taste words go here",

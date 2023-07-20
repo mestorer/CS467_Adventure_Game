@@ -2,7 +2,7 @@
     "name": "Server Room S",
     "is_locked": true,
     "key": "air vent",
-    "locked_message": "You try to climb into the air duct but the vent is blocking it...",
-    "unlocked_after_key_message": "After prying off the vent you squeeze thru into the server room... ",
-    "unlocked_message": "You squeeze thru the dusty vent into the server room..."
+    "locked_message": "You'll need to remove the vent before you have any chance of squeezing through.",
+    "unlocked_after_key_message": "After prying off the vent, you exhale completely and barely manage to push yourself through into the server room... ",
+    "unlocked_message": "You exhale all of your breath and push yourself through the small opening..."
 }
