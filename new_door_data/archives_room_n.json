@@ -2,7 +2,7 @@
     "name": "Archives Room N",
     "is_locked": true,
     "key": "silver_key",
-    "locked_message": "You walk towards the door but it is locked, you need a key to open it.",
-    "unlocked_after_key_message": "You walk towards the door, it opens as you turn the key...",
-    "unlocked_message": "You walk towards the door and open it..."
+    "locked_message": "You turn the handle to the archives, but it doesn't budge.  You need a key to open it.",
+    "unlocked_after_key_message": "You slip the small silver key into the lock and turn it.  With a faint click and turn of the handle, the door opens.",
+    "unlocked_message": "You walk towards the archives and open the door..."
 }

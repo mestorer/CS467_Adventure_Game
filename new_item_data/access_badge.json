@@ -1,5 +1,5 @@
 {
     "name": "access_badge",
-    "description": "a badge that opens a door",
+    "description": "A NFC-equipped badge that grants access to the most secure rooms in the building.",
     "is_takeable": true
 }
