@@ -2,6 +2,7 @@
     "name": "Main Hallway N",
     "is_locked": false,
     "key": null,
+    "type": "elevator",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You press the button and walk through when the elevator doors slide open..."

@@ -2,6 +2,7 @@
     "name": "Executive Elevator N",
     "is_locked": false,
     "key": null,
+    "type": "elevator",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You press the button to the elevator and step in when the doors slide open..."

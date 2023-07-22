@@ -2,6 +2,7 @@
     "name": "Research Lab W",
     "is_locked": true,
     "key": "research_lab_key",
+    "type": "door",
     "locked_message": "You try the door and it's locked.  Thinking back, you remember people entering the lab using a key.  You'll need to find a copy of that key.",
     "unlocked_after_key_message": "Using the small key, you open the research lab door and slide it open and shut behind you...",
     "unlocked_message": "You slide open the door and shut it behind you..."

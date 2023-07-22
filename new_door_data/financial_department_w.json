@@ -2,6 +2,7 @@
     "name": "Financial Department W",
     "is_locked": false,
     "key": null,
+    "type": "door",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You walk towards the doorway to finance and pass through..."
