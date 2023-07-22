@@ -1,15 +1,15 @@
 {
     "name": "box of matches",
-    "description": "A box of strike-anywhere matches",
+    "description": "a box of strike-anywhere matches",
     "use": "You strike a match.  The flame burns brightly for a brief moment before slowly flickering out.",
     "is_takeable": true,
     "combine": {"plastic bottle" : "bottle of match dust",
                 "bottle of ammonia" : "stink bomb"},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
+    "throw": "You toss the box of matches onto the ground.  Its contents rattle disapprovingly but quickly quiet.",
+    "taste": "You remove a match from the box and place the business end onto your tongue.  It tastes like metal and rotten eggs.  It reminds you of middle school...mixing a little ammonia with these cleared classrooms.",
     "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "smell": "The matches smell unpleasant, but you remember from schooldays past it's not nearly as bad as mixing the dust from the heads with ammonia could be.",
+    "shake": "You rattle the box in your hand.  The sound of the matches tumbling within is oddly soothing.",
+    "break_item": "You take a match out of the box and snap it in half.  You feel a little less stressed but no more accomplished.",
+    "read": "The generic label on the box has the bolded words 'strike-anywhere' prominently displayed alongside some cautionary fine-print."
 }

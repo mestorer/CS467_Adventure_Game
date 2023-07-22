@@ -4,11 +4,11 @@
     "use": "Mustering up as much covert craftiness as you can, you unscrew the cap and toss the bottle in an inconspicuous corner of the room.  It doesn't take long before pandemonium breaks and the unfortunate victims flee the odorous onslaught.  You should be free to poke around for a bit, but maybe not longer than you can hold your breath.",
     "is_takeable": true,
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "You toss the bottle of vile liquid to the floor.  It hits with a dull thud, rolls briefly, and comes to a stop.  This isn't going to do anything useful.  You should pick it back up before someone comes to investigate your shenanigans.",
+    "taste": "As willing as you might be to taste other disgusting substances, you can't physically command yourself to sip any of the revolting substance within.",
+    "touch": "The small plastic bottle is smooth and clean, belying the abominable contents.",
+    "smell": "You move to unscrew the cap but hesitate.  This could cause quite a commotion if others are nearby, and although that's the goal, you need to carefully choose where to uncork pandemonium.",
+    "shake": "You lightly shake the bottle, cautiously ensuring that the contents stay contained.  The liquid inside gently sloshes for a bit and settles.",
+    "break_item": "This isn't the way to use this.  Use this strategically, both in time and place.",
+    "read": "The blue and white label reads 'envita', innocently masking the vile contents."
 }

@@ -4,11 +4,11 @@
     "is_takeable": true,
     "use": "",
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "The access badge goes soaring through the air, spinning like a tiny ninja star and clattering softly onto the floor.",
+    "taste": "The plastic card tastes faintly of some unknown chemical.  You wonder if it could bad for your health.  You also wonder what sticking it in your mouth means about your mental health.",
+    "touch": "Smooth and cool to the touch, the access badge feels like a small victory in your hand.",
+    "smell": "Taking a quick whiff of the card, you believe you smell impending victory.",
+    "shake": "You whip the card back and forth in your hand.  Nothing exciting happens.",
+    "break_item": "You bend the card completely in half, but it springs back to its original shape immediately.  You try tearing it in half instead, and the most you can manage is making your fingers hurt.",
+    "read": "The badge is blank except for small characters in the corner that read 'AWID26 011 15500'.  This doesn't feel important in any way."
 }

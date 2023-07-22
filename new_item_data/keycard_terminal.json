@@ -1,14 +1,14 @@
 {
     "name": "keycard terminal",
     "description": "the machine that makes access cards to various parts of the facility.",
-    "use": "The receptionist would be mad if I used this.",
+    "use": "There's no way the receptionist is going to sit idly by while I program my own master keycard.  I need to get them to leave somehow.",
     "is_takeable": false,
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "As the intrusive thought of throwing the keycard terminal crosses your mind, you realize you need to be strategic at the moment and dismiss the thought.",
+    "taste": "The metal frame looks oddly tasty, but you remind yourself that you need to stay focused on the goal.",
+    "touch": "You move to touch the frame of the terminal, but remind yourself that strategy and focus is of utmost importance at the moment.",
+    "smell": "There is no distinctive smell coming from the terminal, except perhaps the faint aroma of hidden secrets.",
+    "shake": "You remind yourself to stay focused",
+    "break_item": "You dismiss the thought of breaking the terminal as soon as it enters your mind.  The task you have to complete is far more imporant.",
+    "read": "The terminal is nondescript.  There is no branding, model numbers, or anything resembling letters or numbers anywhere on the device."
 }

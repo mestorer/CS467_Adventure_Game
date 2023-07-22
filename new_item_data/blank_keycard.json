@@ -4,11 +4,11 @@
     "use": "it seems pretty useless right now",
     "is_takeable": true,
     "combine": {"keycard terminal" : "access card"},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "The keycard goes soaring through the air, spinning like a tiny ninja star and clattering softly onto the floor.",
+    "taste": "Why would you even try? It tastes like plain, flavorless plastic. Not very exciting.",
+    "touch": "With a uniformly smooth surface, the keycard feels like a fresh canvas, ready to be told which secrets to unlock.",
+    "smell": "Taking a quick whiff of the card, you smell the key to success.",
+    "shake": "You whip the card back and forth in your hand.  Nothing exciting happens.",
+    "break_item": "You bend the card completely in half, but it springs back to its original shape immediately.  You try tearing it in half instead, and the most you can manage is making your fingers hurt.",
+    "read": "The badge is blank except for small characters in the corner that read 'AWID26 011 15500'.  This doesn't feel important in any way."
 }

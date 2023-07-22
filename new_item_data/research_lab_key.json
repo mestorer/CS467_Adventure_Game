@@ -4,11 +4,11 @@
     "use": "",
     "is_takeable": true,
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "You toss the small metal key onto the floor ahead of you and quickly feel bad about your actions.",
+    "taste": "The key tastes it could unlock some serious scientific knowledge, but you're unsure what that actually means.",
+    "touch": "The key feels smooth all over except for the jagged edges of the teeth.",
+    "smell": "Holding the key up to your face, you take a giant whiff and notice...nothing.  No smell at all.  You're a bit disappointed.",
+    "shake": "Holding the key in your palm, you gently shake it back and forth.  It dances around a bit, but doesn't do anything else.",
+    "break_item": "You don't dare break the key to knowledge, right?  ...well, you tried, but it's too sturdy to even bend.  ",
+    "read": "There are no printed words or letters on the face of the key, but you know you've seen the researchers all carry and use one just like this to access the lab."
 }

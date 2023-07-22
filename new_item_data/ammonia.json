@@ -5,11 +5,11 @@
     "is_takeable": true,
     "combine": {"plastic bottle" : "bottle of ammonia",
                 "bottle of match dust" : "stink bomb"},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "You chuck the bottle and it clatters to the floor.  Luckily, it remains intact.",
+    "taste": "You unscrew the cap and take a small sip, ignoring every part of your brain that is telling you to stop.  It tastes somehwat metallic in a most unpleasant way.",
+    "touch": "You run your fingers over the bottle.  It's a thick, sturdy plastic with a smooth surface.",
+    "smell": "You don't need to do much to catch a whiff once you open the cap.  It smells like a combination of urine, sweat, dead fish, and regret.  Your nose and throat burns a bit.",
+    "shake": "You vigorously shake the large plastic bottle.  The contents slosh around a bit but settle quickly.",
+    "break_item": "",
+    "read": "The label clearly states the contents and associated warnings about inhaling fumes and skin contact.  You're pretty sure those are just suggestions... Right?"
 }

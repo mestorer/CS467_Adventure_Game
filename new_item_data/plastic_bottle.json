@@ -1,15 +1,15 @@
 {
     "name": "plastic bottle",
-    "description": "A small, mostly opaque plastic bottle with a decently sized opening.  The blue and white label reads 'envita', a brand you don't recognize.",
+    "description": "a small, mostly opaque plastic bottle with a decently sized opening.",
     "use": "You screw open the lid of the small plastic bottle and find it completely empty. This would make a great container for mixing something.  You screw the lid back on.",
     "is_takeable": true,
     "combine": {"box of matches" : "bottle of match dust",
                 "ammonia" : "bottle of ammonia"},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "You hurl the empty bottle forward, but air resistance keeps it from going very far.  It ends up a few feet in front of you.  You look around and hope no one noticed.",
+    "taste": "Placing the capped end onto your tongue, you find the plastic to be underwhelmingly tasteless.",
+    "touch": "The plastic bottle feels smooth as you run your finger over it, contrasting sharply with the small, prominent ridges on the cap.",
+    "smell": "You sniff the bottle, but find the plastic has no aroma.  You unscrew the cap, but the empty inside provides nothing different from the exterior.  You screw the cap back on.",
+    "shake": "You shake the empty bottle, its lightweight mass moving easily as you manipulate it.",
+    "break_item": "You squeeze the empty bottle, but it springs back into its original shape immediately.  Probably for the best...this looks like it could be important.",
+    "read": "The blue and white label reads 'envita', a brand you don't recognize."
 }
