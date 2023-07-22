@@ -1,14 +1,14 @@
 {
     "name": "air vent",
-    "description": "an air conditioning vent that's barely hanging on...",
-    "use": "",
+    "description": "a small steel grate in front of a sizeable opening that looks like it could be removed relatively easily.",
+    "use": "The only use this really has is to be taken off.",
     "is_takeable": true,
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "You throw the vent and it clatters loudly to the floor.  Praying that no one comes to check the noise, you get the overwhelming feeling that you should pick it back up quickly.",
+    "taste": "The vent tastes exactly as it looks:  Metallic.  With a hint of dust.",
+    "touch": "The grate feels rugged and sturdy to the touch, like a loyal guardian of a hidden passage.",
+    "smell": "A faint, dusty aroma emanates from the vent and tickles your nose.",
+    "shake": "With considerable effort, you give the vent a good shake.  Nothing exciting happens.",
+    "break_item": "The rigid metal gives no sign of yielding under the pressure of your greatest attempts to bend it.  You're unsure why you even tried.",
+    "read": "The metal surface has no words or distinguishing marks on it to read."
 }

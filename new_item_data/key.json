@@ -1,14 +1,14 @@
 {
     "name": "key",
-    "description": "A rough brass key that's seen some abuse.  It has the words 'supply closet' stamped into the side",
+    "description": "A rough brass key that's seen some abuse.  It has the words 'supply closet' etched into the sides",
     "is_takeable": true,
     "use": "",
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "With a flick of your wrist, you toss the key through the air.  It clinks sharply as it strikes the ground, rattling to rest a few feet away from you.",
+    "taste": "As you stick the brass object into your mouth, you're met with a cold, metallic sensation on your tongue.",
+    "touch": "The brass key is rough and worn, with dulled ridges along where it was initially cut.  Various gashes on both faces suggest its physical condition has never been a concern.",
+    "smell": "You sniff the key and get a faint scent of chemicals from it.  You guess there must be some strong chemicals in the 'supply closet' this key goes to.",
+    "shake": "You shake the key in the palm of your hand but nothing exciting happens.",
+    "break_item": "Taking each end between your fingertips, you try bending the key to no avail.  This seems pretty important anyway, so you should probably keep it intact.",
+    "read": "The words 'supply closet' are crudely etched into each face of the key."
 }

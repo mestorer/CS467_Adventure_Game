@@ -4,11 +4,11 @@
     "use": "This doesn't have much use on it's own.",
     "is_takeable": true,
     "combine": {"ammonia" : "stink bomb"},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "The small bottle sails through the air and bounces lightly on the ground.  Nothing exciting happens but you feel a little less stressed.",
+    "taste": "You dip your finger into the bottle and, pulling out a small sample of the dust within, place it on your tongue.  The overwhelming taste of metal and rotten eggs ellicits immediate feelings of regret.",
+    "touch": "The plastic bottle feels smooth as you run your finger over it, contrasting sharply with the small, prominent ridges on the cap.",
+    "smell": "Unscrewing the cap, you inhale sharply through your nose over the mouth of the bottle.  You're immediately met with a stinging sensation in your nostrils and the pungent smell of rotten eggs.",
+    "shake": "You shake the bottle lightly and hear the particles of match dust dance around inside.",
+    "break_item": "Gripping the bottle one-half in each hand and severely misjuding your own strength, you start to twist the bottle before remembering you have an important task to complete with this.",
+    "read": "The blue and white label reads 'envita'.  You don't know what envita is but it sounds kind of cool."
 }

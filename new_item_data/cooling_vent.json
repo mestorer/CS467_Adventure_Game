@@ -4,11 +4,11 @@
     "use": "",
     "is_takeable": false,
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "Unsure of where the thought came from, you question which part of your brain reasoned that you could throw a built-in feature of a building.",
+    "taste": "Licking the sides of the vent, you're greeted by a clean metal surface that tastes...metallic.  You can't seem to identify any other flavors.",
+    "touch": "The sides of the vent are smooth and cool to the touch.",
+    "smell": "You inhale deeply but receive no sensation of smell. You know the server room is kept meticulously clean, so that makes sense.",
+    "shake": "Despite your efforts the vent - being part of the wall between rooms - cannot be shaken.",
+    "break_item": "The vent is a hole between rooms...there is nothing to break.  You try beating your fist against the sides but are only rewarded with dull thuds.",
+    "read": "There is no conspicious language or lettering on the sides of the vent."
 }

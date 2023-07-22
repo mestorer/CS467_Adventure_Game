@@ -1,14 +1,14 @@
 {
     "name": "silver_key",
-    "description": "a key that opens a door",
+    "description": "a small silver key with a the letter 'A' engraved onto it.",
     "use": "",
     "is_takeable": true,
     "combine": {},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "You hurl the small key away from you.  It emanates a series of tiny fading clinks as it tumbles and comes to a rest.",
+    "taste": "You place the tip of the key onto your tongue and received nothing except for a metallic taste in your mouth.",
+    "touch": "You trace your finger along the well-defined grooves of the 'A' etched onto its face. The rest of the key is smooth and refined.",
+    "smell": "You hold the key up to your nose and inhale.  You think for a moment that it smells faintly of old paper and folders, but you're not sure.",
+    "shake": "You rattle the small key in the palm of your hand.  Nothing happens.",
+    "break_item": "The key is almost too small to get a good grasp with the fingers of both hands. When you try to bend it, you find it to be sturdier than it looks.",
+    "read": "There is a small 'A' engraved onto the key, and nothing else."
 }

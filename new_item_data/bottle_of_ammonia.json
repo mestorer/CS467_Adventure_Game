@@ -4,11 +4,11 @@
     "use": "This doesn't have much use on it's own.",
     "is_takeable": true,
     "combine": {"box of matches" : "stink bomb"},
-    "throw": "throw words go here",
-    "taste": "taste words go here",
-    "touch": "touch words go here",
-    "smell": "smell words go here",
-    "shake": "shake words go here",
-    "break_item": "break words go here",
-    "read": "read words go here"
+    "throw": "The small bottle sails through the air and bounces lightly on the ground.  You can hear the contents slosh for a bit before settling down.",
+    "taste": "You unscrew the cap and take a small sip.  You immediately regret your decision",
+    "touch": "The plastic bottle feels smooth as you run your finger over it, contrasting sharply with the small, prominent ridges on the cap.",
+    "smell": "Removing the cap, you immediately smell the the revolting combination of sweat, urine, fish, and self-loathing.",
+    "shake": "You lightly shake the bottle and the liquid sloshes a bit.  You try a more vigorous shake but get the same result.",
+    "break_item": "You raise your hand to slam the bottle onto the ground, but catch yourself at the last minute.  You have an important task to complete with this.",
+    "read": "The blue and white label reads 'envita'.  You're unsure of what that is, but it sounds kind of refreshing."
 }
