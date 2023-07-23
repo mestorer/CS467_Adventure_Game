@@ -2,7 +2,7 @@
     "name": "Marketing Department N",
     "is_locked": false,
     "key": null,
-    "type": "door",
+    "kind": "door",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You open the door out to marketing and pass through..."

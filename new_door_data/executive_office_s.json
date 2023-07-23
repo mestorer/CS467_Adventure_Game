@@ -2,7 +2,7 @@
     "name": "Executive Office S",
     "is_locked": true,
     "key": "access badge",
-    "type": "elevator",
+    "kind": "elevator",
     "locked_message": "The ominous red circle on the badge reader flashes and chimes to tell you that you'll need an access badge with much higher privileges than your own to get into the executive's office.",
     "unlocked_after_key_message": "You hover the access badge over the red circle, and with a satisfying beep, the circle turns green and the elevator begins to move.",
     "unlocked_message": "You press the button and step through when the doors slide open..."

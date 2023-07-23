@@ -2,7 +2,7 @@
     "name": "Conference Room S",
     "is_locked": false,
     "key": null,
-    "type": "door",
+    "kind": "door",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You open the conference room door slowly, and after checking if anyone is inside, step in..."

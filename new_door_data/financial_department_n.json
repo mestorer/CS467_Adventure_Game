@@ -3,7 +3,7 @@
     "is_locked": false,
     "key": null,
     "locked_message": null,
-    "type": "door",
+    "kind": "door",
     "unlocked_after_key_message": null,
     "unlocked_message": "You walk towards the doorway to finance and open it..."
 }

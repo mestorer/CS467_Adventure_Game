@@ -1,7 +1,7 @@
 from game_object import GameObject
 import sys
 import time
-import constants as const
+import ascii_art.door_animation as door_anim
 
 class Door(GameObject):
     def __init__(self, file_name, data):
@@ -13,7 +13,7 @@ class Door(GameObject):
         self.unlocked_message = data['unlocked_message']
         # 'key' is the item that unlocks the transition to the next room
         self.key = data['key']
-        self.type = data['type']
+        self.kind = data['kind']
         self.opening_count = 0
 
     def try_to_open(self, player):
@@ -40,22 +40,22 @@ class Door(GameObject):
     def animate_door(self, locked = True, key = False):
         sys.stdout.flush()
         if self.type == 'door':
-            app = const.door_approaching
-            at = const.door_at
-            opening = const.door_opening
-            opened = const.door_open
+            app = door_anim.door_approaching
+            at = door_anim.door_at
+            opening = door_anim.door_opening
+            opened = door_anim.door_open
             flash = self.flash_knob
         elif self.type == 'door_badge':
-            app = const.door_badge_approaching
-            at = const.door_badge_at
-            opening = const.door_badge_opening
-            opened = const.door_badge_open
+            app = door_anim.door_badge_approaching
+            at = door_anim.door_badge_at
+            opening = door_anim.door_badge_opening
+            opened = door_anim.door_badge_open
             flash = self.flash_badge_sensor
         elif self.type == 'elevator':
-            app = const.elevator_approaching
-            at = const.elevator_at
-            opening = const.elevator_opening
-            opened = const.elevator_open
+            app = door_anim.elevator_approaching
+            at = door_anim.elevator_at
+            opening = door_anim.elevator_opening
+            opened = door_anim.elevator_open
             flash = self.flash_badge_sensor
         else:
             return
@@ -86,7 +86,7 @@ class Door(GameObject):
         sys.stdout.flush()
 
     def flash_badge_sensor(self, locked, frame_duration=0.1):
-        color = const.colors.RED if locked else const.colors.GREEN
+        color = door_anim.RED if locked else door_anim.GREEN
         for x in range(5):
             sys.stdout.write("\033[u")
             sys.stdout.write(f"{color}\033[6B\033[14C" + '[]')
@@ -94,14 +94,14 @@ class Door(GameObject):
             sys.stdout.flush()
             time.sleep(frame_duration)
             sys.stdout.write("\033[u")
-            sys.stdout.write(f"{const.colors.NOCOLOR}\033[6B\033[14C" + '[]')
+            sys.stdout.write(f"{door_anim.NOCOLOR}\033[6B\033[14C" + '[]')
             sys.stdout.write("\033[9B\033[1C")
             sys.stdout.flush()
             time.sleep(frame_duration)
         sys.stdout.flush()
 
     def flash_knob(self, locked, frame_duration=0.1):
-        color = const.colors.RED if locked else const.colors.GREEN
+        color = door_anim.RED if locked else door_anim.GREEN
         for x in range(5):
             sys.stdout.write("\033[u")
             sys.stdout.write(f"{color}\033[6B\033[10C" + 'O')
@@ -109,7 +109,7 @@ class Door(GameObject):
             sys.stdout.flush()
             time.sleep(frame_duration)
             sys.stdout.write("\033[u")
-            sys.stdout.write(f"{const.colors.NOCOLOR}\033[6B\033[10C" + 'O')
+            sys.stdout.write(f"{door_anim.NOCOLOR}\033[6B\033[10C" + 'O')
             sys.stdout.write("\033[9B\033[1C")
             sys.stdout.flush()
             time.sleep(frame_duration)
