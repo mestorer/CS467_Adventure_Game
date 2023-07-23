@@ -142,7 +142,7 @@ class CommandProcessor(LanguageLibrary):
                 for key2, value2 in current_room.doors.items():
                     if value2 is not None and key2 == key:
                         door = self._get_game_object_by_name(value2, doors_list)
-                        move_player, message = door.try_open_door(player)
+                        move_player, message = door.try_to_open(player)
                         print_text(message)
                         print()
                 if move_player:

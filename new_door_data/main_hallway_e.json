@@ -2,6 +2,7 @@
     "name": "Main Hallway E",
     "is_locked": false,
     "key": null,
+    "kind": "door",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You walk towards the opening to the main hallway and pass through..."

@@ -2,6 +2,7 @@
     "name": "Reception Area W",
     "is_locked": false,
     "key": null,
+    "kind": "door",
     "locked_message": null,
     "unlocked_after_key_message": null,
     "unlocked_message": "You open the door back into reception and walk through..."
