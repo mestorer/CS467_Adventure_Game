@@ -38,6 +38,7 @@ class Door(GameObject):
         return move_player, message
 
     def animate_door(self, locked = True, key = False):
+        sys.stdout.flush()
         if self.type == 'door':
             app = const.door_approaching
             at = const.door_at
