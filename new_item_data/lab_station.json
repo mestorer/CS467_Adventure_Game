@@ -1,0 +1,14 @@
+{
+    "name": "lab station",
+    "description": "The lab station is a marvel of cutting-edge technology and precision engineering. Its sleek surface hosts a myriad of buttons, dials, and digital displays, each serving a specialized purpose in the pursuit of scientific breakthroughs. Nearest you, you spy a [Reference Manual] mounted to the bench with a familiar looking bookmark sticking out.",
+    "use": "You have often been called 'very talented' at your job and hobbies. However, you would not know where to begin when it comes to using this lab station.",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "Throwing the lab station is definitely not a wise decision; it's a complex and expensive piece of equipment that should be treated with care. ",
+    "taste": "Absolutely not! The lab station is not meant for consumption; it's strictly for scientific research.",
+    "touch": "As you run your hands over the smooth, touch-sensitive interface, you feel the power of scientific exploration at your fingertips.",
+    "smell": "The lab station emits a faint odor of warm electronics, a testament to its constant use in various scientific endeavors.",
+    "shake": "While the lab station might appear robust, shaking it recklessly could cause delicate internal components to malfunction.",
+    "break_item": "Deliberately breaking the lab station would be an irreparable loss to the research efforts; it's best to handle it with extreme caution.",
+    "read": "The lab station's digital displays present a wealth of information related to ongoing experiments, data analysis, and operational instructions. The book mounted at the front of the lab station reads [Reference Manual] in big, bold letters."
+}

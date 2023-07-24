@@ -2,7 +2,7 @@
     "name": "Marketing Department",
     "description": "TBD - Marketing Department long description",
     "short_description": "TBD - Marketing Department short description", 
-    "items": ["research_lab_key"],
+    "items": ["lab key"],
     "dropped_items": [] ,
     "directions": "The Marketing Department is connected to the Conference Room to the north, the Research Lab to the east, the Financial Department to the south and the Main Hallway to the west.",
     "locations": {

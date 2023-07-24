@@ -1,0 +1,14 @@
+{
+    "name": "reference manual",
+    "description": "The reference manual is a comprehensive compendium of scientific knowledge, bound in a hardcover with its pages filled with diagrams, formulas, and detailed explanations. Someone has saved their spot on a page titled 'Esterification' using a [Blank Keycard].",
+    "use": "You have no possible reason to use this. It looks incredibly boring and reminds you of the chemistry course you hated in college.",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "The manual is mounted to the lab station and cannot be thrown. It looks critical to the operations of the laboratory.",
+    "taste": "You can taste the knowledge within the pages.",
+    "touch": "The reference manual's cover has a textured finish, inviting you to run your fingers over its embossed title and feel the wealth of knowledge beneath.",
+    "smell": "The pages of the reference manual emit the subtle scent of freshly printed ink and the less subtle scent of an unknown spilled chemical.",
+    "shake": "You can do little more than jostle the pages of the mounted book. When doing this, you noticed that someone made a flipbook of a dog catching a ball on the corners of the pages. How cute.",
+    "break_item": "Damaging or tearing the reference manual would be a disservice to its purpose and the knowledge it imparts. If you really wanted to do some damage, you could take the [blank keycard] that marks someone's page.",
+    "read": "As you begin reading the first page, you nod off like you used to in college. You quickly awake and remember that you were doing something important and don't have the time to do this now."
+}

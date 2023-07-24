@@ -1,8 +1,8 @@
 {
     "name": "Research Lab",
-    "description": "TBD - Research Lab long description",
-    "short_description": "TBD - Research Lab short description", 
-    "items": [],
+    "description": " The Research Lab air is imbued with a mix of anticipation and excitement. The room is spacious, lined with sleek metallic cabinets and pristine white countertops. Shelves brimming with an array of scientific instruments and glassware adorn the walls, hinting at the magnitude of groundbreaking experiments that have transpired here. Dominating the room's center is a state-of-the-art [lab station], a symphony of blinking lights and digital readouts that beckon to be explored. Surrounding the station, the [fume hood] stands tall, a robust sentinel guarding against any hazardous fumes or volatile reactions. Its large, transparent visage allows glimpses of swirling chemical reactions within, igniting curiosity about the clandestine projects undertaken within this laboratory. You can't help but feel a sense of awe and wonderment, knowing that countless discoveries and innovations have originated from this very spot.",
+    "short_description": "The Research Lab is a nexus of scientific ingenuity, featuring a captivating [lab station] and an imposing [fume hood] that exudes an air of mystery.", 
+    "items": ["ammonia", "blank keycard", "fume hood", "lab station", "reference manual"],
     "dropped_items": [] ,
     "directions": "The Research Lab is connected to the Marketing Department to the west.",
     "locations": {
