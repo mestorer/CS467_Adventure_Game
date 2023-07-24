@@ -1,5 +1,5 @@
 from language_library import LanguageLibrary
-from helper_functions import print_text
+from helper_functions import print_text, print_slowly
 import constants
 
 class CommandProcessor(LanguageLibrary):
@@ -333,11 +333,14 @@ class CommandProcessor(LanguageLibrary):
         Prints a help guide for the player describing the commands available 
         to them.
         """
-        print(constants.HELP_GUIDE)
+        print_slowly(constants.HELP_GUIDE, pause=0.0)
+        print()
 
-            
     def execute_command(self, command, player, room_list,
                         item_list, door_list, load_game, save_game):
+        """
+        Executes the command passed in the argument if it is valid.
+        """
         if command[0] == 'look':
             self._describe_location(player, room_list, long_desc=True)
             
@@ -349,56 +352,58 @@ class CommandProcessor(LanguageLibrary):
             self._move_player_to_new_room(destination, player, room_list, 
                                           door_list)
         
-        elif command[0] == 'take':
+        elif command[0] in ['take', 'grab']:
             item_to_take = command[1]
             self._pick_up_item(item_to_take, player, room_list, item_list)
                 
-        elif command[0] == 'use':
-            if len(command) == 2:
+        elif command[0] in ['use', 'combine']:
+            if len(command) == 2 and command[0] == 'use':
                 item_to_use = command[1]
                 self._use_item(item_to_use, player, room_list, item_list)
-            elif len(command) == 4 and command[2] == 'on':
-                self._combine_items(command[1], command[3], player, room_list, item_list)
+            elif len(command) == 4 and (command[2] == 'on' or 
+                                        command[2] == 'with'):
+                self._combine_items(command[1], command[3], player, room_list,
+                                    item_list)
             else:
                 print("Items can't be used like that.\n")
                 
         elif command[0] == 'drop':
             self._drop_item(command[1], player, room_list, item_list)
             
-        elif command[0] == 'throw':
+        elif command[0] in ['throw', 'toss']:
             self._throw_item(command[1], player, room_list, item_list)
             
-        elif command[0] == 'taste':
+        elif command[0] in ['taste', 'lick']:
             self._taste_item(command[1], player, room_list, item_list)
             
-        elif command[0] == 'touch':
+        elif command[0] in ['touch', 'rub', 'feel']:
             self._touch_item(command[1], player, room_list, item_list)
             
-        elif command[0] == 'smell':
+        elif command[0] in ['smell', 'sniff', 'inhale']:
             self._smell_item(command[1], player, room_list, item_list)
             
-        elif command[0] == 'shake':
+        elif command[0] in ['shake', 'rock']:
             self._shake_item(command[1], player, room_list, item_list)
             
-        elif command[0] == 'break':
+        elif command[0] in ['break', 'smash', 'crush']:
             self._break_item(command[1], player, room_list, item_list)
             
         elif command[0] == 'read':
             self._read_item(command[1], player, room_list, item_list)
                 
-        elif command[0] == 'help':
+        elif command[0] in ['help', 'h']:
             self._print_help_guide()
         
-        elif command[0] == 'inventory':
+        elif command[0] in ['inventory', 'i']:
             self._check_inventory(player)
                 
-        elif command[0] == 'savegame':
+        elif command[0] in ['savegame', 'sg', 'save']:
             save_game()
             print("Game saved!\n")
             
-        elif command[0] == 'loadgame':
+        elif command[0] in ['loadgame', 'lg', 'load']:
             load_game(load_saved_game=True)
             print("Game loaded!\n")
             
-        elif command[0] == 'quitgame':
+        elif command[0] in ['quitgame', 'qg', 'quit']:
             exit(0)
