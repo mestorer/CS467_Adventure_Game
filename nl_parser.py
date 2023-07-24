@@ -31,13 +31,16 @@ class NlParser(LanguageLibrary):
     
     # handle 'look' special case
     def _handle_look(self, tokens):
-        if (len(tokens) == 1): # handles 'look' command with no target
-            return tokens
+        if (len(tokens) == 1): # handles 'look' or 'l' command with no target
+            return ['look']
         else:
-            if tokens[1] == "at":
+            if tokens[0] == "look" and tokens[1] == "at":
                 new_command = ['look at'] + tokens[2:]
                 return self._merge_item_names(new_command)
-            if tokens[1] != "at":
+            elif tokens[0] == "inspect" or tokens[0] == "examine":
+                new_command = ['look at'] + tokens[1:]
+                return self._merge_item_names(new_command)
+            else:
                 return None
     
     # combine tokens into item names       
@@ -49,7 +52,7 @@ class NlParser(LanguageLibrary):
         item_name = ""
         
         for i in range(1,len(tokens)):
-            if tokens[i] == "on":       # handles 'use <item> on <item>' once implemented
+            if tokens[i] == "on" or tokens[i] == "with":    
                 modified_tokens.append(item_name[0:len(item_name)-1]) #take off the extra space
                 modified_tokens.append(tokens[i])
                 item_name = ""
@@ -61,7 +64,11 @@ class NlParser(LanguageLibrary):
         return modified_tokens
 
     # keeps track of commands that target items
-    item_commands = ['take', 'use', 'drop', 'throw', 'taste', 'touch', 'smell', 'shake', 'break', 'read']
+    item_commands = ['take', 'use', 'drop', 'throw', 'taste', 
+                     'touch', 'smell', 'shake', 'break', 'read',
+                     'grab', 'combine', 'toss', 'lick', 'rub',
+                     'feel', 'sniff', 'inhale', 'rock', 'smash',
+                     'crush']
 
     # Check if tokenized input matches established language rules
     def parse_command(self, input_text):
@@ -74,14 +81,19 @@ class NlParser(LanguageLibrary):
         
         if command in self.language:
             #special cases
-            if command == 'look':
+            if (command == 'look' or 
+               command == 'inspect' or
+               command == 'examine' or
+               command == 'l'):
                 return self._handle_look(tokens)
+            
             if command == 'go':
                 return self._handle_go(tokens)
+            
             if command in self.item_commands: 
                 return self._merge_item_names(tokens)
             
-            # default - detects correct length command
+            # ddetects correct length command for input with no target
             if len(tokens) == len(self.language[command]) + 1:
                 return tokens
         

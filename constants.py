@@ -6,7 +6,7 @@ SAVED_DATA_DIRS = ['/saved_player_data/', '/saved_room_data/',
 
 # Terminal size
 MIN_TERM_SIZE_COLS = 80
-MIN_TERM_SIZE_LINES = 24
+MIN_TERM_SIZE_LINES = 24 # useful for testing, increase later
 
 # Terminal text colors
 class colors:
@@ -67,26 +67,43 @@ RESULT_TEXT = {"bottle of match dust": "Using the rim of the plastic bottle, you
                "compromising document" : "You look back and forth between the Executive's information and the safe, plugging in various dates, phone numbers - even his social security number - anything that could be used in some form as a combination.  When you try the date he started at the company, the door clicks loudly and squeaks open.  You wonder how much of a tool he really is."
                }
 
-HELP_GUIDE = """-----------------------------------Help Guide-----------------------------------
-look: look around the room you are in
-look at <item>: look at the item in the room you are in or in your inventory
-go <direction>: move in the direction specified
-<direction>: move in the direction specified
-go <location>: move to the location specified
-<location>: move to the location specified
-take <item>: take the item specified
-drop <item>: drop the item specified
-throw <item>: throw the item specified
-use <item>: use the item specified
-use <item> on <item>: combine the two items specified
-taste <item>: taste the item specified
-touch <item>: touch the item specified
-smell <item>: smell the item specified
-shake <item>: shake the item specified
-break <item>: break the item specified
-read <item>: read the item specified
-inventory: print the items in your inventory
-help: print this help guide
-savegame: save the game
-loadgame: load the game
-quitgame: quits the game\n"""
+HELP_GUIDE = """                                   Help Guide
+################################################################################
+# look : look around the room you are in                                       #
+#     Also try : l                                                             #
+# look at <item>: look at the item in the room you are in or in your inventory #
+#     Also try : inspect <item>, examine <item>                                #
+# go <direction>: move in the direction specified                              #
+#     Also try : <direction>                                                   #
+# go <location>: move to the location specified                                #
+#     Also try : <location>                                                    #
+# take <item>: take the item specified                                         #
+#     Also try : grab <item>                                                   #
+# drop <item> : drop the item specified                                        #
+# throw <item> : throw the item specified                                      #
+#     Also try : toss <item>                                                   #
+# use <item> : use the item specified                                          #
+# use <item> on <item> : combine the two items specified                       #
+#     Also try : combine <item> with <item>                                    #
+# taste <item> : taste the item specified                                      #
+#     Also try : lick <item>                                                   #
+# touch <item> : touch the item specified                                      #
+#     Also try : rub <item>, feel <item>                                       #
+# smell <item> : smell the item specified                                      #
+#     Also try : sniff <item>, inhale <item>                                   #
+# shake <item> : shake the item specified                                      #
+#     Also try : rock <item>                                                   #
+# break <item> : break the item specified                                      #
+#     Also try : smash <item>, crush <item>                                    #
+# read <item> : read the item specified                                        #
+# inventory : print the items in your inventory                                #
+#     Also try : i                                                             #
+# help : print this help guide                                                 #
+#     Also try : h                                                             #
+# savegame : save the game                                                     #
+#     Also try : sg, save                                                      #
+# loadgame : load the game                                                     #
+#     Also try : lg, load                                                      #
+# quitgame : quits the game                                                    #
+#     Also try : qg, quit                                                      #
+################################################################################"""
