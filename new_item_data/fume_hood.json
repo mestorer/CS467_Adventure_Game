@@ -1,0 +1,14 @@
+{
+    "name": "fume hood",
+    "description": "The fume hood stands tall, constructed of sturdy stainless steel and tempered glass. Amongst the many jars and containers of chemicals whose names are cryptic to you, you see one labelled [Ammonia].",
+    "use": "You press a button on the side and a fan whirs loudly overhead. Better leave it alone.",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "The fume hood is far too heavy and firmly anchored to the ground to be thrown or moved.",
+    "taste": "As tempting as it may be, tasting the fume hood is ill-advised and potentially dangerous.",
+    "touch": "As you run your fingers along the smooth stainless steel surface and feel the cool glass, you sense the robustness and reliability of the fume hood.",
+    "smell": "You catch faint whiffs of the lingering chemical odors that the fume hood has efficiently filtered, leaving the air around it fresh and safe.",
+    "shake": "The fume hood is not an object to be shaken; doing so might disrupt its sensitive mechanisms.",
+    "break_item": "Attempting to break the fume hood would require a Herculean effort, and it's better left intact for everyone's safety.",
+    "read": "There are no discernible texts or labels on the fume hood; its purpose is evident through its design and location in the research lab."
+}
