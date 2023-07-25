@@ -3,6 +3,8 @@
     "description": "A small plastic bottle of sulfur dust and other minor compounds that you made from scraping the heads off of strike-anywhere matches.",
     "use": "This doesn't have much use on it's own.",
     "is_takeable": true,
+    "parent": [],
+    "hints": [],
     "combine": {"ammonia" : "stink bomb"},
     "throw": "The small bottle sails through the air and bounces lightly on the ground.  Nothing exciting happens but you feel a little less stressed.",
     "taste": "You dip your finger into the bottle and, pulling out a small sample of the dust within, place it on your tongue.  The overwhelming taste of metal and rotten eggs ellicits immediate feelings of regret.",

@@ -1,5 +1,8 @@
 {
     "name": "player", 
     "inventory": [], 
-    "location": "Parking Lot"
+    "location": "Parking Lot",
+    "checkpoint": 1,
+    "prev_checkpoint": 0,
+    "item_flags": []
 }

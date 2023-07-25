@@ -2,6 +2,8 @@
     "name": "access_badge",
     "description": "A NFC-equipped badge that grants access to the most secure rooms in the building.",
     "is_takeable": true,
+    "parent": [],
+    "hints": [],
     "use": "",
     "combine": {},
     "throw": "The access badge goes soaring through the air, spinning like a tiny ninja star and clattering softly onto the floor.",

@@ -3,6 +3,8 @@
     "description": "The PrestoCorp logo is a constant reminder of the place you dread being in every day. It's a sleek design featuring a stylized letter 'P' with a shooting star streaking across it, but you can't help but find it superficial and meaningless. The vibrant blue and silver colors only serve to accentuate the corporate facade that hides the reality of the workplace.",
     "use": "You can't find any use for the company logo in your miserable work life. It's just a symbol of everything you've grown to resent.",
     "is_takeable": false,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "You fantasize about throwing the company logo out the window in a fit of frustration, but you know it won't change anything.",
     "taste": "There's nothing tempting about tasting the company logo. It's as tasteless as your job satisfaction.",

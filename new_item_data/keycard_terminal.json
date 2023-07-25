@@ -3,6 +3,8 @@
     "description": "the machine that makes access cards to various parts of the facility.",
     "use": "There's no way the receptionist is going to sit idly by while I program my own master keycard.  I need to get them to leave somehow.",
     "is_takeable": false,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "As the intrusive thought of throwing the keycard terminal crosses your mind, you realize you need to be strategic at the moment and dismiss the thought.",
     "taste": "The metal frame looks oddly tasty, but you remind yourself that you need to stay focused on the goal.",

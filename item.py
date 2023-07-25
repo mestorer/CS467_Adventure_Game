@@ -7,6 +7,8 @@ class Item(GameObject):
         self.description = item_data['description']
         self.use = item_data['use']
         self.is_takeable = item_data['is_takeable']
+        self.parent = item_data['parent']
+        self.hints = item_data['hints']
         self.combine = item_data['combine']
         self.throw = item_data['throw']
         self.taste = item_data['taste']
@@ -15,3 +17,37 @@ class Item(GameObject):
         self.shake = item_data['shake']
         self.break_item = item_data['break_item']
         self.read = item_data['read']
+        
+    def _get_game_object_by_name(self, name, obj_list):
+        """
+        Returns the actual game object with the matching name attribute or
+        None if there's no match.
+        """
+        for obj in obj_list:
+            if obj.name == name:
+                return obj
+            
+    def _remove_last_sentence(self, input_string):
+        # Split the string into sentences using the period ('.') as the separator
+        sentences = input_string.split('.')
+
+        # Check if there is more than one sentence in the string
+        if len(sentences) > 1:
+            # Reconstruct the string without the last sentence
+            result_string = '.'.join(sentences[:-2]).strip() + '.'
+            return result_string
+        else:
+            # If there is only one sentence or no sentence, return the original string
+            return input_string
+
+            
+    def remove_hints(self, item_list):
+        if self.parent is not None:
+            for item in self.parent:
+                parent_obj = self._get_game_object_by_name(item, item_list)
+                for attribute in parent_obj.hints:
+                    current_value = getattr(parent_obj, attribute)
+                    new_value = self._remove_last_sentence(current_value)
+                    setattr(parent_obj, attribute, new_value)
+                parent_obj.hints = []
+                

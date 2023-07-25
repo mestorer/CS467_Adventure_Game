@@ -49,6 +49,10 @@ class CommandProcessor(LanguageLibrary):
         if item is None or (item_name not in room.items and item_name not in room.dropped_items):
             print(f"There is no {item_name} here.\n")
         elif item.is_takeable and (item_name in room.items or item_name in room.dropped_items):
+            if item_name in room.items:
+                # item is only added to item_flags when it comes from room.items 
+                player.item_flags.append(item_name)
+                item.remove_hints(item_list) 
             self._transfer_room_item_to_player(player.location, item_name, player, room_list)
             print(f"You picked up the {item_name}.\n")
         else:
