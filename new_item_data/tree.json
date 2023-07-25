@@ -1,0 +1,14 @@
+{
+    "name": "tree",
+    "description": "A large tree stands guard next to the entrance to the bulding. It provides shade to the entrance to the buiding and the company logo",
+    "use": "The tree is too large to be used directly, but you can lean against it for a moment of rest.",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "You can't throw the tree! It's far too heavy and firmly rooted.",
+    "taste": "Tasting the tree's bark would not be a wise decision. It's not meant for consumption.",
+    "touch": "As you touch the tree, you feel the rough texture of its bark under your fingers.",
+    "smell": "The tree emanates a faint, earthy aroma, typical of a healthy tree.",
+    "shake": "You shake the tree, but nothing significant happens. The leaves rustle softly.",
+    "break_item": "You can try to break a branch off the tree, but it proves to be sturdy and doesn't break easily.",
+    "read": "There are no readable inscriptions on the tree."
+}

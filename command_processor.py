@@ -35,7 +35,7 @@ class CommandProcessor(LanguageLibrary):
         if item_name in location.items or item_name in location.dropped_items \
                 or item_name in player.inventory:
             item = self._get_game_object_by_name(item_name, item_list)
-            print(item.description + '\n')
+            print_text(item.description + '\n')
         else:
             print('There is no ' + item_name + ' here.\n')
     
