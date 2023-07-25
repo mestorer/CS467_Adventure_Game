@@ -1,0 +1,14 @@
+{
+    "name": "deleted emails",
+    "description": "A stack of printed emails that no longer exists on the server.",
+    "use": "You can't really use these right now.  You should probably wait to show the Executive and clear your name.",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "With a swift motion, you throw the pile of deleted emails, causing them to scatter and flutter like confetti before cascading to the ground. They lie there, remnants of a hidden past.",
+    "taste": "In a puzzling move, you taste the deleted emails, only to realize they have no discernible taste. They remain as intangible as they were in the digital realm.",
+    "touch": "With a touch, you realize that the deleted emails are intangible, beyond the realm of physical interaction. They exist only as bits and bytes in the digital void.",
+    "smell": "Deleted emails exist in the realm of the digital, devoid of any discernible scent. They remain intangible and beyond the reach of olfactory perception.", 
+    "shake": "Deleted emails exist in the intangible realm of digital communication and do not respond to physical actions such as shaking. They remain beyond the reach of tactile interaction.",
+    "break_item": "Deleted emails exist in the digital realm and cannot be physically broken. Their impact lies in the realm of data and information, making them impervious to physical actions.",
+    "read": "TBD!!!"
+}

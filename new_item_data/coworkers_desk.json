@@ -1,0 +1,14 @@
+{
+    "name": "coworker's desk",
+    "description": "Your coworker's desk is similar to your own, except he doesn't have any personal effects save for one wallet-sized photo of your coworker and his family taped to one of his monitors.  They look a little too happy.",
+    "use": "You don't even want to do your own work right now, are you really going to do someone else's?",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "",
+    "taste": "With a touch of mischief, you taste your coworker's desk, but it's nothing more than the remnants of their morning snack and a subtle hint of their perfume or cologne.",
+    "touch": "You touch your coworker's desk, feeling the cluttered surface beneath your hand. Papers, pens, and personal artifacts give it a unique character, reflecting its owner's personality.",
+    "smell": "The scent of your coworker's desk varies depending on their habits and preferences. It may carry the aroma of coffee, perfume, or even a hint of their lunch.",
+    "shake": "Your coworker's desk may reveal a faint rustle or clinking sound as you shake it, indicating the presence of loose items or scattered office supplies on its surface.",
+    "break_item": "Breaking your coworker's desk would be an act of unnecessary destruction. It's best to respect personal spaces and maintain a harmonious office atmosphere.",
+    "read": "Examining your coworker's desk offers no text to read. It's a personal workspace that reveals little beyond their organizational habits and personal items."
+}
