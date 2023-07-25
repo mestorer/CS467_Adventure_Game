@@ -1,8 +1,8 @@
 {
     "name": "Reception Area",
-    "description": "The Reception Area of PrestoCorp exudes a professional and efficient atmosphere, with polished marble floors, contemporary decor, and a sleek desk manned by a diligent receptionist. The room is well-organized, featuring a waiting area with plush leather couches and a selection of business journals. Access to certain areas is closely monitored through a high-tech Keycard Terminal. As you glance around the room, your keen eye catches something unexpected—a key lying inconspicuously on the floor near the desk. It's a curious find, and you can't shake the feeling that it may come in handy. The receptionist remains focused on her duties, unaware of your observation.",
+    "description": "The Reception Area of PrestoCorp exudes a professional and efficient atmosphere, with polished marble floors, contemporary decor, and a sleek desk manned by a diligent receptionist. The room is well-organized, featuring a waiting area with plush leather couches and a selection of business journals. Access to certain areas is closely monitored through a high-tech [Keycard Terminal].",
     "short_description": "The receptionist is busy answering the phones.\n", 
-    "items": ["key", "ammonia", "box of matches", "plastic bottle", "stink bomb", "blank keycard", "keycard terminal"],
+    "items": ["keycard terminal"],
     "dropped_items": [] ,
     "directions": "The Reception Area is connected to the Main Hallway to the north, the Financial Department to the east, the Parking Lot to the south and a Supply Closet to the west.",
     "locations": {
