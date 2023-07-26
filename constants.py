@@ -64,7 +64,7 @@ RESULT_TEXT = {"bottle of match dust": "Using the rim of the plastic bottle, you
                "bottle of ammonia" : "You pour the ammonia into the plastic bottle.  The noxious fumes begin to make your eyes water before you quickly close the lid.",
                "stink bomb" : "You combine the items in the plastic bottle and quickly replace the lid, but not before you catch a whiff of the foul, gut-wrenching reaction occurring within.  This will undoubtedly clear any room.",
                "access card" : "You swipe the access card through the card reader.  The light turns green and the door unlocks with a click.",
-               "deleted emails" : "You stick the flash drive into the first available port on the server rack. With your superior drag and drop skills, you are able to locate the missing emails and transfer them to the flash drive.",
+               "deleted emails" : "You stick the flash drive into the first available port on the server rack. With your superior drag and drop skills, you are able to locate the missing emails from your coworker's computer and transfer them to the flash drive.",
                "compromising document" : "You look back and forth between the Executive's information and the safe, plugging in various dates, phone numbers - even his social security number - anything that could be used in some form as a combination.  When you try the date he started at the company, the door clicks loudly and squeaks open.  You wonder how much of a tool he really is."
                }
 

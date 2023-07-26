@@ -1,8 +1,8 @@
 {
     "name": "Conference Room",
-    "description": "TBD - Conference Room long description",
-    "short_description": "TBD - Conference Room short description", 
-    "items": [],
+    "description": "The Conference Room is where decisions are made, ideas are exchanged, and collaborations are born. The room exudes an air of professionalism and sophistication, evident from the polished wooden table that stretches across the center, surrounded by comfortable, cushioned chairs. At the front of the room, standing tall, is a sleek [podium], its presence commanding attention during presentations and speeches. Near the entrance, you notice a [custodian cart], a practical reminder of the dedicated staff ensuring the room's immaculate state. Stacked with cleaning supplies and neatly organized equipment, the cart stands ready to swiftly tend to any unforeseen spills or mishaps, maintaining the room's pristine ambiance. Large windows adorned with heavy curtains offer a view of the outside world when desired, but can be drawn shut for presentations requiring complete focus. The Conference Room strikes the perfect balance between formality and comfort, making it an ideal space for important meetings, brainstorming sessions, and forging connections that propel the corporate machinery forward.",
+    "short_description": "The Conference Room features a prominent [podium] for commanding presentations, and a [custodian cart] ensuring a spotless environment for productive meetings.", 
+    "items": ["supply key", "podium", "meeting notes", "custodian cart"],
     "dropped_items": [] ,
     "directions": "The Conference Room is connected to the Marketing Department to the south.",
     "locations": {

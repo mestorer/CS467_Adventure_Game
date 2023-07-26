@@ -1,0 +1,16 @@
+{
+    "name": "custodian cart",
+    "description": "The custodian cart is a utilitarian and mobile tool, laden with cleaning supplies and equipment. It features shelves, compartments, and hooks to accommodate various cleaning tools and accessories. A [supply key] hangs from a small hook on the side of the cart.",
+    "use": "You are terrible at cleaning. Better not try. ",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description", "shake"],
+    "combine": {},
+    "throw": "Throwing the custodian cart would be an impractical and disrespectful action, as it is an essential asset for the upkeep of the office environment.",
+    "taste": "The custodian cart is not meant for tasting, and its purpose is entirely unrelated to culinary experiences.",
+    "touch": "As you run your hands along the sturdy handles and shelves of the custodian cart, you feel the practicality and organization it offers to the custodial staff.",
+    "smell": "The custodian cart smells of various cleaning supplies that can probably harm you if you keep smelling them.",
+    "shake": "Giving the custodian cart a shake confirms its robust construction and reliability in supporting the custodial staff's efforts. The [supply key] jingles as you shake the cart.",
+    "break_item": "Attempting to break the custodian cart would hinder the custodial team's ability to maintain the office environment efficiently.",
+    "read": "While there are no texts or labels on the custodian cart itself, its significance is evident through the cleanliness it helps maintain and the impact of a well-kept office environment on the corporate setting."
+}
