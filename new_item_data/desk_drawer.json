@@ -1,0 +1,16 @@
+{
+    "name": "desk drawer",
+    "description": "The desk drawer is a modest yet functional compartment tucked neatly into the wooden surface of the office desk. It slides open smoothly, revealing a treasure trove of pens, pencils and chewing gum. For the first time in weeks, you notice the [flash drive] that you thought you lost.",
+    "use": "Sliding the desk drawer in and out of your desk generates a small squeek. Everytime you hear it you are drawn one step closer to madness.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description"],
+    "combine": {},
+    "throw": "",
+    "taste": "You certainly don't want to taste the desk drawer; it is coated with dust and not meant for consumption.",
+    "touch": "Running your fingers along the smooth handle and interior of the desk drawer, you sense a touch of professionalism and orderliness.",
+    "smell": "The faint scent of paper, ink, and chewing gum wafts toward your nose. You are reminded of your days in grade school. You wonder to yourself when lunchtime is...",
+    "shake": "Gently shaking the desk drawer, you hear a subtle rattle of stationery. What else did you expect?",
+    "break_item": "Attempting to break the desk drawer would be an unnecessary act of destruction, and it serves a useful purpose in the corporate office.",
+    "read": "You look for something to read in the drawer. Carved into the bottom are the words 'Garrett waz here'. How rude."
+}

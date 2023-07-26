@@ -2,7 +2,7 @@
     "name": "IT Room",
     "description": "TBD - IT Room long description",
     "short_description": "TBD - IT Room short description", 
-    "items": ["access_badge"],
+    "items": ["access badge"],
     "dropped_items": [] ,
     "directions": "The IT Room is connected to the Main Hallway to the east and the Server Room to the west.",
     "locations": {

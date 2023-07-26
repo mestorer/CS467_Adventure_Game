@@ -1,9 +1,9 @@
 {
     "name": "Supply Closet N",
-    "is_locked": true,
+    "is_locked": false,
     "key": null,
     "kind": null,
-    "locked_message": "You inspect the cooling vent.  It doesn't look like it would take much to get the grate off....",
+    "locked_message": null,
     "unlocked_after_key_message": null,
-    "unlocked_message": null
+    "unlocked_message": "It was a tight squeeze through the vent, but you managed to fit. "
 }

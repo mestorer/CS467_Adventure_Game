@@ -1,7 +1,7 @@
 {
-    "name": "cooling_vent",
-    "description": "a cooling vent for the server room",
-    "use": "",
+    "name": "cooling vent",
+    "description": "This vent allows airflow to move inside the room. It is a standard vent, with a metal grate on the outside and a metal box on the inside. ",
+    "use": "You can easily climb through to get back to the [Supply Closet].",
     "is_takeable": false,
     "parent": [],
     "hints": [],

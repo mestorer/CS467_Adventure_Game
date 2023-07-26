@@ -1,8 +1,8 @@
 {
     "name": "Server Room",
-    "description": "TBD - Server Room long description",
-    "short_description": "TBD - Server Room short description", 
-    "items": ["cooling_vent"],
+    "description": "The Server Room is a confined space humming with the symphony of whirring fans and the soft glow of blinking LEDs. The a large [server rack] that stretches towards the ceiling. The [cooling vent], which you just emerged from, provides a constant rush of chilled air, maintaining the delicate balance required to preserve the servers' optimal performance. The air carries a faint scent of ozone, mingling with the distinct hum of electrical components. Dimly lit, the Server Room exudes an air of secrecy and importance, leaving you with a sense of the critical data and processes it guards.",
+    "short_description": "The Server Room is a technological marvel dominated by a towering [server rack]. A [cooling vent], just exited, hums steadily, keeping the environment optimal for the network's lifeblood.", 
+    "items": ["cooling vent", "server rack"],
     "dropped_items": [] ,
     "directions": "The Server Room is connected to the IT Room to the east.",
     "locations": {

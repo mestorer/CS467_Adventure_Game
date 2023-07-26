@@ -1,9 +1,9 @@
 {
     "name": "Server Room S",
     "is_locked": true,
-    "key": "air vent",
+    "key": "screwdriver",
     "kind": null,
     "locked_message": "You'll need to remove the vent before you have any chance of squeezing through.",
-    "unlocked_after_key_message": "After prying off the vent, you exhale completely and barely manage to push yourself through into the server room... ",
-    "unlocked_message": "You exhale all of your breath and push yourself through the small opening..."
+    "unlocked_after_key_message": "After prying off the vent with the screwdriver, you exhale completely and barely manage to push yourself through into the server room... ",
+    "unlocked_message": "You exhale all of your breath and push yourself through the small opening of the vent..."
 }
