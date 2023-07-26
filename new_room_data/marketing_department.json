@@ -1,8 +1,8 @@
 {
     "name": "Marketing Department",
-    "description": "TBD - Marketing Department long description",
-    "short_description": "TBD - Marketing Department short description", 
-    "items": ["lab key"],
+    "description": "Welcome to the bustling hive of creativity and strategy known as the Marketing Department. The moment you step in, you're greeted by the lively atmosphere of innovative minds at work. The room is adorned with colorful posters and charts, reflecting ongoing marketing campaigns and inspiring new ideas. [My desk] sits in the corner behind a pale grey cubicle awaiting my presence to accomplish the tasks of the day. Across from you stands the beloved [water cooler]; a hub of casual conversations and moments of respite. It's a vital social gathering spot, where colleagues exchange thoughts, laughter, and perhaps some friendly office gossip. The constant low murmur of discussions and the occasional bursts of laughter fill the air, creating an ambiance that nurtures both collaboration and camaraderie.",
+    "short_description": "The Marketing Department is home to [my desk] and is a whirlwind of creativity. The oasis of the [water cooler] is a welcome respite from the daily grind.", 
+    "items": ["flash drive", "my desk", "desk drawer", "water cooler", "notice of disciplinary action"],
     "dropped_items": [] ,
     "directions": "The Marketing Department is connected to the Conference Room to the north, the Research Lab to the east, the Financial Department to the south and the Main Hallway to the west.",
     "locations": {

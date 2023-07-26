@@ -1,0 +1,16 @@
+{
+    "name": "water cooler",
+    "description": "The water cooler is a common fixture in corporate offices, providing a refreshing oasis amidst the hustle and bustle of the workplace. Its tall, freestanding design houses a water dispenser and a storage compartment for cups.",
+    "use": "You take a small cup and fill it to the brim with cold, refreshing water. You drink it with one big gulp and feel its refreshment throughout your body.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {},
+    "throw": "Throwing the water cooler is not feasible; its substantial size and weight make it an immovable object. It would also make everyone very sad.",
+    "taste": "The water from the cooler is clear and refreshing, offering a crisp and pure taste that quenches your thirst.",
+    "touch": "Running your hand along the smooth surface of the water cooler, you feel the chill radiating from the reservoir, promising a refreshing drink.",
+    "smell": "The water cooler has no distinctive smell; it maintains its neutrality to ensure the purity of the water it dispenses.",
+    "shake": "While you can give the water cooler a gentle shake, it won't reveal any surprises; its purpose remains straightforward.",
+    "break_item": "Breaking the water cooler would not only create a mess but also deprive the office of its vital hydration station.",
+    "read": "There are no texts or labels to read on the water cooler, as its operation is intuitive, offering only the refreshing reward of hydration."
+}

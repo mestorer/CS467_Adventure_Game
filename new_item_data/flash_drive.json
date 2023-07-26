@@ -1,0 +1,16 @@
+{
+    "name": "flash drive",
+    "description": "The flash drive is a sleek and portable data storage device, no larger than your thumb. Its smooth casing conceals a vast digital capacity, making it an indispensable tool for transferring and safeguarding important data.",
+    "use": "The flash drive serves as a portable repository for digital information, allowing you to save, access, and transfer files with ease.",
+    "is_takeable": true,
+    "parent": ["desk drawer"],
+    "hints": [],
+    "combine": {"server rack" : "deleted emails"},
+    "throw": "Despite the fact mishandling could lead to data loss or damage, you toss the flash drive on the ground. You should really recycle your e-waste.",
+    "taste": "It has a slight metallic flavor. You can't taste grandma's recipes stored within.",
+    "touch": "The smooth surface of the flash drive invites your touch, and you feel the cool, lightweight texture of the device between your fingertips.",
+    "smell": "The flash drive has no discernible odor; its minimalist design focuses solely on its functional purpose.",
+    "shake": "Shaking the flash drive will yield no significant results; its silent data storage capabilities are not influenced by movement.",
+    "break_item": "Deliberately breaking the flash drive would result in data loss and render it useless for future data storage. You will probably need this at some point.",
+    "read": "Unfortunately, you can't read the contents directly."
+}

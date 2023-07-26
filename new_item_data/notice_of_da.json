@@ -1,0 +1,16 @@
+{
+    "name": "notice of disciplinary action",
+    "description": "story missing",
+    "use": "You can't really use this right now, but you can read it.",
+    "is_takeable": true,
+    "parent": ["my desk"],
+    "hints": [],
+    "combine": {},
+    "throw": "As you throw the notice of disciplinary action, it spins through the air, its presence a reminder of past mistakes that never happened. It lands with a quiet thud, lying on the ground as a symbol of consequences.",
+    "taste": "You give in to curiosity and taste the notice of disciplinary action, but it's simply the taste of ink and paper. There's no hint of consequences in its flavor.",
+    "touch": "As you touch the notice of disciplinary action, the paper feels crisp and official in your hand. It serves as a tangible reminder of consequences and the weight of authority.",
+    "smell": "The notice of disciplinary action carries no distinct scent. It's simply paper and ink, offering no olfactory hints beyond the familiar odor of printed documents.",
+    "shake": "The notice of disciplinary action remains still and silent when shaken, holding its ground as a reminder of consequences and the weight of its content.",
+    "break_item": "Breaking the notice of disciplinary action doesn't alter the consequences it represents. It's a symbolic reminder that actions have repercussions, even if the physical document is damaged.",
+    "read": "story missing"
+}

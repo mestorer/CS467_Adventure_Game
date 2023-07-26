@@ -1,0 +1,16 @@
+{
+    "name": "screwdriver",
+    "description": "The screwdriver is a versatile hand tool, featuring a sturdy handle and a metallic shaft with a flat or Phillips head at the tip. Its functional design allows for easy grip and efficient application of torque when dealing with screws and fasteners.",
+    "use": "The screwdriver is an indispensable tool for loosening or tightening screws, making it essential for assembling furniture, repairing appliances, and various other tasks that involve fasteners.",
+    "is_takeable": true,
+    "parent": ["flower pot"],
+    "hints": [],
+    "combine": {},
+    "throw": "In a rather reckless act, you lob the screwdriver in the air and it hits the ground some distance away. It would be better to use it for its intended purpose rather than as a projectile.",
+    "taste": "It should go without saying that the screwdriver is not meant to be tasted; its metallic components are not fit for consumption.",
+    "touch": "As you run your fingers along the textured handle of the screwdriver, you feel the firm grip it offers, instilling confidence in its use.",
+    "smell": "The screwdriver emits no distinctive odor, preserving its utilitarian essence without any aromatic distractions.",
+    "shake": "Giving the screwdriver a shake reveals no surprises; it's a solid and functional tool, true to its purpose.",
+    "break_item": "While it's technically possible to break the screwdriver with enough force, doing so would render it useless and defeat its practicality.",
+    "read": "There are no texts or labels on the screwdriver itself, but its functionality is evident through its design and the tasks it assists in completing."
+}

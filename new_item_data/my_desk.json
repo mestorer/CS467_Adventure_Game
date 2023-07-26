@@ -1,0 +1,16 @@
+{
+    "name": "my desk",
+    "description": "Your desk is a grayish tan with a gray flecked pattern that instills a sense of obedience and despair.  Your work computer sits on top, and an array of personal items litter the surface around it. It has one small [desk drawer] to hold various supplies. A new addition to your desk is a [Notice of Disciplinary Action] that has been placed on its center to draw your attention towards it.",
+    "use": "You have some more important things to do at the moment than work.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description", "read"],
+    "combine": {},
+    "throw": "",
+    "taste": "You take a quick taste of the desk's surface, but it's merely a mix of wood, varnish, and perhaps a hint of lingering coffee. It's a taste of productivity and routine.",
+    "touch": "Your hand glides along the smooth surface of the desk, the polished wood beneath your fingertips providing a sense of stability. It's a solid anchor in the midst of the office chaos.",
+    "smell": "As you take a sniff of the desk's surface, you detect a subtle aroma of wood, mingled with the faint scent of cleaning products and the lingering essence of productivity.",
+    "shake": "Shaking the desk produces no discernible sound or movement. It's a solid and reliable piece of office furniture, steadfast and unmoved by such actions.",
+    "break_item": "Breaking the desk would serve no significant purpose beyond causing damage to the office environment. It's a solid and functional piece of furniture that should be respected.",
+    "read": "The desk itself has nothing written on it. It is a functional workspace where documents and tools are organized. Maybe you should read the [Notice of Disciplinary Action] since it is likely much better reading material."
+}
