@@ -3,6 +3,8 @@
     "description": "a small, mostly opaque plastic bottle with a decently sized opening.",
     "use": "You screw open the lid of the small plastic bottle and find it completely empty. This would make a great container for mixing something.  You screw the lid back on.",
     "is_takeable": true,
+    "parent": [],
+    "hints": [],
     "combine": {"box of matches" : "bottle of match dust",
                 "ammonia" : "bottle of ammonia"},
     "throw": "You hurl the empty bottle forward, but air resistance keeps it from going very far.  It ends up a few feet in front of you.  You look around and hope no one noticed.",

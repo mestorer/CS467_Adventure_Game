@@ -2,6 +2,8 @@
     "name": "key",
     "description": "A rough brass key that's seen some abuse.  It has the words 'supply closet' etched into the sides",
     "is_takeable": true,
+    "parent": [],
+    "hints": [],
     "use": "",
     "combine": {},
     "throw": "With a flick of your wrist, you toss the key through the air.  It clinks sharply as it strikes the ground, rattling to rest a few feet away from you.",

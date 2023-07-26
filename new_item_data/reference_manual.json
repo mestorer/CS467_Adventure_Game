@@ -1,8 +1,10 @@
 {
     "name": "reference manual",
-    "description": "The reference manual is a comprehensive compendium of scientific knowledge, bound in a hardcover with its pages filled with diagrams, formulas, and detailed explanations. Someone has saved their spot on a page titled 'Esterification' using a [Blank Keycard].",
+    "description": "The reference manual is a comprehensive compendium of scientific knowledge, bound in a hardcover with its pages filled with diagrams, formulas, and detailed explanations. Someone has saved their spot on a page titled 'Esterification' using a [blank keycard].",
     "use": "You have no possible reason to use this. It looks incredibly boring and reminds you of the chemistry course you hated in college.",
     "is_takeable": false,
+    "parent": [],
+    "hints": ["description", "break_item"],
     "combine": {},
     "throw": "The manual is mounted to the lab station and cannot be thrown. It looks critical to the operations of the laboratory.",
     "taste": "You can taste the knowledge within the pages.",

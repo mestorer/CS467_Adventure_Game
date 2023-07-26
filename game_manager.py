@@ -4,6 +4,7 @@ import constants
 from room import Room
 from item import Item
 from door import Door
+from story_handler import StoryHandler
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
@@ -16,6 +17,7 @@ class GameManager:
         self.saved_data_dirs = constants.SAVED_DATA_DIRS
         self.parser = NlParser() # instance allows for potential adding/ removing from language rules
         self.command_processor = CommandProcessor()
+        self.story_handler = StoryHandler()
         self.player = None
         self.room_list = []
         self.item_list = []
@@ -124,6 +126,13 @@ class GameManager:
 
     def show_intro(self):
         print_slowly(constants.GAME_INTRO, pause=0.05)
+        
+    def update_game_state(self, player):
+        """
+        Display story if player has reached a new checkpoint.
+        Update item descriptions if player has picked up a key item
+        """
+        self.story_handler.check_story(player)
 
     def start_game(self):
         # Some ASCII art about the game or a basic despcription should go here.
@@ -166,6 +175,7 @@ class GameManager:
         print() # blank line       
         #os.system('clear')  # Clear screen       
         while True:
+            self.update_game_state(self.player)
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:

@@ -3,6 +3,8 @@
     "description": "a cooling vent for the server room",
     "use": "",
     "is_takeable": false,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "Unsure of where the thought came from, you question which part of your brain reasoned that you could throw a built-in feature of a building.",
     "taste": "Licking the sides of the vent, you're greeted by a clean metal surface that tastes...metallic.  You can't seem to identify any other flavors.",

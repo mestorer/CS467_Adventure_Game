@@ -6,3 +6,6 @@ class Player(GameObject):
         self.name = player_data['name']
         self.inventory = player_data["inventory"]
         self.location = player_data["location"]
+        self.checkpoint = player_data["checkpoint"]
+        self.prev_checkpoint = player_data["prev_checkpoint"]
+        self.item_flags = player_data["item_flags"]

@@ -3,6 +3,8 @@
     "description": "A stack of printed emails that no longer exists on the server.",
     "use": "You can't really use these right now.  You should probably wait to show the Executive and clear your name.",
     "is_takeable": false,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "With a swift motion, you throw the pile of deleted emails, causing them to scatter and flutter like confetti before cascading to the ground. They lie there, remnants of a hidden past.",
     "taste": "In a puzzling move, you taste the deleted emails, only to realize they have no discernible taste. They remain as intangible as they were in the digital realm.",

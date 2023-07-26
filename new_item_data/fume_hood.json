@@ -3,6 +3,8 @@
     "description": "The fume hood stands tall, constructed of sturdy stainless steel and tempered glass. Amongst the many jars and containers of chemicals whose names are cryptic to you, you see one labelled [Ammonia].",
     "use": "You press a button on the side and a fan whirs loudly overhead. Better leave it alone.",
     "is_takeable": false,
+    "parent": [],
+    "hints": ["description"],
     "combine": {},
     "throw": "The fume hood is far too heavy and firmly anchored to the ground to be thrown or moved.",
     "taste": "As tempting as it may be, tasting the fume hood is ill-advised and potentially dangerous.",

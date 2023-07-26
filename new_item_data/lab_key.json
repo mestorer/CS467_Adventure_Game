@@ -3,6 +3,8 @@
     "description": "A shiny metal key that opens the [Research Lab].",
     "use": "This doesn't have any use on it's own, but you know it can open the [Research Lab].",
     "is_takeable": true,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "You toss the small metal key onto the floor ahead of you and quickly feel bad about your actions.",
     "taste": "The key tastes it could unlock some serious scientific knowledge, but you're unsure what that actually means.",

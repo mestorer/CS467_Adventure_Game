@@ -3,6 +3,8 @@
     "description": "A large tree stands guard next to the entrance to the bulding. It provides shade to the entrance to the buiding and the company logo",
     "use": "The tree is too large to be used directly, but you can lean against it for a moment of rest.",
     "is_takeable": false,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "You can't throw the tree! It's far too heavy and firmly rooted.",
     "taste": "Tasting the tree's bark would not be a wise decision. It's not meant for consumption.",

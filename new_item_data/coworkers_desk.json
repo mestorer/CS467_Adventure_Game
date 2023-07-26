@@ -3,6 +3,8 @@
     "description": "Your coworker's desk is similar to your own, except he doesn't have any personal effects save for one wallet-sized photo of your coworker and his family taped to one of his monitors.  They look a little too happy.",
     "use": "You don't even want to do your own work right now, are you really going to do someone else's?",
     "is_takeable": false,
+    "parent": [],
+    "hints": [],
     "combine": {},
     "throw": "",
     "taste": "With a touch of mischief, you taste your coworker's desk, but it's nothing more than the remnants of their morning snack and a subtle hint of their perfume or cologne.",
