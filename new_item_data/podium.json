@@ -1,0 +1,16 @@
+{
+    "name": "podium",
+    "description": "The podium stands tall and dignified, its polished wooden surface exuding an aura of authority and confidence. It features a slanted top with a small lip to hold notes and documents securely during speeches and presentations. On top of the podium, you see some [meeting notes] that someone left behind.",
+    "use": "The podium is a key fixture for public speaking events, conferences, and presentations. It provides a focal point for speakers, lending them a sense of command and professionalism.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description", "read", "shake"],
+    "combine": {},
+    "throw": "Throwing the podium would be an inappropriate and disruptive action, as it serves a vital function during formal events.",
+    "taste": "The podium is not meant for tasting; it's a piece of furniture designed for presentations, not culinary experiences.",
+    "touch": "As you run your fingers along the smooth, polished surface of the podium, you can feel the craftsmanship and the decades of speeches that have graced its stand.",
+    "smell": "The podium carries a faint scent of wood polish, a testament to the effort to maintain its elegant appearance.",
+    "shake": "Giving the podium a gentle shake, you find it to be steady and stable, reassuring speakers of its reliability. The [meeting notes] become jostled.",
+    "break_item": "Deliberately breaking the podium would be an act of disrespect, considering its importance during formal events and presentations.",
+    "read": "The podium itself has no text that can be read. The [meeting notes] left here by someone can be read."
+}

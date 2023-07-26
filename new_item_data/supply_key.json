@@ -1,10 +1,10 @@
 {
-    "name": "key",
+    "name": "supply key",
     "description": "A rough brass key that's seen some abuse.  It has the words 'supply closet' etched into the sides",
     "is_takeable": true,
-    "parent": [],
+    "parent": ["custodian cart"],
     "hints": [],
-    "use": "",
+    "use": "This doesn't have any use on it's own, but you know it can open the Supply Closet.",
     "combine": {},
     "throw": "With a flick of your wrist, you toss the key through the air.  It clinks sharply as it strikes the ground, rattling to rest a few feet away from you.",
     "taste": "As you stick the brass object into your mouth, you're met with a cold, metallic sensation on your tongue.",

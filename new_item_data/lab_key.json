@@ -1,7 +1,7 @@
 {
     "name": "lab key",
     "description": "A shiny metal key that opens the [Research Lab].",
-    "use": "This doesn't have any use on it's own, but you know it can open the [Research Lab].",
+    "use": "This doesn't have any use on it's own, but you know it can open the Research Lab.",
     "is_takeable": true,
     "parent": [],
     "hints": [],

@@ -1,0 +1,16 @@
+{
+    "name": "meeting notes",
+    "description": "this is some missing story text",
+    "use": "You could make a paper airplane, but you need this evidence.",
+    "is_takeable": true,
+    "parent": ["podium"],
+    "hints": [],
+    "combine": {},
+    "throw": "You foolishly throw the meeting notes on the ground. Littering is terrible. You should pick them back up.",
+    "taste": "Meeting notes are not edible and should not be tasted; their value lies in their content, not their flavor.",
+    "touch": "Running your fingers over the pages of the meeting notes, you sense the importance of the information they hold.",
+    "smell": "The meeting notes carry no distinctive scent; their significance is conveyed through the words transcribed on the pages.",
+    "shake": "Shaking the meeting notes yields no surprises; they are an organized and reliable source of information.",
+    "break_item": "Tearing or damaging the meeting notes would hinder the ability to reference the discussions and decisions made during the meeting.",
+    "read": "this is some missing story text"
+}
