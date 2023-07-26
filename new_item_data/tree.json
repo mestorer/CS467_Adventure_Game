@@ -1,10 +1,10 @@
 {
     "name": "tree",
-    "description": "A large tree stands guard next to the entrance to the bulding. It provides shade to the entrance to the buiding and the company logo",
+    "description": "A large tree stands guard next to the entrance to the bulding. It provides shade to the entrance to the buiding and the company logo. As you look back at the entrance you notice the lab key on the ground, someone must have dropped it on the way in.",
     "use": "The tree is too large to be used directly, but you can lean against it for a moment of rest.",
     "is_takeable": false,
     "parent": [],
-    "hints": [],
+    "hints": ["description"],
     "combine": {},
     "throw": "You can't throw the tree! It's far too heavy and firmly rooted.",
     "taste": "Tasting the tree's bark would not be a wise decision. It's not meant for consumption.",
