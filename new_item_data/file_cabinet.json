@@ -1,0 +1,16 @@
+{
+    "name": "small cabinet",
+    "description": "The small cabinet is a compact, sturdy piece of furniture with several drawers. It sits against one corner of the Archives Room, storing various files and documents in an organized manner. As you examine the files inside, you notice a particular folder with the CEO's [personal information].",
+    "use": "You can use the small cabinet to access files and documents stored within. Despite its size, it holds essential information that could be valuable to you.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description", "read"],
+    "combine": {},
+    "throw": "Throwing the small cabinet would be impractical and potentially damaging to the files and documents inside.",
+    "taste": "Tasting the small cabinet is not advisable. It's made of wood and metal and is not meant to be consumed.",
+    "touch": "As you touch the small cabinet's surface, you feel the smoothness of polished wood and the sturdiness of the metal handles.",
+    "smell": "The small cabinet has a faint scent of aged wood and a hint of dust, typical of items stored in the Archives Room.",
+    "shake": "Shaking the small cabinet won't achieve anything significant. It's a well-built piece of furniture.",
+    "break_item": "Attempting to break the small cabinet would be pointless and disruptive to the archives and would make a terrible mess.",
+    "read": "You open the 'Confidential Files' drawer of the small cabinet and find an array of documents neatly arranged inside. Among them, you spot files containing the CEO's confidential [personal information]."
+}

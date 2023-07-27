@@ -1,7 +1,7 @@
 {
     "name": "trash can",
     "description": "The trash can sits right next to the shelf. It looks like its been emptied recently. All it contains is a plastic bottle.",
-    "is_takeable": true,
+    "is_takeable": false,
     "parent": [],
     "hints": ["description", "shake"],
     "use": "The trash can is used to dispose of any broken or unwanted things.",

@@ -1,6 +1,6 @@
 {
     "name": "coworker's desk",
-    "description": "Your coworker's desk is similar to your own, except he doesn't have any personal effects save for one wallet-sized photo of your coworker and his family taped to one of his monitors. They look a little too happy. The only thing that stands out is a printed email neatly tucked away under the keyboard.",
+    "description": "Your coworker's desk is similar to your own, except he doesn't have any personal effects save for one wallet-sized photo of your coworker and his family taped to one of his monitors. They look a little too happy. The only thing that stands out is a [suspicious email] neatly tucked away under the keyboard.",
     "use": "You don't even want to do your own work right now, are you really going to do someone else's?",
     "is_takeable": false,
     "parent": [],

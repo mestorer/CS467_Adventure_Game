@@ -1,6 +1,6 @@
 {
     "name": "Financial Department",
-    "description": "The Financial Department is a well-organized workspace with rows of desks, each occupied by diligent-looking employees. Neatly stacked files line the shelves, giving the impression of a busy and efficient department. You notice a [coworker's desk].",
+    "description": "The Financial Department is a well-organized workspace with rows of desks, each occupied by diligent-looking employees. Neatly stacked files line the shelves, giving the impression of a busy and efficient department. You notice some documents on a [coworker's desk].",
     "short_description": "A well-organized workspace filled with busy employees.", 
     "items": ["coworker’s desk", "suspicious email", "computer"],
     "dropped_items": [] ,

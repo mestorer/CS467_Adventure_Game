@@ -4,7 +4,7 @@
     "use": "You can't really use these right now. You can pick it up, read it discreetly and find out what it's all about.",
     "is_takeable": true,
     "parent": ["coworker’s desk"],
-    "hints": ["read"],
+    "hints": [],
     "combine": {},
     "throw": "You fling the email in the air and it flutters down slowly landing under the desk.",
     "taste": "You lick the email and taste nothing but well... paper, and betrayal.",
