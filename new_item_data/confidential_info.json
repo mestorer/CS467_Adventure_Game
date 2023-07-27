@@ -1,0 +1,16 @@
+{
+    "name": "confidential information",
+    "description": "This file appears to contain sensitive information related to the company's CEO. As you glance at the cover, you notice the words 'Personal and Confidential' written in bold red letters.",
+    "use": "The CEO confidential information file contains highly sensitive data. This is extremely useful but it has no use right now. You should get this to someone of authority. Based on some of what you read in this, the police might be a good option.",
+    "is_takeable": true,
+    "parent": ["file cabinet"],
+    "hints": [],
+    "combine": {},
+    "throw": "You discard the confidential document, sending it flying through the air. It flutters momentarily, revealing its confidential contents, before descending gracefully and coming to rest on the floor.",
+    "taste": "Curiosity piqued, you taste the confidential document, but it's nothing more than the taste of paper and ink. There's no hidden flavor or secret message to be found.",
+    "touch": "As you touch the confidential document, the paper's texture is slightly rough beneath your fingertips. It holds secrets, tangible evidence of someone's undoing.",
+    "smell": "The confidential document carries no particular scent. It's simply paper and ink, lacking any distinct smell beyond the familiar odor of printed materials.",
+    "shake": "The confidential document produces no sound or movement when shaken. It remains still, a silent witness to its own secrets and the impact it could have.",
+    "break_item": "Breaking the compromising document wouldn't erase its contents or alter its impact. It's best to handle such sensitive information with care and discretion.",
+    "read": "Story missing, presumably the end.."
+}
