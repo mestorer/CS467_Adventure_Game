@@ -3,7 +3,7 @@
     "description": "a small silver key with a the letter 'A' engraved onto it.",
     "use": "",
     "is_takeable": true,
-    "parent": [],
+    "parent": ["executive desk"],
     "hints": [],
     "combine": {},
     "throw": "You hurl the small key away from you.  It emanates a series of tiny fading clinks as it tumbles and comes to a rest.",
@@ -12,5 +12,5 @@
     "smell": "You hold the key up to your nose and inhale.  You think for a moment that it smells faintly of old paper and folders, but you're not sure.",
     "shake": "You rattle the small key in the palm of your hand.  Nothing happens.",
     "break_item": "The key is almost too small to get a good grasp with the fingers of both hands. When you try to bend it, you find it to be sturdier than it looks.",
-    "read": "There is a small 'A' engraved onto the key, and nothing else."
+    "read": "There is a small 'A' engraved onto the key, and nothing else.  The small size reminds you of the tiny locks on the archive room."
 }

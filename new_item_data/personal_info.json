@@ -1,0 +1,16 @@
+{
+    "name": "personal information",
+    "description": "This file appears to contain personal information related to the company's CEO. As you glance at the cover, you notice the words 'HR Use Only' written in underlined red letters.",
+    "use": "This is extremely useful but not on its own...perhaps a date, number, or name in this is a password or code for something?",
+    "is_takeable": true,
+    "parent": ["file cabinet"],
+    "hints": [],
+    "combine": {"safe" : "confidential information"},
+    "throw": "You discard the document, sending it flying through the air. It flutters momentarily before descending gracefully and coming to rest on the floor.",
+    "taste": "There's something a little too personal about putting the CEO's personal information into your mouth.  You resist temptation, for now.",
+    "touch": "As you touch the document, the paper's texture is slightly rough beneath your fingertips.  There are visible creases and signs of aging from years of being archived.",
+    "smell": "The paper carries a scent that you can really only describe as 'old'.",
+    "shake": "The stiff, crinkled paper waves back and forth, making surprisingly little sound.",
+    "break_item": "The intrusive thought of sabotaging your progress when you're so close to victory briefly pops into your mind, but you quickly dismiss it.",
+    "read": "There are dates, numbers, names, and other sensitive information about the CEO scattered about the paper.  You're almost positive something here will be useful as a password or passcode somewhere."
+}

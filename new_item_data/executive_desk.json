@@ -1,0 +1,16 @@
+{
+    "name": "executive desk",
+    "description": "The Executive's desk is nothing short of awe-inspiring.  It is made of fine wood and appears to be hand carved.  Small ornamental pieces adorn the surface, and the papers on the desk are meticulously arranged.  A small [silver key] hangs on a small hook in one corner with a label above it that reads 'archives'.",
+    "use": "You sit down at the desk and immediately feel a sense of power.  You also feel out of place, so you get back up.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description", "read"],
+    "combine": {},
+    "throw": "You're not able to budge the desk at all when you try to pick it up, let alone hurl it any significant distance.",
+    "taste": "You run your tongue along the surface of the polished wood and experience a pungent sensation of bitterness with a hint of almonds.",
+    "touch": "You run your finger along the surface of the desk.  There are no traces of dust - in fact, your finger leaves no markings at all - and you wonder how much effort it takes to maintain it in such a state.",
+    "smell": "You press your nose to the desk an inhale deeply.  You're greeted with a pleasant sensation of almonds.",
+    "shake": "You thrust your hip against the side of the desk to no avail.  You're impressed that someone was able to move this here in the first place.",
+    "break_item": "You smash your fist onto the surface of the desk and pull away in pain.  You'll break far before the desk does if you keep trying.",
+    "read": "There are miscellaneous papers in sharp, aligned stacks on the desk, but nothing in particular catches your interest.  A small [silver key] glistens as it hangs on a small hook labelled 'archives'."
+}
