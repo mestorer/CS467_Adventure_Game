@@ -4,7 +4,7 @@
     "is_takeable": false,
     "parent": [],
     "hints": ["description"],
-    "use": "",
+    "use": "The self is used to temporarily store supplies.",
     "combine": {},
     "throw": "",
     "taste": "As you lick the storage shelf, you realize it probably hasn't been cleaned in ages. The taste of dust and cleaner is revolting.",
