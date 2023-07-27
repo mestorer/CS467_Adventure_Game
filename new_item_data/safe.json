@@ -1,0 +1,16 @@
+{
+    "name": "safe",
+    "description": "The safe is tucked into the base of the bookshelf and is slightly obscured behind the executive's desk.  It looks exceptionally solid and exceedingly expensive.",
+    "use": "You roll the dial beteen your fingers and enjoy the satisfying clicks emanating from within, but without the combination, there's no way you're guessing correctly.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {"personal information" : "confidential information"},
+    "throw": "Even if it weren't installed into the bookshelf, there would be no way you could lift this safe to toss it",
+    "taste": "You stoop down and run your tongue along the dial.  Setting aside your disgust, you suddenly feel like you might know how to open this if you could find out more about the CEO.",
+    "touch": "The metallic surface is smooth and cool to the touch.  There are no worn areas on the dial that might hint at the code, unfortunately.",
+    "smell": "You draw a deep breath through your nose with your face pressed against the safe.  It smells...juicy?  Odd.",
+    "shake": "You shove forcefully at the side of the safe but it shows no signs of even the slightest movement.",
+    "break_item": "You smash your fist onto the door of the safe and recoil in pain.  It looks like it could contain an explosion...your feeble attempts won't do anything.",
+    "read": "'Arcanorum' is printed on the door in elegant lettering above the word 'fireproof'."
+}

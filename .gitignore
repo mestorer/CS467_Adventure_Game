@@ -168,3 +168,5 @@ saved_player_data/*
 !saved_player_data/.gitkeep
 saved_room_data/*
 !saved_room_data/.gitkeep
+
+.vscode/
