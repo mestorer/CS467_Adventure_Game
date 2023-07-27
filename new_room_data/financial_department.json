@@ -1,8 +1,8 @@
 {
     "name": "Financial Department",
-    "description": "The Financial Department is a well-organized workspace with rows of desks, each occupied by diligent-looking employees. Neatly stacked files line the shelves, giving the impression of a busy and efficient department. You notice a [coworker's desk], and on it lies a [suspicious-looking email] and a pile of seemingly [missing emails]",
+    "description": "The Financial Department is a well-organized workspace with rows of desks, each occupied by diligent-looking employees. Neatly stacked files line the shelves, giving the impression of a busy and efficient department. You notice a [coworker's desk].",
     "short_description": "A well-organized workspace filled with busy employees.", 
-    "items": ["coworker’s desk"],
+    "items": ["coworker’s desk", "suspicious email", "computer"],
     "dropped_items": [] ,
     "directions": "The Financial Department is connected to the Marketing Department to the north, the Archives Room to the south and the Reception Area to the west.",
     "locations": {
