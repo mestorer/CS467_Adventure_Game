@@ -1,0 +1,16 @@
+{
+    "name": "portrait",
+    "description": "A portrait the founder and CEO, Bill Lumberg.",
+    "use": "By now, the portrait only serves to remind employees of who it is that is reponsible for their dull and miserable work environment.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {},
+    "throw": "",
+    "taste": "You stealthily approach the portrait and lick it. The varnish on the frame is bitter, like your mood.",
+    "touch": "As you run touch the frame of the portrait you are amazed at the quality of the wood. You wonder, if only Lumberg used his money to make the company a better place for employees instead of indulging his ego.",
+    "smell": "You can still smell the paint. It appears the portrait is was very recently painted.",
+    "shake": "You try to shake the painting but that would attract the attention of the receptionist. You leave the portrait where it is.",
+    "break_item": "Breaking the painting would attract too much attention, that's the last thing you need!",
+    "read": "The only thing you can read is Bill Lumberg's smug expression on his face."
+}

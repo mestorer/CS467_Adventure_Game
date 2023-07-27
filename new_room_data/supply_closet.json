@@ -1,8 +1,8 @@
 {
     "name": "Supply Closet",
-    "description": "The Supply Closet is a small, dimly lit room tucked away in a corner of the reception area. It is cluttered with various supplies and equipment, stacked haphazardly on the shelves. The air inside is slightly musty, but the [air vent] keeps the smell from being overpowering. The walls are old and faded, and a flickering light bulb adds to the eerie atmosphere. You notice a mop and a bucket, a box of matches, and a plastic bottle among the items in the closet.",
+    "description": "The Supply Closet is a small, dimly lit room tucked away in a corner of the reception area. It is cluttered with various supplies and equipment, stacked haphazardly on a [shelf]. You see a [trash can] right next to it.",
     "short_description": "A small, dimly lit room filled with various supplies.", 
-    "items": ["air vent", "box of matches", "plastic bottle"],
+    "items": ["air vent", "box of matches", "plastic bottle", "shelf", "trash can"],
     "dropped_items": [] ,
     "directions": "The Supply Closet is connected to the Reception Area to the east.",
     "locations": {

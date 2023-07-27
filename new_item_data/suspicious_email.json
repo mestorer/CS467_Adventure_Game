@@ -1,0 +1,16 @@
+{
+    "name": "suspicious email",
+    "description": "A piece of paper with an email cryptic email directed to your coworker, among others.",
+    "use": "You can't really use these right now. You can pick it up, read it discreetly and find out what it's all about.",
+    "is_takeable": true,
+    "parent": ["coworker’s desk"],
+    "hints": [],
+    "combine": {},
+    "throw": "You fling the email in the air and it flutters down slowly landing under the desk.",
+    "taste": "You lick the email and taste nothing but well... paper, and betrayal.",
+    "touch": "You touch the email and marvel at the quality and weight of the paper, no wonder they don't have money for a decent raise.",
+    "smell": "You carefully smell the email and notice the faint smell of ink. The email may be recent, or at least recently printed.", 
+    "shake": "You shake the eamil and the paper wrinkles a bit in the process.",
+    "break_item": "That would accomplish very little and may destroy the contents of the email. You may need it later.",
+    "read": "The email reads like a spy novel, so you try to piece what happened together. It appears you we're left out of a meeting in the conference room."
+}

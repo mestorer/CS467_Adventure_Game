@@ -1,0 +1,16 @@
+{
+    "name": "shelf",
+    "description": "The supply shelf is typical of any storage space. There is an air vent above it that keeps the smell of the musty air from being overpowering. It contains mostly cleaning and office supplies. You notice a box of matches in it, it seems a bit out of place here.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": ["description"],
+    "use": "The self is used to temporarily store supplies.",
+    "combine": {},
+    "throw": "",
+    "taste": "As you lick the storage shelf, you realize it probably hasn't been cleaned in ages. The taste of dust and cleaner is revolting.",
+    "touch": "The shelf is well built. Its wooden surface is covered in light dust and some dryed up cleaning fluid.",
+    "smell": "You sniff the shelf and all you can smell is the odor of cleaning supplies, paper, and toner.",
+    "shake": "You shake the shelf and discover that it is very sturdy and firmly anchored to the wall.",
+    "break_item": "You firmly grab the shelf and try to rip it from the wall but it is very sturdy.",
+    "read": "The words 'for office use only' are written on the edge."
+}
