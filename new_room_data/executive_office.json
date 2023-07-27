@@ -1,7 +1,7 @@
 {
     "name": "Executive Office",
-    "description": "The Executive's office exudes a sensation of opulence and power as you enter. A grand desk, meticulously crafted from the finest wood, stands prominently in front of a dark bookcase that covers the entirety of the back wall. Framed accolades and prestigious awards adorn the right wall, showcasing (and boasting) of remarkable achievements. A floor-to-ceiling window to the left provides ample natural light and a pleasant view of the adjacent upscale neighborhood. Impressive pieces of art, carefully selected to reflect refined taste, add an air of sophistication to the room.  You notice a built-in [safe] located at the base of the bookshelf.",
-    "short_description": "You find yourself in the opulent Executive's Office, surrounded by an aura of elegance, success, with a touch of arrogance.", 
+    "description": "The Executive's office exudes a sensation of opulence and power as you enter. The [Executive Desk], meticulously crafted from the finest wood, stands prominently in front of a dark bookcase that covers the entirety of the back wall. Framed accolades and prestigious awards adorn the right wall, showcasing (and boasting) of remarkable achievements. A floor-to-ceiling window to the left provides ample natural light and a pleasant view of the adjacent upscale neighborhood. Impressive pieces of art, carefully selected to reflect refined taste, add an air of sophistication to the room.  You notice a built-in [safe] located at the base of the bookshelf.",
+    "short_description": "You find yourself in the opulent Executive's Office, surrounded by an aura of elegance, success, with a touch of arrogance.  The [Executive Desk] sits a few feet in front of the [safe].", 
     "items": ["safe", "executive desk", "silver key"],
     "dropped_items": [] ,
     "directions": "The Executive Office is connected to the Executive Elevator to the south.",
