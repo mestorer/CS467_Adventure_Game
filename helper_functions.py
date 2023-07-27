@@ -13,8 +13,9 @@ def print_slowly(str, color=constants.colors.PURPLE, pause=0.1):
         time.sleep(pause)
     print(constants.colors.ENDCOLOR)  # Ends the color effect
 
-def print_text(text, color=constants.colors.ENDCOLOR, 
-               max_width=constants.MIN_TERM_SIZE_COLS, pause=0):
+def print_text(text, color=constants.colors.ENDCOLOR,
+                highlight_color=constants.colors.GREEN, 
+                max_width=constants.MIN_TERM_SIZE_COLS, pause=0.005):
     '''
     Prints text within the limits of the terminal width
     '''
@@ -33,4 +34,6 @@ def print_text(text, color=constants.colors.ENDCOLOR,
     if current_line:
         lines.append(current_line.strip())
     text = ' \n'.join(lines)
+    text = text.replace('[',highlight_color)
+    text = text.replace(']', color)
     print_slowly(text, color=color, pause=pause)
