@@ -4,7 +4,7 @@
     "is_takeable": true,
     "parent": [],
     "hints": ["description", "shake"],
-    "use": "",
+    "use": "The trash can is used to dispose of any broken or unwanted things.",
     "combine": {},
     "throw": "You kick the trash can with your foot. It bounces in the confined space of the closet and ends up right where it began making a metallic clunking sound in the process.",
     "taste": "You approach the trash can to taste it, but you think it over again and decide it's probably not going to taste good.",
