@@ -15,10 +15,10 @@ class StoryHandler:
         """
         checkpoint = str(player.checkpoint)
         if checkpoint in self.story:
-            print_text(self.story[checkpoint], color=constants.colors.BLUE, pause=0.025)
+            print_text(self.story[checkpoint], color=constants.colors.GREEN, pause=0.025)
             # if we pass other objects into this function we can modify other aspects of the game!
         else:
-            print_text("The story is over I guess...", color=constants.colors.BLUE, pause=0.025)
+            print_text("The story is over I guess...", color=constants.colors.GREEN, pause=0.025)
             
     # should add ability to check is_locked on Door objects
     def _advance_checkpoint(self, player):
@@ -33,6 +33,13 @@ class StoryHandler:
             player.item_flags.remove("ammonia")
             player.item_flags.remove("blank keycard")
         # add more checkpoints here
+        
+    def recap_story(self, player):
+        """
+        Recap the last story message displayed to player.
+        """
+        print_text("Recap: ")
+        self._display_story(player)
 
     def check_story(self, player):
         """

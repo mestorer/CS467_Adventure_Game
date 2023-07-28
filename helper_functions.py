@@ -13,7 +13,7 @@ def print_slowly(str, color=constants.colors.PURPLE, pause=0.1):
         time.sleep(pause)
     print(constants.colors.ENDCOLOR)  # Ends the color effect
 
-def print_text(text, color=constants.colors.ENDCOLOR,
+def print_text(text, color=constants.colors.PURPLE,
                 highlight_color=constants.colors.GREEN, 
                 max_width=constants.MIN_TERM_SIZE_COLS, pause=0.005):
     '''

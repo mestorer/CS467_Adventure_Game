@@ -57,7 +57,10 @@ matters into your own hands.\n
 As you head to your desk in the Marketing Department, you discover a dreaded 
 "Notice of Disciplinary Action" waiting for you. Your heart races as you wonder 
 who might be trying to sabotage you and how you can turn the tables on them.\n
-Welcome, and good luck!
+Welcome, and good luck!'''
+
+LINE_BREAK = '''
+################################################################################ 
 '''
 
 RESULT_TEXT = {"bottle of match dust": "Using the rim of the plastic bottle, you scrape the heads of the matches into the opening.  The sulfur dust settles neatly onto the bottom.",
