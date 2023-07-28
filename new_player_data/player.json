@@ -1,7 +1,7 @@
 {
     "name": "player", 
     "inventory": [], 
-    "location": "Parking Lot",
+    "location": "Hidden Start",
     "checkpoint": 1,
     "prev_checkpoint": 0,
     "item_flags": []
