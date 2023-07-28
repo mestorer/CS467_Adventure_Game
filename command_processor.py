@@ -1,5 +1,6 @@
 from language_library import LanguageLibrary
 from helper_functions import print_text, print_slowly
+import os
 import constants
 
 class CommandProcessor(LanguageLibrary):
@@ -35,9 +36,11 @@ class CommandProcessor(LanguageLibrary):
         if item_name in location.items or item_name in location.dropped_items \
                 or item_name in player.inventory:
             item = self._get_game_object_by_name(item_name, item_list)
-            print_text(item.description + '\n')
+            print_text(item.description)
+            print()
         else:
-            print('There is no ' + item_name + ' here.\n')
+            print_text('There is no ' + item_name + ' here.\n', color=constants.colors.RED)
+            print()
     
     def _pick_up_item(self, item_name, player, room_list, item_list):
         """
@@ -47,16 +50,19 @@ class CommandProcessor(LanguageLibrary):
         item = self._get_game_object_by_name(item_name, item_list)
         room = self._get_game_object_by_name(player.location, room_list)
         if item is None or (item_name not in room.items and item_name not in room.dropped_items):
-            print(f"There is no {item_name} here.\n")
+            print_text(f"There is no {item_name} here.\n", color=constants.colors.RED)
+            print()
         elif item.is_takeable and (item_name in room.items or item_name in room.dropped_items):
             if item_name in room.items:
                 # item is only added to item_flags when it comes from room.items 
                 player.item_flags.append(item_name)
                 item.remove_hints(item_list) 
             self._transfer_room_item_to_player(player.location, item_name, player, room_list)
-            print(f"You picked up the {item_name}.\n")
+            print_text(f"You picked up the {item_name}.\n")
+            print()
         else:
-            print(f"You can't pick up the {item_name}.\n")
+            print_text(f"You can't pick up the {item_name}.\n", color=constants.colors.RED)
+            print()
 
     def _transfer_room_item_to_player(self, room_name, item_name, 
                                       player, room_list):
@@ -78,10 +84,12 @@ class CommandProcessor(LanguageLibrary):
         item = self._get_game_object_by_name(item_name, item_list)
         
         if item is None or item_name not in player.inventory:
-            print(f"You don't have a {item_name} to drop.\n")
+            print_text(f"You don't have a {item_name} to drop.\n", color=constants.colors.RED)
+            print()
         else:
             self._transfer_player_item_to_room(player.location, item_name, player, room_list)
-            print(f"You dropped the {item_name} on the floor.\n")
+            print_text(f"You dropped the {item_name} on the floor.\n")
+            print()
             
     def _throw_item(self, item_name, player, room_list, item_list):
         """
@@ -91,9 +99,11 @@ class CommandProcessor(LanguageLibrary):
         item = self._get_game_object_by_name(item_name, item_list)
         room = self._get_game_object_by_name(player.location, room_list)
         if item is not None and (item_name in room.items or item_name in room.dropped_items):
-            print("You need to take the " + item_name + " first.\n")
+            print_text("You need to take the " + item_name + " first.\n", color=constants.colors.RED)
+            print()
         elif item is None or item_name not in player.inventory:
-            print(f"You don't have a {item_name} to throw. But you wish you did...\n")
+            print_text(f"You don't have a {item_name} to throw. But you wish you did...\n", color=constants.colors.RED)
+            print()
         else:
             if item_name == 'stink bomb': #special case for stink bomb in receptionist area
                 self._execute_stink_bomb(item, player, room, item_list) #does not drop stink bomb
@@ -151,7 +161,7 @@ class CommandProcessor(LanguageLibrary):
                         print()
                 if move_player:
                     player.location = current_room.locations[key][0]
-                    print(f"You are now in the {player.location}")
+                    #print(f"You are now in the {player.location}")
                     room = self._get_game_object_by_name(player.location, 
                                                          room_list)
                     messages = room.describe()
@@ -163,15 +173,18 @@ class CommandProcessor(LanguageLibrary):
         else:
             if move_player:
                 print_text("You can't go that way.\n", color=constants.colors.RED)
+                print()
 
     def _check_inventory(self, player):
         """
         Prints the items in the player's inventory if they have any.
         """
         if player.inventory == []:
-            print("Your pockets are empty.\n")
+            print_text("Your pockets are empty.\n")
+            print()
         else:
-            print(f"Your pockets contain: {player.inventory}\n")
+            print_text(f"Your pockets contain: {player.inventory}\n")
+            print()
             
     def _use_item(self, item_name, player, room_list, item_list):
         """
@@ -180,7 +193,8 @@ class CommandProcessor(LanguageLibrary):
         item = self._get_game_object_by_name(item_name, item_list)
         room = self._get_game_object_by_name(player.location, room_list)
         if item is None or (item_name not in room.items and item_name not in room.dropped_items and item_name not in player.inventory):
-            print(f"There is no {item_name} to use.\n")
+            print_text(f"There is no {item_name} to use.\n", color=constants.colors.RED)
+            print()
         elif item_name == 'stink bomb':
             self._execute_stink_bomb(item, player, room, item_list)
         else:
@@ -194,7 +208,8 @@ class CommandProcessor(LanguageLibrary):
         Changes the state of Reception Area if stink bomb is used
         """
         if room.name != 'Reception Area':
-            print("There is probably a better place to use this.\n")
+            print_text("There is probably a better place to use this.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.use)
             print()
@@ -213,14 +228,17 @@ class CommandProcessor(LanguageLibrary):
         item_2 = self._get_game_object_by_name(item2_name, item_list)
         room = self._get_game_object_by_name(player.location, room_list)
         if item_1 is None or item_2 is None:
-            print("One or more items is invalid.\n")
+            print_text("One or more items is invalid.\n", color=constants.colors.RED)
+            print()
             
         elif (self._check_item_in_same_room(item_1, player, room) and
               self._check_item_in_same_room(item_2, player, room)) == False:
-            print("Not all items in inventory or room.\n")
+            print_text("Not all items in inventory or room.\n", color=constants.colors.RED)
+            print()
             
         elif item_1.name not in item_2.combine or item_2.name not in item_1.combine:
-            print("You can't combine those items.\n")
+            print_text("You can't combine those items.\n", color=constants.colors.RED)
+            print()
             
         else:
             self._remove_prereqs(item_1.name, player, room, item_list)
@@ -228,7 +246,8 @@ class CommandProcessor(LanguageLibrary):
             player.inventory.append(item_1.combine[item_2.name])
             print_text(constants.RESULT_TEXT[item_1.combine[item_2.name]])
             print()
-            print(f"You now have a {item_1.combine[item_2.name]}!\n")
+            print_text(f"You now have a {item_1.combine[item_2.name]}!\n")
+            print()
             
     def _remove_prereqs(self, item_name,  player, room, item_list):  
         """
@@ -262,7 +281,8 @@ class CommandProcessor(LanguageLibrary):
         room = self._get_game_object_by_name(player.location, room_list)
         if (item is None or 
             self._check_item_in_same_room(item, player, room) == False):
-            print("There is no such item to taste here.\n")
+            print_text("There is no such item to taste here.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.taste)
             print()
@@ -275,7 +295,8 @@ class CommandProcessor(LanguageLibrary):
         room = self._get_game_object_by_name(player.location, room_list)
         if (item is None or 
             self._check_item_in_same_room(item, player, room) == False):
-            print("There is no such item to touch here.\n")
+            print_text("There is no such item to touch here.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.touch)
             print()
@@ -288,7 +309,8 @@ class CommandProcessor(LanguageLibrary):
         room = self._get_game_object_by_name(player.location, room_list)
         if (item is None or 
             self._check_item_in_same_room(item, player, room) == False):
-            print("There is no such item to smell here.\n")
+            print_text("There is no such item to smell here.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.smell)
             print()
@@ -301,7 +323,8 @@ class CommandProcessor(LanguageLibrary):
         room = self._get_game_object_by_name(player.location, room_list)
         if (item is None or 
             self._check_item_in_same_room(item, player, room) == False):
-            print("There is no such item to shake here.\n")
+            print_text("There is no such item to shake here.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.shake)
             print()
@@ -314,7 +337,8 @@ class CommandProcessor(LanguageLibrary):
         room = self._get_game_object_by_name(player.location, room_list)
         if (item is None or 
             self._check_item_in_same_room(item, player, room) == False):
-            print("There is no such item to break here.\n")
+            print_text("There is no such item to break here.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.break_item)
             print()
@@ -327,7 +351,8 @@ class CommandProcessor(LanguageLibrary):
         room = self._get_game_object_by_name(player.location, room_list)
         if (item is None or 
             self._check_item_in_same_room(item, player, room) == False):
-            print("There is no such item to read here.\n")
+            print_text("There is no such item to read here.\n", color=constants.colors.RED)
+            print()
         else:
             print_text(item.read)
             print()
@@ -369,7 +394,7 @@ class CommandProcessor(LanguageLibrary):
                 self._combine_items(command[1], command[3], player, room_list,
                                     item_list)
             else:
-                print("Items can't be used like that.\n")
+                print_text("Items can't be used like that.\n", color=constants.colors.RED)
                 
         elif command[0] == 'drop':
             self._drop_item(command[1], player, room_list, item_list)
@@ -403,11 +428,17 @@ class CommandProcessor(LanguageLibrary):
                 
         elif command[0] in ['savegame', 'sg', 'save']:
             save_game()
-            print("Game saved!\n")
+            print_text("Game saved!\n", color=constants.colors.GREEN)
+            print()
             
         elif command[0] in ['loadgame', 'lg', 'load']:
             load_game(load_saved_game=True)
-            print("Game loaded!\n")
+            os.system('clear')  # Clear screen
+            print_text("Game loaded!\n", color=constants.colors.GREEN)
+            print()
+            #this is where recap story function from story handler would go
+            
             
         elif command[0] in ['quitgame', 'qg', 'quit']:
+            os.system('clear')  # Clear screen 
             exit(0)

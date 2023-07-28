@@ -122,11 +122,64 @@ class GameManager:
                 self.instantiate_objects, self.save_objects_to_file)
         
     def show_title(self):
-        print(constants.OPENING_TITLE)
+        print(constants.colors.PURPLE + 
+              constants.OPENING_TITLE + 
+              constants.colors.ENDCOLOR)
 
     def show_intro(self):
-        print_slowly(constants.GAME_INTRO, pause=0.05)
-        
+        print_slowly(constants.GAME_INTRO,color=constants.colors.PURPLE, pause=0.05)
+        print(constants.colors.PURPLE + 
+              constants.LINE_BREAK +
+              constants.colors.ENDCOLOR)
+    
+    def check_terminal_size(self):
+        # Check for the right terminal size
+        term_size = os.get_terminal_size()
+        if term_size.columns < constants.MIN_TERM_SIZE_COLS:
+            print(constants.colors.RED)
+            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} columns required for game!")
+            print("Please resize your terminal window and try again.")
+            print(constants.colors.ENDCOLOR)
+            exit(0)
+        if term_size.lines < constants.MIN_TERM_SIZE_LINES:
+            print(constants.colors.RED)
+            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} lines required for game!")
+            print("Please resize your terminal window and try again.")
+            print(constants.colors.ENDCOLOR)
+            exit(0)
+          
+    def load_prompt(self):
+        # Ask player if they want to start a new game or load a saved game
+        while True:
+            print(constants.colors.GREEN + 
+                  "Would you like to load a saved game or start a " +
+                  "new one? (load / new / exit)" + 
+                  constants.colors.ENDCOLOR)
+            new_or_saved = input("> ")
+            new_or_saved = new_or_saved.strip().lower()
+            if new_or_saved == 'new':
+                print()
+                print(constants.colors.GREEN + 
+                      "Would you like to see a short introduction to the game? (y / n):\n" +
+                      "**Recommended for first time players**" +
+                      constants.colors.ENDCOLOR)
+                see_intro = input("> ")
+                os.system('clear')  # Clear screen
+                if see_intro.lower() == 'y' or see_intro.lower() == 'yes':
+                    self.show_intro()
+                self.instantiate_objects()
+                break
+            elif new_or_saved == 'load':
+                self.execute_user_command(['loadgame'])
+                break
+            elif new_or_saved == 'exit':
+                os.system('clear')  # Clear screen 
+                exit(0)
+            else:
+                print(constants.colors.RED +
+                      "I'm sorry, but I didn't understand your response" +
+                      constants.colors.ENDCOLOR + "\n")          
+    
     def update_game_state(self, player):
         """
         Display story if player has reached a new checkpoint.
@@ -135,52 +188,22 @@ class GameManager:
         self.story_handler.check_story(player)
 
     def start_game(self):
-        # Some ASCII art about the game or a basic despcription should go here.
-        # Before the game starts...
-        # Also need to clear screen, make sure size is adequate, etc
-        # Maybe offer a short tutorial when a new game is started
-        
-        os.system('clear')  # Clear screen
-
-        # Check for the right terminal size
-        term_size = os.get_terminal_size()
-        if term_size.columns < constants.MIN_TERM_SIZE_COLS:
-            print(f"Error: Please resize your terminal to the at least {constants.MIN_TERM_SIZE_COLS} columns required for game!")
-            exit(0)
-        if term_size.lines < constants.MIN_TERM_SIZE_LINES:
-            print(f"Error: Please resize your terminal to the at least {constants.MIN_TERM_SIZE_COLS} lines required for game!")
-            exit(0)
-
-        # Show game title
+         
+        self.check_terminal_size()
+        os.system('clear') 
         self.show_title()
+        self.load_prompt()
         
-        # Ask player if they want to start a new game or load a saved game
-        while True:
-            new_or_saved = input("Do you want to start a new or a saved " +
-                                    "game? (new / loadgame / exit)\n" + ">")
-            new_or_saved = new_or_saved.strip().lower()
-            if new_or_saved == 'new':
-                see_intro = input("Would you line to see a short intro to the game if you're playing it for the first time? (y/n): \n" + ">")
-                if see_intro.lower() == 'y':
-                    self.show_intro()
-                self.instantiate_objects()
-                break
-            elif new_or_saved == 'loadgame':
-                self.execute_user_command(['loadgame'])
-                break
-            elif new_or_saved == 'exit':
-                exit(0)
-            else:
-                print("I'm sorry, but I didn't understand your response\n")
-        print() # blank line       
-        #os.system('clear')  # Clear screen       
+         
         while True:
             self.update_game_state(self.player)
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
-                print(command) # debug/demo
+                #print(command) # debug/demo
                 self.execute_user_command(command)
             else:
-                print("I'm sorry, but I didn't understand your response\n")
+                print(constants.colors.RED +
+                      "I'm sorry, but I didn't understand your response" +
+                      constants.colors.ENDCOLOR + "\n")
 
