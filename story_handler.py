@@ -18,7 +18,7 @@ class StoryHandler:
             print_text(self.story[checkpoint], color=constants.colors.GREEN, pause=0.025)
             # if we pass other objects into this function we can modify other aspects of the game!
         else:
-            print_text("The story is over I guess...", color=constants.colors.GREEN, pause=0.025)
+            print_text("The story is over I guess... STORY MISSING", color=constants.colors.GREEN, pause=0.025)
             
     # should add ability to check is_locked on Door objects
     def _advance_checkpoint(self, player):

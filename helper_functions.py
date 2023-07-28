@@ -15,9 +15,13 @@ def print_slowly(str, color=constants.colors.PURPLE, pause=0.1):
 
 def print_text(text, color=constants.colors.PURPLE,
                 highlight_color=constants.colors.GREEN, 
-                max_width=constants.MIN_TERM_SIZE_COLS, pause=0.005):
+                max_width=constants.MIN_TERM_SIZE_COLS, pause=0.005, newline=True):
     '''
     Prints text within the limits of the terminal width
+    color: the base text color
+    highlight_color: the color of highlighted text surrounded by brackets []
+    pause: The pause between each character in seconds
+    newline: True adds an extra newline at the end, Flase omits it.
     '''
     words = text.split()
     lines = []
@@ -37,3 +41,5 @@ def print_text(text, color=constants.colors.PURPLE,
     text = text.replace('[',highlight_color)
     text = text.replace(']', color)
     print_slowly(text, color=color, pause=pause)
+    if newline:
+        print()
