@@ -1,6 +1,6 @@
 {
     "name": "Parking Lot",
-    "description": "The PrestoCorp parking lot is a bustling hub of activity with cars lined up neatly. Anticipation fills the air as you embark on your quest for truth and justice. A large tree stands by the entrance, it offers a moment of calm amidst the corporate chaos.",
+    "description": "The PrestoCorp parking lot is a bustling hub of activity with cars lined up neatly. Anticipation fills the air as you embark on your quest for truth and justice. A large [tree] stands by the entrance, it offers a moment of calm amidst the corporate chaos.",
     "short_description": "The parking lot is busy today", 
     "items": ["tree", "company logo", "lab key"],
     "dropped_items": [] ,
