@@ -1,7 +1,7 @@
 {
     "name": "keycard terminal",
     "description": "the machine that makes access cards to various parts of the facility.",
-    "use": "There's no way the receptionist is going to sit idly by while I program my own master keycard.  I need to get them to leave somehow.",
+    "use": "There's no way the receptionist is going to sit idly by while I program my own master keycard. I need to get them to leave somehow.",
     "is_takeable": false,
     "parent": [],
     "hints": [],
