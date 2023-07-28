@@ -168,10 +168,10 @@ class GameManager:
                 if see_intro.lower() == 'y' or see_intro.lower() == 'yes':
                     self.show_intro()
                 self.instantiate_objects()
-                break
+                return False
             elif new_or_saved == 'load':
                 self.execute_user_command(['loadgame'])
-                break
+                return True
             elif new_or_saved == 'exit':
                 os.system('clear')  # Clear screen 
                 exit(0)
@@ -192,9 +192,12 @@ class GameManager:
         self.check_terminal_size()
         os.system('clear') 
         self.show_title()
-        self.load_prompt()
+        load = self.load_prompt()
         
-         
+        if load == False:
+            self.update_game_state(self.player)
+            self.execute_user_command(['go', 'parking lot'])
+        
         while True:
             self.update_game_state(self.player)
             user_input = input(">")
@@ -203,6 +206,7 @@ class GameManager:
                 #print(command) # debug/demo
                 self.execute_user_command(command)
             else:
+                print()
                 print(constants.colors.RED +
                       "I'm sorry, but I didn't understand your response" +
                       constants.colors.ENDCOLOR + "\n")

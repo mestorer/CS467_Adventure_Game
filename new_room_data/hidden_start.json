@@ -1,0 +1,13 @@
+{
+    "name": "Hidden Start",
+    "description": "",
+    "short_description": "", 
+    "items": [],
+    "dropped_items": [] ,
+    "directions": "",
+    "locations": {
+        "N": ["Parking Lot"]
+    },
+    "doors": {},
+    "visited": false
+}
