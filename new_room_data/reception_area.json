@@ -1,7 +1,7 @@
 {
     "name": "Reception Area",
     "description": "The Reception Area of PrestoCorp exudes a professional and efficient atmosphere, with polished marble floors, contemporary decor, and a sleek desk manned by a diligent receptionist. The room is well-organized, featuring a waiting area with plush leather couches and a selection of business journals. A large [portrait] of the founder and CEO greets everyone who enters the room. Access to certain areas is closely monitored through a high-tech [Keycard Terminal].",
-    "short_description": "The receptionist is busy answering the phones.", 
+    "short_description": "The receptionist is busy answering the phone rignt next to the [keycard terminal]. The CEOs [portrait] is right above the receptionist desk.", 
     "items": ["keycard terminal", "portrait"],
     "dropped_items": [] ,
     "directions": "The Reception Area is connected to the Main Hallway to the north, the Financial Department to the east, the Parking Lot to the south and a Supply Closet to the west.",

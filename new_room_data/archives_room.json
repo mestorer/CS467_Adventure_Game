@@ -1,7 +1,7 @@
 {
     "name": "Archives Room",
     "description": "The Archives Room is a spacious storage area filled with file cabinets containing numerous files and documents. The room is dimly lit, giving it an air of mystery. Dust has settled on some of the older files, hinting at their historical significance. One [file cabinet] is labeled 'confidential' is tucked away in the corner.",
-    "short_description": "A dimly lit storage area filled with countless files and documents.",
+    "short_description": "A dimly lit storage area filled with countless files and documents. A [file cabintet] labeled 'confidential' stands out in a corner.",
     "items": ["files", "personal information", "file cabinet"],
     "dropped_items": [] ,
     "directions": "The Archives Room is connected to the Financial Department to the north.",
