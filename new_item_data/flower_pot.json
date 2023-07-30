@@ -2,7 +2,7 @@
     "name": "flower pot",
     "description": "The flower pot is a delightful and decorative container made of clay, ceramic, or other materials, housing a vibrant and verdant plant. Its simple yet charming design adds a touch of nature's beauty to the corporate office environment. Someone has stuck a [screwdriver] in the dirt and seems to have forgotten it here.",
     "use": "The flower pot serves as a nurturing home for the plant it holds, providing the necessary support and space for its roots to grow and thrive.",
-    "is_takeable": true,
+    "is_takeable": false,
     "parent": [],
     "hints": ["description"],
     "combine": {},
