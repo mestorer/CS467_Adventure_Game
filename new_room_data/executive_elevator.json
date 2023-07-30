@@ -1,8 +1,8 @@
 {
     "name": "Executive Elevator",
-    "description": "TBD - Executive Elevator long description",
-    "short_description": "TBD - Executive Elevator short description", 
-    "items": [],
+    "description": "The Executive's Elevator is an exclusive and well-maintained compartment that caters exclusively to the upper echelons of the corporate realm. Its interior exudes an air of refined opulence, adorned with plush carpeting and sleek wood paneling. As the elevator glides smoothly between floors, the [control panel] stands proudly in the center, featuring a modern interface with illuminated buttons for each floor, offering seamless access to various levels of authority within the building. Only those with the appropriate credentials and clearance use it.",
+    "short_description": "An exclusive elevator for executives, featuring a modern [control panel] and an aura of refined opulence.", 
+    "items": ["control panel", "badge reader"],
     "dropped_items": [] ,
     "directions": "The Executive Elevator is connected to the Main Hallway by its southern door on the ground floor. The northern door connects to the Executive Office on the top floor.",
     "locations": {

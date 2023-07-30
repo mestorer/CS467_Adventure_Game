@@ -1,0 +1,16 @@
+{
+    "name": "badge reader",
+    "description": "The [badge reader] is a sleek and modern device installed on the elevator's [control panel]. It serves as a security measure to grant access to the executive's office. The reader features a small illuminated screen displaying the message 'Please swipe your badge.' To proceed to the executive's office, you must possess a badge with the appropriate privileges. Without the correct authorization, access will be denied, and the elevator will remain unresponsive.",
+    "use": "To access the executive's office, you need to swipe a valid badge with the required privileges on the [badge reader]. If your badge has the right access, the elevator doors will open, and you'll be granted entry.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {},
+    "throw": "",
+    "taste": "Tasting the badge reader is not advisable. It's an electronic device, and it's not meant to be consumed.",
+    "touch": "As you run your fingers over the smooth surface of the badge reader, you feel the subtle hum of electronic components beneath its casing.",
+    "smell": "The badge reader has no distinctive smell. It's a functional device without any particular fragrance.",
+    "shake": "Shaking the badge reader won't achieve anything. It's a solid-state device with no moving parts.",
+    "break_item": "Trying to break the badge reader would be unwise. It's a vital security measure and should be treated with care.",
+    "read": "The illuminated screen on the badge reader displays the message 'Please swipe your badge,' indicating that you need to present a valid badge with the appropriate privileges to access the executive's office."
+}
