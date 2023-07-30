@@ -1,0 +1,16 @@
+{
+    "name": "control panel",
+    "description": "The control panel is a central interface that commands the elevator's operations. It features a series of buttons for selecting floors, an illuminated display showing the current floor, and a modern [badge reader] installed on its side. The panel is designed with a sleek and minimalist aesthetic, fitting seamlessly into the elevator's interior. The badge reader serves as a vital security measure, granting access to the executive's office only when a badge with the appropriate privileges is swiped. The [control panel] exudes an aura of functionality and sophistication, providing efficient and secure transportation throughout the building.",
+    "use": "The [control panel] allows you to interact with the elevator's functionalities. You can press the buttons corresponding to the desired floor or swipe a valid badge on the [badge reader] to access the executive's office.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {},
+    "throw": "",
+    "taste": "Tasting the control panel is not advisable. It's an electronic device and is not meant to be consumed.",
+    "touch": "As you touch the control panel's smooth surface, you feel the responsiveness of the buttons and the cool touch of the 'badge reader.'",
+    "smell": "The control panel emits no particular smell. It's a functional device without any distinctive fragrance.",
+    "shake": "Gently shaking the control panel, you sense the stability of its construction, designed to withstand the elevator's daily operation.",
+    "break_item": "Trying to break the control panel would be highly unwise. It's a crucial element of the elevator's functionality and should be treated with care.",
+    "read": "The illuminated display on the control panel indicates the current floor, while the buttons are labeled with numbers corresponding to each floor in the building. Additionally, a small label on the [badge reader] instructs, 'Please swipe your badge,' signifying its role in granting access to the executive's office."
+}

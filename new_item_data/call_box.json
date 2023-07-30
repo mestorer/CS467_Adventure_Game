@@ -1,0 +1,16 @@
+{
+    "name": "call box",
+    "description": "An extremely ornamental call-box.  There is a placard above a single embellished button that reads 'Executive Office'.  You assume this means the Executive himself answers any calls.",
+    "use": "You press the call button and wait.  The periodic audible cues assure you that the call is waiting to be answered.  After a few moments, you hear a low-pitched double beep that signals that the call went unanswered.",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {},
+    "throw": "Throwing the call box would not be productive and could potentially cause damage to the office equipment.",
+    "taste": "You dare to taste the call box, and it leaves a mild flavor of dust and metal on your tongue. It's a reminder of the countless hands that have used it before.",
+    "touch": "Your hand brushes against the call box, feeling its sturdy construction. The surface is cool and smooth, a reliable means of communication in this corporate labyrinth.",
+    "smell": "The call box carries a faint aroma of metal and plastic, a familiar scent associated with communication devices that have stood the test of time.",
+    "shake": "The call box produces a slight metallic jingle as you give it a shake, the sound of small internal components resonating within, a reminder of its purpose as a communication device.",
+    "break_item": "Breaking the call box accomplishes little beyond rendering it inoperable. It's a communication device that should be preserved for emergency or necessary situations. Don't be rude.",
+    "read": "There is one label that reads 'Executive Office'. Seems like someone thinks they are important..."
+}
