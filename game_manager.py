@@ -40,6 +40,7 @@ class GameManager:
             if len(obj_files) == 0:
                 obj_files = self._get_obj_file_list(self.new_data_dirs)
         self._build_objects(obj_files)
+        self.player.prev_checkpoint = self.player.checkpoint - 1
 
     def _build_objects(self, obj_files):
         """
@@ -194,7 +195,8 @@ class GameManager:
         self.show_title()
         load = self.load_prompt()
         
-        if load == False:
+        if (load == False or
+            (load == True and self.player.location == "Hidden Start")):
             self.update_game_state(self.player)
             self.execute_user_command(['go', 'parking lot'])
         
