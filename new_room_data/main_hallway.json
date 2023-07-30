@@ -1,7 +1,7 @@
 {
     "name": "Main Hallway",
-    "description": "TBD - Main Hallway long description",
-    "short_description": "TBD - Main Hallway short description", 
+    "description": "The Main Hallway is a grand passage with elegant marble flooring that echoes with each step. Natural light pours in from large windows, casting soft rays on the walls adorned with exquisite paintings. The hallway exudes an air of sophistication, with various doors leading to essential company departments. As you walk through, you notice a [flower pot] placed gracefully on a decorative pedestal, showcasing a vibrant array of flowers.",
+    "short_description": "A grand and sophisticated hallway leading to other rooms with a vibrant [flower pot] decorating it.", 
     "items": ["flower pot", "screwdriver"],
     "dropped_items": [] ,
     "directions": "The Main Hallway is connected to the Executive Elevator to the north, the Marketing Department to the east, the Reception Area to the south and the IT Room to the west.",
