@@ -33,13 +33,6 @@ class StoryHandler:
             player.item_flags.remove("ammonia")
             player.item_flags.remove("blank keycard")
         # add more checkpoints here
-        
-    def recap_story(self, player):
-        """
-        Recap the last story message displayed to player.
-        """
-        print_text("Recap: ")
-        self._display_story(player)
 
     def check_story(self, player):
         """

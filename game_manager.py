@@ -195,7 +195,8 @@ class GameManager:
         self.show_title()
         load = self.load_prompt()
         
-        if load == False:
+        if (load == False or
+            (load == True and self.player.location == "Hidden Start")):
             self.update_game_state(self.player)
             self.execute_user_command(['go', 'parking lot'])
         

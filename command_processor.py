@@ -398,8 +398,6 @@ class CommandProcessor(LanguageLibrary):
             load_game(load_saved_game=True)
             os.system('clear')  # Clear screen
             print_text("Game loaded!\n", color=constants.colors.GREEN)
-            #this is where recap story function from story handler would go
-            
             
         elif command[0] in ['quitgame', 'qg', 'quit']:
             os.system('clear')  # Clear screen 
