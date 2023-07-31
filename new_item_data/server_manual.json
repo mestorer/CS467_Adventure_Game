@@ -1,8 +1,10 @@
 {
-    "name": "server maintenance manual",
-    "description": "The Server Maintenance Manual contains diagrams and instructions for maintaining and troubleshooting servers, a valuable resource for IT experts.",
-    "use": "Gain insights into server infrastructure and perform maintenance tasks with the Server Maintenance Manual.",
+    "name": "server manual",
+    "description": "The Server Manual contains diagrams and instructions for maintaining and troubleshooting servers, a valuable resource for IT experts.",
+    "use": "Gain insights into server infrastructure and perform maintenance tasks with the Server Manual.",
     "is_takeable": false,
+    "parent": ["bookshelf"],
+    "hints": [],
     "combine": {},
     "throw": "",
     "taste": "Tasting the manual is ill-advised. It's meant for reference, not consumption. Besides, who knows how many people touch it on a daily basis.",
