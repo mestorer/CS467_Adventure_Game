@@ -1,0 +1,14 @@
+{
+    "name": "server maintenance manual",
+    "description": "The Server Maintenance Manual contains diagrams and instructions for maintaining and troubleshooting servers, a valuable resource for IT experts.",
+    "use": "Gain insights into server infrastructure and perform maintenance tasks with the Server Maintenance Manual.",
+    "is_takeable": false,
+    "combine": {},
+    "throw": "",
+    "taste": "Tasting the manual is ill-advised. It's meant for reference, not consumption. Besides, who knows how many people touch it on a daily basis.",
+    "touch": "You feel the smooth cover and sturdy pages of the Server Maintenance Manual, it is clearly meant to be used frequently.",
+    "smell": "The manual has a faint scent of fresh ink and paper.",
+    "shake": "Shaking the Server Maintenance Manual won't yield any useful results.",
+    "break_item": "Breaking the manual would render it useless. Preserve it in good condition.",
+    "read": "You flip through the pages to learn about server maintenance and troubleshooting techniques, but interestingly enough, nothing tells you how to get into the server room, you need to find another way."
+}
