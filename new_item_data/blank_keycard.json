@@ -5,7 +5,7 @@
     "is_takeable": true,
     "parent": ["reference manual"],
     "hints": [],
-    "combine": {"keycard terminal" : "access card"},
+    "combine": {"keycard terminal" : "access badge"},
     "throw": "The keycard goes soaring through the air, spinning like a tiny ninja star and clattering softly onto the floor.",
     "taste": "Why would you even try? It tastes like plain, flavorless plastic. Not very exciting.",
     "touch": "With a uniformly smooth surface, the keycard feels like a fresh canvas, ready to be told which secrets to unlock.",

@@ -181,12 +181,12 @@ class GameManager:
                       "I'm sorry, but I didn't understand your response" +
                       constants.colors.ENDCOLOR + "\n")          
     
-    def update_game_state(self, player):
+    def update_game_state(self, player, item_list):
         """
         Display story if player has reached a new checkpoint.
         Update item descriptions if player has picked up a key item
         """
-        self.story_handler.check_story(player)
+        self.story_handler.check_story(player, item_list)
 
     def start_game(self):
          
@@ -197,15 +197,15 @@ class GameManager:
         
         if (load == False or
             (load == True and self.player.location == "Hidden Start")):
-            self.update_game_state(self.player)
+            self.update_game_state(self.player, self.item_list)
             self.execute_user_command(['go', 'parking lot'])
         
         while True:
-            self.update_game_state(self.player)
+            self.update_game_state(self.player, self.item_list)
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
-                #print(command) # debug/demo
+                print(command) # debug/demo
                 self.execute_user_command(command)
             else:
                 print()
