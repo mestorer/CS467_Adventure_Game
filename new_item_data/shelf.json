@@ -1,0 +1,16 @@
+{
+    "name": "bookshelf",
+    "description": "The bookshelf is an elegant piece of furniture with polished wooden shelves, neatly organized with an assortment of technical reference books. Among them, you spot the [Server Manual], standing proudly alongside other IT-related literature. The bookshelf adds a touch of sophistication to the IT Room, showcasing the team's commitment to knowledge and expertise.",
+    "use": "The bookshelf serves as a repository of valuable reference materials, including the [Server Manual].",
+    "is_takeable": false,
+    "parent": [],
+    "hints": [],
+    "combine": {},
+    "throw": "",
+    "taste": "Tasting the Bookshelf is not recommended. It's a piece of furniture.",
+    "touch": "As you touch the Bookshelf, you feel the smooth surface of the polished wooden shelves.",
+    "smell": "The bookshelf has a pleasant, subtle scent of polished wood.",
+    "shake": "Shaking the bookshelf won't yield any useful results. It's a sturdy and stable furniture piece.",
+    "break_item": "Breaking the bookshelf would destroy it and the valuable books it holds. It's better to preserve it.",
+    "read": "You can't read the bookshelf itself, but you notice the titles of the technical books placed on its shelves."
+}

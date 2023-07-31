@@ -1,7 +1,7 @@
 {
     "name": "control panel",
     "description": "The control panel is a central interface that commands the elevator's operations. It features a series of buttons for selecting floors, an illuminated display showing the current floor, and a modern [badge reader] installed on its side. The panel is designed with a sleek and minimalist aesthetic, fitting seamlessly into the elevator's interior. The badge reader serves as a vital security measure, granting access to the executive's office only when a badge with the appropriate privileges is swiped. The [control panel] exudes an aura of functionality and sophistication, providing efficient and secure transportation throughout the building.",
-    "use": "The [control panel] allows you to interact with the elevator's functionalities. You can press the buttons corresponding to the desired floor or swipe a valid badge on the [badge reader] to access the executive's office.",
+    "use": "The control panel allows you to interact with the elevator's functionalities. You can press the buttons corresponding to the desired floor or swipe a valid badge on the [badge reader] to access the executive's office.",
     "is_takeable": false,
     "parent": [],
     "hints": [],

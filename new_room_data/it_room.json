@@ -1,8 +1,8 @@
 {
     "name": "IT Room",
-    "description": "TBD - IT Room long description",
-    "short_description": "TBD - IT Room short description", 
-    "items": ["access badge"],
+    "description": "The IT Room houses a network of humming computers amidst neon lights, a digital fortress safeguarding the company's data. Access badges grant entry to restricted IT areas but don't unlock the nearby Server Room. The IT Room stands as a sanctuary of expertise and technology. A [bookshelf] in a corner houses IT reference manuals.",
+    "short_description": "An IT sanctuary of humming servers and neon lights. A [bookshelf] in the corner is full on manuals.", 
+    "items": ["bookshelf", "server manual"],
     "dropped_items": [] ,
     "directions": "The IT Room is connected to the Main Hallway to the east and the Server Room to the west.",
     "locations": {
