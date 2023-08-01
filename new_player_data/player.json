@@ -1,6 +1,6 @@
 {
     "name": "player", 
-    "inventory": ["access badge", "personal information"], 
+    "inventory": [], 
     "location": "Hidden Start",
     "checkpoint": 1,
     "prev_checkpoint": 0,
