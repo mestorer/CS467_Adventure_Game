@@ -13,7 +13,7 @@ class StoryHandler:
             "7": "Story #7: Caused by crafting the access badge. Tell player they can now go see the CEO in the executive office.",
             "8": "Story #8: Caused by taking the CEO's silver key. Tell player something fishy is afoot and they should check the archives to solve the mystery.",
             "9": "Story #9: Caused by taking personal information from archives. Tell player to use personal info to open CEO safe.",
-            "10": "Story #10: Caused by taking the confidential information from safe. End game story here."
+            "10": "Story #10: Caused by taking the confidential information from safe. End game story here.GAME_OUTRO prints immediately following this."
         }
 
     def _get_game_object_by_name(self, name, obj_list):
