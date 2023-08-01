@@ -59,6 +59,21 @@ As you head to your desk in the Marketing Department, you discover a dreaded
 who might be trying to sabotage you and how you can turn the tables on them.\n
 Welcome, and good luck!'''
 
+GAME_OUTRO = '''
+The elevator ride down is a blur. You can't believe you've made it this far.
+You're finally free of the corporate world. You're free of the endless
+meetings, the petty politics, the backstabbing, the gossip, the drama, the
+emails, the pointless projects, the micromanaging, the soul-crushing
+boredom, the... You're free!'''
+
+SCORE_RESULTS = {
+  "A": "Congratulations! You have demonstrated exceptional skills and dedication throughout the game. Your performance has been truly remarkable, and you've consistently exceeded expectations. Keep up the outstanding work, and you'll continue to be a valuable asset to the team.",
+  "B": "You've shown great competence and a strong work ethic in this corporate challenge. While there's room for improvement, your performance has been commendable. Continue to focus on enhancing your skills and taking initiative to reach new heights in your game endeavors.",
+  "C": "You've met the basic requirements and completed the game with an acceptable level of competence. Your performance has been satisfactory, but there's still room for growth. Use this experience as a stepping stone to refine your abilities and contribute more effectively in future tasks.",
+  "D": "Your performance in the game has been inconsistent, and there are areas where improvement is required. Pay attention to the feedback provided, identify your weaknesses, and work diligently to enhance your skills. With determination and effort, you can turn things around and achieve better results.",
+  "F": "Unfortunately, your performance fell short of expectations. Your lack of engagement and effort has been evident throughout the game. Take this as a valuable learning experience and use it to assess your strengths and weaknesses. Set specific goals to improve your skills and make a comeback in future challenges."
+}
+
 LINE_BREAK = '''
 ################################################################################ 
 '''

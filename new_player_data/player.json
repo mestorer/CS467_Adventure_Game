@@ -4,5 +4,6 @@
     "location": "Hidden Start",
     "checkpoint": 1,
     "prev_checkpoint": 0,
-    "item_flags": []
+    "item_flags": [],
+    "total_score": 0
 }

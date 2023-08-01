@@ -179,7 +179,13 @@ class GameManager:
             else:
                 print(constants.colors.RED +
                       "I'm sorry, but I didn't understand your response" +
-                      constants.colors.ENDCOLOR + "\n")          
+                      constants.colors.ENDCOLOR + "\n") 
+                
+    def update_score(self):
+        """
+        Updates player score based on valid commands entered
+        """
+        self.player.total_score += 1      
     
     def update_game_state(self, player, item_list):
         """
@@ -187,6 +193,63 @@ class GameManager:
         Update item descriptions if player has picked up a key item
         """
         self.story_handler.check_story(player, item_list)
+        new = self.check_end_game()
+        return new
+        
+    def display_final_score(self):
+        """
+        Display the player's final score and performance report.
+        """
+        print_text(constants.GAME_OUTRO,color=constants.colors.GREEN, newline=False)
+        print_text("Press enter to continue...")
+        enter = input()
+        os.system('clear')  # Clear screen
+        print_text(constants.LINE_BREAK)
+        print_text("PERFORMANCE REPORT:", newline=False)
+        if self.player.total_score < 35:
+            print_text("OVERALL GRADE: A")
+            print_text(constants.SCORE_RESULTS["A"])
+        elif self.player.total_score < 45:
+            print_text("OVERALL GRADE: B")
+            print_text(constants.SCORE_RESULTS["B"])
+        elif self.player.total_score < 55:
+            print_text("OVERALL GRADE: C")
+            print_text(constants.SCORE_RESULTS["C"])
+        elif self.player.total_score < 65:
+            print_text("OVERALL GRADE: D")
+            print_text(constants.SCORE_RESULTS["D"])
+        elif self.player.total_score < 75:
+            print_text("OVERALL GRADE: F")
+            print_text(constants.SCORE_RESULTS["F"])
+        print_text("-- Management")
+        print_text(constants.LINE_BREAK)
+    
+    def check_end_game(self):
+        """
+        Display game over message and exit game.
+        """
+        if (self.player.location == "Executive Office" and 
+            self.player.checkpoint) == 10:
+            self.display_final_score()
+            new_game = self.play_again()
+            return new_game
+        return None
+            
+    def play_again(self):
+        """
+        Prompt user to play again or exit game.
+        """
+        while True:
+            print_text("Would you like to play again? (y / n)")
+            response = input(">")
+            if response == 'y' or response == 'yes':
+                return True
+            elif response == 'n' or response == 'no':
+                return False
+            else:
+                print_text("I'm sorry, but I didn't understand your response", 
+                           color=constants.colors.RED, newline=False)
+            
 
     def start_game(self):
          
@@ -201,12 +264,19 @@ class GameManager:
             self.execute_user_command(['go', 'parking lot'])
         
         while True:
-            self.update_game_state(self.player, self.item_list)
+            state = self.update_game_state(self.player, self.item_list)
+            if state is None:    # Game not over
+                pass
+            elif state:
+                return True
+            else:
+                return False
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
                 print(command) # debug/demo
                 self.execute_user_command(command)
+                self.update_score()
             else:
                 print()
                 print(constants.colors.RED +

@@ -9,3 +9,4 @@ class Player(GameObject):
         self.checkpoint = player_data["checkpoint"]
         self.prev_checkpoint = player_data["prev_checkpoint"]
         self.item_flags = player_data["item_flags"]
+        self.total_score = player_data["total_score"]
