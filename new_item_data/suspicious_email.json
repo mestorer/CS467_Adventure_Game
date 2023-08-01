@@ -3,7 +3,7 @@
     "description": "A piece of paper with an email cryptic email directed to your coworker, among others.",
     "use": "You can't really use these right now. You can pick it up, read it discreetly and find out what it's all about.",
     "is_takeable": true,
-    "parent": ["coworker’s desk"],
+    "parent": ["coworker's desk"],
     "hints": [],
     "combine": {},
     "throw": "You fling the email in the air and it flutters down slowly landing under the desk.",

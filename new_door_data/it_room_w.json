@@ -1,9 +1,9 @@
 {
     "name": "IT Room W",
-    "is_locked": false,
+    "is_locked": true,
     "key": null,
     "kind": "door",
-    "locked_message": null,
+    "locked_message": "The door is locked and you are unable to open it without a key.",
     "unlocked_after_key_message": null,
     "unlocked_message": "You walk towards the large metal door to IT, scan your badge, and walk through as it slowly opens..."
 }

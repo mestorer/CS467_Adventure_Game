@@ -196,11 +196,11 @@ class CommandProcessor(LanguageLibrary):
         else:
             print_text(item.use)
             self._remove_prereqs('stink bomb', player, room, items_list)
-            room.description = "The reception area is a mess. The receptionist is nowhere to be seen."
-            room.short_description = "The reception area is a mess."
+            room.description = "The Reception Area of PrestoCorp has been completely emptied by the use of a devastating stink bomb. The room is littered with papers and looks like a tornado hit it. A large [portrait] of the founder and CEO looks out into the empty room. The high-tech [Keycard Terminal] that was located next to the receptionist is unguarded."
+            room.short_description = "The reception area is a mess. The [keycard terminal] sits next to the desk unguarded. The CEOs [portrait] is right above the receptionist desk."
             keycard_terminal = self._get_game_object_by_name('keycard terminal', items_list)
             keycard_terminal.use = "I should be able to use this now. If only I had a blank keycard."
-            keycard_terminal.combine["blank keycard"] = "access card"
+            keycard_terminal.combine["blank keycard"] = "access badge"
                 
     def _combine_items(self, item1_name, item2_name, player, room_list, item_list):
         """
@@ -223,8 +223,9 @@ class CommandProcessor(LanguageLibrary):
             self._remove_prereqs(item_1.name, player, room, item_list)
             self._remove_prereqs(item_2.name, player, room, item_list)
             player.inventory.append(item_1.combine[item_2.name])
+            player.item_flags.append(item_1.combine[item_2.name])
             print_text(constants.RESULT_TEXT[item_1.combine[item_2.name]])
-            print_text(f"You now have a {item_1.combine[item_2.name]}!\n")
+            print_text(f"You now have [{item_1.combine[item_2.name]}]!\n")
             
     def _remove_prereqs(self, item_name,  player, room, item_list):  
         """
