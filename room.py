@@ -1,5 +1,5 @@
 from game_object import GameObject
-from helper_functions import print_text
+from ascii_art.room_art import ascii_art as art
 
 class Room(GameObject):
     def __init__(self, file_name, room_data):
@@ -13,6 +13,10 @@ class Room(GameObject):
         self.locations = room_data['locations']
         self.doors = room_data['doors']
         self.visited = room_data['visited']
+        try:
+            self.ascii_art = art[self.name]
+        except:
+            self.ascii_art = None
 
     def describe(self, long_desc=False):
         '''

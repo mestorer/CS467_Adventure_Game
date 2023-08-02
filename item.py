@@ -1,4 +1,5 @@
 from game_object import GameObject
+from ascii_art.item_art import ascii_art as art
 
 class Item(GameObject):
     def __init__(self, file_name, item_data):
@@ -17,6 +18,11 @@ class Item(GameObject):
         self.shake = item_data['shake']
         self.break_item = item_data['break_item']
         self.read = item_data['read']
+        self.has_been_seen = False
+        try:
+            self.ascii_art = art[self.name]
+        except:
+            self.ascii_art = None
         
     def _get_game_object_by_name(self, name, obj_list):
         """
