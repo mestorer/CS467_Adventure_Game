@@ -4,7 +4,7 @@
     "short_description": "You find yourself in the opulent Executive's Office, surrounded by an aura of elegance, success, with a touch of arrogance.  The [Executive Desk] sits a few feet in front of the [safe].", 
     "items": ["safe", "executive desk", "silver key"],
     "dropped_items": [] ,
-    "directions": "The Executive Office is connected to the Executive Elevator to the south.",
+    "directions": "The [Executive Office] is connected to the [Executive Elevator] to the south.",
     "locations": {
         "S": ["Executive Elevator","Elevator"]
     },

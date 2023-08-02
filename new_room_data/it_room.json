@@ -4,7 +4,7 @@
     "short_description": "An IT sanctuary of humming servers and neon lights. A [bookshelf] in the corner is full on manuals.", 
     "items": ["bookshelf", "server manual"],
     "dropped_items": [] ,
-    "directions": "The IT Room is connected to the Main Hallway to the east and the Server Room to the west.",
+    "directions": "The [IT Room] is connected to the [Main Hallway] to the east and the [Server Room] to the west.",
     "locations": {
         "E": ["Main Hallway","Hallway"],
         "W": ["Server Room","Server", "Room"]

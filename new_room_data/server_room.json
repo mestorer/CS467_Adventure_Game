@@ -4,7 +4,7 @@
     "short_description": "The Server Room is a technological marvel dominated by a towering [server rack]. A [cooling vent], just exited, hums steadily, keeping the environment optimal for the network's lifeblood.", 
     "items": ["cooling vent", "server rack"],
     "dropped_items": [] ,
-    "directions": "The Server Room is connected to the IT Room to the east.",
+    "directions": "The [Server Room] is connected to the [IT Room] to the east.",
     "locations": {
         "E": ["IT Room","IT"],
         "S": ["Supply Closet","Supply","Closet"]

@@ -4,7 +4,7 @@
     "short_description": "The receptionist is busy answering the phone rignt next to the [keycard terminal]. The CEOs [portrait] is right above the receptionist desk.", 
     "items": ["keycard terminal", "portrait"],
     "dropped_items": [] ,
-    "directions": "The Reception Area is connected to the Main Hallway to the north, the Financial Department to the east, the Parking Lot to the south and a Supply Closet to the west.",
+    "directions": "The [Reception Area] is connected to the [Main Hallway] to the north, the [Financial Department] to the east, the [Parking Lot] to the south and a [Supply Closet] to the west.",
     "locations": {
         "N": ["Main Hallway", "Hallway"],
         "E": ["Financial Department", "Financial", "Finance"],
