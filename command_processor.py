@@ -36,6 +36,9 @@ class CommandProcessor(LanguageLibrary):
         if item_name in location.items or item_name in location.dropped_items \
                 or item_name in player.inventory:
             item = self._get_game_object_by_name(item_name, item_list)
+            if not item.has_been_seen and item.ascii_art != None:
+                print_slowly(item.ascii_art, pause=0.001)
+                item.has_been_seen = True
             print_text(item.description)
         else:
             print_text('There is no ' + item_name + ' here.\n', color=constants.colors.RED)
@@ -153,6 +156,8 @@ class CommandProcessor(LanguageLibrary):
                     #print(f"You are now in the {player.location}")
                     room = self._get_game_object_by_name(player.location, 
                                                          room_list)
+                    if not room.visited and room.ascii_art != None:
+                        print_slowly(room.ascii_art, pause=0.001)
                     messages = room.describe()
                     room.mark_as_visited()
                     for message in messages:
