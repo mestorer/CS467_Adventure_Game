@@ -1,6 +1,6 @@
 {
     "name": "shelf",
-    "description": "The supply shelf is typical of any storage space. There is an air vent above it that keeps the smell of the musty air from being overpowering. It contains mostly cleaning and office supplies. You notice a box of matches in it, it seems a bit out of place here.",
+    "description": "The supply shelf is typical of any storage space. There is an [air vent] above it that keeps the smell of the musty air from being overpowering. It contains mostly cleaning and office supplies. You notice a [box of matches] in it, it seems a bit out of place here.",
     "is_takeable": false,
     "parent": [],
     "hints": ["description"],
