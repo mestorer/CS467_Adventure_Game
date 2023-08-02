@@ -204,7 +204,7 @@ class CommandProcessor(LanguageLibrary):
             room.description = "The Reception Area of PrestoCorp has been completely emptied by the use of a devastating stink bomb. The room is littered with papers and looks like a tornado hit it. A large [portrait] of the founder and CEO looks out into the empty room. The high-tech [Keycard Terminal] that was located next to the receptionist is unguarded."
             room.short_description = "The reception area is a mess. The [keycard terminal] sits next to the desk unguarded. The CEOs [portrait] is right above the receptionist desk."
             keycard_terminal = self._get_game_object_by_name('keycard terminal', items_list)
-            keycard_terminal.use = "I should be able to use this now. If only I had a blank keycard."
+            keycard_terminal.use = "I should be able to use this now. If only I had a [blank keycard]."
             keycard_terminal.combine["blank keycard"] = "access badge"
                 
     def _combine_items(self, item1_name, item2_name, player, room_list, item_list):

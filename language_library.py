@@ -49,14 +49,14 @@ class LanguageLibrary:
                           'n', 's', 'e', 'w',
                           'parking lot', 'parking', 'lot',
                           'reception area', 'reception',
-                          'supply closet', 'supply', 'closet'
+                          'supply closet', 'supply', 'closet',
                           'main hallway', 'hallway',
                           'it room', 'it',
                           'server room', 'server',
                           'executive elevator', 'elevator',
                           'executive office', 'executive', 'office',
                           'marketing department', 'marketing',
-                          'conference room', 'conference'
-                          'research lab', 'research', 'lab'
+                          'conference room', 'conference',
+                          'research lab', 'research', 'lab',
                           'financial department', 'financial', 'finance',
                           'archives room', 'archives', 'archive']

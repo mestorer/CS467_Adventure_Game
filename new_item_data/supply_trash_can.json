@@ -1,6 +1,6 @@
 {
     "name": "trash can",
-    "description": "The trash can sits right next to the shelf. It looks like its been emptied recently. All it contains is a plastic bottle.",
+    "description": "The trash can sits right next to the shelf. It looks like its been emptied recently. All it contains is a [plastic bottle].",
     "is_takeable": false,
     "parent": [],
     "hints": ["description", "shake"],
@@ -10,7 +10,7 @@
     "taste": "You approach the trash can to taste it, but you think it over again and decide it's probably not going to taste good.",
     "touch": "The trash can is made out of metal, it is smooth and cold to the touch.",
     "smell": "You sniff the trash can and find it refreshingly fresh, it smells like it was recently emptied.",
-    "shake": "You shake the trash can in your hands, it is heavy and solidly built. The only sound you hear is a plastic bottle rattling inside.",
+    "shake": "You shake the trash can in your hands, it is heavy and solidly built. The only sound you hear is a [plastic bottle] rattling inside.",
     "break_item": "You apply as much force as you can but the solid metal construction of the trash can leaves it intact.",
     "read": "There are no words printed on the smooth surface of the can."
 }
