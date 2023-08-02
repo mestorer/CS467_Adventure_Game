@@ -27,6 +27,7 @@ class Door(GameObject):
         if self.is_locked and self.key not in player.inventory:
             message = self.locked_message
             self.animate_door(locked=True, key=False)
+            self.opening_count += 1
             move_player = False
         elif self.is_locked and self.key in player.inventory:
             message = self.unlocked_after_key_message
@@ -77,8 +78,9 @@ class Door(GameObject):
 
         # Play the animations accordingly
         if locked and not key:
-            self.show_animation(approaching_frames, save_curr_pos=True)
-            flash(locked=True)
+            if self.opening_count < 2:
+                self.show_animation(approaching_frames, save_curr_pos=True)
+                flash(locked=True)
         elif locked and key:
             self.show_animation(approaching_frames, save_curr_pos=True)
             flash(locked=False)
