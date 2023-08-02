@@ -206,19 +206,19 @@ class GameManager:
         os.system('clear')  # Clear screen
         print_text(constants.LINE_BREAK)
         print_text("PERFORMANCE REPORT:", newline=False)
-        if self.player.total_score < 35:
+        if self.player.total_score < 100:
             print_text("OVERALL GRADE: A")
             print_text(constants.SCORE_RESULTS["A"])
-        elif self.player.total_score < 45:
+        elif self.player.total_score < 120:
             print_text("OVERALL GRADE: B")
             print_text(constants.SCORE_RESULTS["B"])
-        elif self.player.total_score < 55:
+        elif self.player.total_score < 140:
             print_text("OVERALL GRADE: C")
             print_text(constants.SCORE_RESULTS["C"])
-        elif self.player.total_score < 65:
+        elif self.player.total_score < 160:
             print_text("OVERALL GRADE: D")
             print_text(constants.SCORE_RESULTS["D"])
-        elif self.player.total_score < 75:
+        else:
             print_text("OVERALL GRADE: F")
             print_text(constants.SCORE_RESULTS["F"])
         print_text("-- Management")
