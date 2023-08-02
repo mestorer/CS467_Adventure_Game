@@ -25,6 +25,7 @@ python3 corporateconspiracy.py
 ```
 
 4. Enjoy the game.
+> To view a list of available in-game commands type 'help'
 
 ## License
 
