@@ -4,7 +4,7 @@
     "short_description": "A grand and sophisticated hallway leading to other rooms with a vibrant [flower pot] decorating it. There's a [call box] at the north end.", 
     "items": ["flower pot", "screwdriver", "call box"],
     "dropped_items": [] ,
-    "directions": "The Main Hallway is connected to the Executive Elevator to the north, the Marketing Department to the east, the Reception Area to the south and the IT Room to the west.",
+    "directions": "The Main Hallway is connected to the [Executive Elevator] to the north, the [Marketing Department] to the east, the [Reception Area] to the south and the [IT Room] to the west.",
     "locations": {
         "N": ["Executive Elevator","Elevator"],
         "E": ["Marketing Department","Marketing"],

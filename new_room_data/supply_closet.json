@@ -4,7 +4,7 @@
     "short_description": "A small, dimly lit room filled with various supplies on a [shelf] with a [trash can] next to it.", 
     "items": ["air vent", "box of matches", "plastic bottle", "shelf", "trash can"],
     "dropped_items": [] ,
-    "directions": "The Supply Closet is connected to the Reception Area to the east.",
+    "directions": "The Supply Closet is connected to the [Reception Area] to the east.",
     "locations": {
         "N": ["Server Room", "Server"],
         "E": ["Reception Area", "Reception"]
