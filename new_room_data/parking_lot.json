@@ -4,7 +4,7 @@
     "short_description": "The parking lot is busy today. A [tree] provides shade to the entrance to the buklding.", 
     "items": ["tree", "company logo", "lab key"],
     "dropped_items": [] ,
-    "directions": "The [Parking Lot] is connected to the [Reception Area] to the north.",
+    "directions": "The Parking Lot is connected to the [Reception Area] to the north.",
     "locations": {
         "N": ["Reception Area", "Reception"]
     },

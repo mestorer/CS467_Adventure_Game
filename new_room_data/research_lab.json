@@ -4,7 +4,7 @@
     "short_description": "The Research Lab is a nexus of scientific ingenuity, featuring a captivating [lab station] and an imposing [fume hood] that exudes an air of mystery.", 
     "items": ["ammonia", "blank keycard", "fume hood", "lab station", "reference manual"],
     "dropped_items": [] ,
-    "directions": "The [Research Lab] is connected to the [Marketing Department] to the west.",
+    "directions": "The Research Lab is connected to the [Marketing Department] to the west.",
     "locations": {
         "W": ["Marketing Department", "Marketing"]
     },

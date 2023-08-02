@@ -4,7 +4,7 @@
     "short_description": "The Conference Room features a prominent [podium] for commanding presentations, and a [custodian cart] ensuring a spotless environment for productive meetings.", 
     "items": ["supply key", "podium", "meeting notes", "custodian cart"],
     "dropped_items": [] ,
-    "directions": "The [Conference Room] is connected to the [Marketing Department] to the south.",
+    "directions": "The Conference Room is connected to the [Marketing Department] to the south.",
     "locations": {
         "S": ["Marketing Department","Marketing"]
     },
