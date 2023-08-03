@@ -326,7 +326,11 @@ class CommandProcessor(LanguageLibrary):
             self._check_item_in_same_room(item, player, room) == False):
             print_text("There is no such item to read here.\n", color=constants.colors.RED)
         else:
-            print_text(item.read)
+            if item.name in ["notice of disciplinary action"] \
+                    and item.ascii_art is not None:
+                print_slowly(item.ascii_art, pause=0.0001)
+            else:
+                print_text(item.read)
     
     def _print_help_guide(self):
         """
