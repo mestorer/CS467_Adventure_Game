@@ -42,7 +42,7 @@ class StoryHandler:
             player.item_flags.remove("deleted emails")
         elif ("bottle of match dust" in player.item_flags or "bottle of ammonia" in player.item_flags):
             # different checkpoint based on which half is acquired first
-            player.checkpoint = 5o if "bottle of match dust" in player.item_flags else 51
+            player.checkpoint = 50 if "bottle of match dust" in player.item_flags else 51
             if "bottle of match dust" in player.item_flags:
                 player.item_flags.remove("bottle of match dust")
             else:
