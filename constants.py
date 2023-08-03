@@ -60,7 +60,6 @@ who might be trying to sabotage you and how you can turn the tables on them.\n
 Welcome, and good luck!'''
 
 GAME_OUTRO = '''
-The elevator ride down is a blur. You can't believe you've made it this far.
 You're finally free of the corporate world. You're free of the endless
 meetings, the petty politics, the backstabbing, the gossip, the drama, the
 emails, the pointless projects, the micromanaging, the soul-crushing
