@@ -3,18 +3,7 @@ import constants
 
 class StoryHandler:
     def __init__(self):
-        self.story = {
-            "1": "Story #1: Start of game upon entering parking lot. Hint at going to my desk in marketing",
-            "2": "Story #2: Caused by taking notice of disciplinary action. Hint at coworker's desk in finance.",
-            "3": "Story #3: Caused by having suspicous email and meeting notes in inventory. Hint at returning to coworker's desk in finance.",
-            "4": "Story #4: Caused by crafting the deleted emails. Tell player to take these documents to CEO.",
-            "5": "Story #5: Caused by crafting the bottle of match dust or bottle of ammonia. Tell player that they can probably turn this into a stink bomb to clear the lobby if they find another component.",
-            "6": "Story #6: Caused by crafting the stink bomb. Tell player to go to the lobby and use the stink bomb to clear it out.",
-            "7": "Story #7: Caused by crafting the access badge. Tell player they can now go see the CEO in the executive office.",
-            "8": "Story #8: Caused by taking the CEO's silver key. Tell player something fishy is afoot and they should check the archives to solve the mystery.",
-            "9": "Story #9: Caused by taking personal information from archives. Tell player to use personal info to open CEO safe.",
-            "10": "Story #10: Caused by taking the confidential information from safe. End game story here.GAME_OUTRO prints immediately following this."
-        }
+        self.story = constants.STORY_MOMENTS
 
     def _get_game_object_by_name(self, name, obj_list):
         """
@@ -52,7 +41,8 @@ class StoryHandler:
             player.checkpoint = 4
             player.item_flags.remove("deleted emails")
         elif ("bottle of match dust" in player.item_flags or "bottle of ammonia" in player.item_flags):
-            player.checkpoint = 5 #can include a different checkpoint for each conditional if we want diff text for each
+            # different checkpoint based on which half is acquired first
+            player.checkpoint = 50 if "bottle of match dust" in player.item_flags else 51
             if "bottle of match dust" in player.item_flags:
                 player.item_flags.remove("bottle of match dust")
             else:

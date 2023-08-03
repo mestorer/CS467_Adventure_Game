@@ -60,7 +60,6 @@ who might be trying to sabotage you and how you can turn the tables on them.\n
 Welcome, and good luck!'''
 
 GAME_OUTRO = '''
-The elevator ride down is a blur. You can't believe you've made it this far.
 You're finally free of the corporate world. You're free of the endless
 meetings, the petty politics, the backstabbing, the gossip, the drama, the
 emails, the pointless projects, the micromanaging, the soul-crushing
@@ -126,3 +125,120 @@ HELP_GUIDE = """                                   Help Guide
 # quitgame : quits the game                                                    #
 #     Also try : qg, quit                                                      #
 ################################################################################"""
+
+STORY_MOMENTS = {
+    "1": """Shutting off the engine to your car, you take a deep breath, pop
+     open the door and hop out, accidentally shutting the door behind you with
+     a little too much force. You can physically feel the anticipation and
+     dread filling your chest. "Get down here now" – you can still hear your
+     colleague's words echoing in your mind. "Something big happened and it
+     looks like you might be in trouble."
+
+    You should head to your desk in marketing as soon as possible and find
+     out what is going on.
+    """,
+    "2": """As your eyes scan farther down the discipline notice, each new
+     line leaves you with more questions than answers. You work in marketing.
+     You're not terribly fond of your job but it pays the bills, and your
+     performance is a testament to this.  This notice, however, is saying
+     that you ordered exorbitantly overpriced advertisement packages from
+     a company you've never heard of, and finance flagged the transaction.
+     The notice closes with a dread-inducing warning that an investigation
+     is underway.  You should stop by your [coworker's desk] in finance to
+     find out more.
+    """,
+    "3": """With anxiety rising in your chest, you quickly glance between
+     the emails and the meeting notes. The confusion mounting in your mind
+     slowly begins to resolve into a terrible combination of fear and anger.
+     Pieces aren't lining up.  You know you had nothing to do with the initial
+     transaction, and now it looks like someone is actively poking holes in
+     whatever trail could be followed to the actual culprit.  You feel like
+     there might be some more answers back at your coworker's desk if you dig
+     a little deeper.
+    """,
+    "4": """The emails immediately allay some of your fears and stir up
+     considerable righteous fury.  Messages between your finance coworker
+     detail some of the initial investigation's fact-finding and an abrupt
+     order to desist immediately.  You don't recognize the author
+     of the order, but it is readily apparent that your coworker does.  It has
+     become painfully clear to you that some shady business practices are
+     underway and someone had no qualms about throwing you under the bus if
+     they ever came to light.
+
+    Now that you have some damning and direct evidence, you're ready to take
+     this to the top:  You need to get this to the CEO himself and clear your
+     name before this goes too far.
+    """,
+    "50": """Looking at the bottle of match dust in your hand, you know
+     you have half of a room-clearing prank.  Now you just need to find the
+     chemical counterpart.  The lab has a plethora of various chemicals,
+     perhaps you can find something there.
+    """,
+    "51": """Looking at the bottle of foul ammonia in your hand, you know
+     you have half of a room-clearing prank.  Now you just need to find
+     something with some type of sulfur, and nothing in the lab seems to
+     fit the bill. The supply closet is probably the next place to check out.
+    """,
+    "6": """You look at the bottle in your hand again.  This time, you feel
+     the slightest tinge of remorse for what you're about to release
+     on the receptionist.  She's always been pleasant, if perhaps a bit strict.
+     Regardless, you have a mission and you're going to see it through...even
+     if it means ruining that poor lady's sense of smell for a couple weeks.
+    """,
+    "7": """You pull the keycard up to your eyes.  Nothing physically changed,
+     but you feel a sense of power emanating from it.  This will get you up
+     the elevator and into the CEO's office.  Time to get some answers.
+    """,
+    "8": """You can't help but feel a bit deflated.  Every time you think
+     you're about to find some answers, you're met with another heap of
+     questions. Looking between the papers on the desk and the safe, you
+     can't help but feel the weight of your intuition and what it's
+     suggesting.  You need to get into that safe, and the combination doesn't
+     appear to be anywhere around here.  You have the key to the archives...
+     perhaps you can find something – anything – that the CEO might have used
+     as a combination in his personal records.""",
+    "9": """Scanning through the CEO's personal infomation, you're met with
+     a wide collection of numbers ...phone numbers, significant dates like
+     the CEO's birthday, and even the first day PrestoCorp started operations.
+     You feel somewhat confident that something here could be the combination
+     to that safe.""",
+    "10": """You read line by line down the CEO's file, rolling the dial
+     backwards and forwards as you try each number in turn.  Finally, as your
+     hope begins to wane, the lock makes an audible click and the handle shakes
+     slightly.  You hesitantly grip the handle and rotate it, and it gives no
+     resistance.  With your hope renewed, you swing open the door in triumph...
+     and are met with surprisingly little.
+
+    One folder rests at the bottom of the safe.  You snatch it and open it
+     quickly.  The small amount of frustration that had begun rising
+     immediately vanishes.  This is it.  This is your answer.
+
+    Reading down the first document answers your original question of 'who?'.
+     It is a detailed list of transactions to almost comically bland business
+     names like AdvertCorp  and Initech. It was the CEO himself that set up
+     the fraudulent transaction.  And multiple others. It's been ongoing for
+     years.  And the transaction amounts have ballooned over that time.  Based
+     off the name of the company in the discipline notice, the transaction made
+     under your name is substantially larger than any of the previous.  It's
+     clear why finance flagged this transaction…it's a little less clear how
+     the rest of these weren't caught.
+
+    That question doesn't linger long in your mind as you move to the next
+     page. It's a collection of messages to and from your finance coworker...
+     the CEO was the one that ordered your coworker to drop the investigation.
+     This definitively answers 'why?'.  The CEO is also the owner.  Well,
+     founder and majority owner.  He's been defrauding the other investors by
+     moving a portion of the company's profits into what you assume are shell
+     businesses he owns.
+
+    Conveniently – although it did take some work to get here – the CEO has
+     handed you the smoking gun on a silver platter between the correspondence
+     and the transaction ledger.  You need to get out and get this to the
+     authorities immediately.  You can't be sure how many of the previous
+     transactions were falsely made under your authority or any other innocent
+     victim.
+
+    The elevator ride down is a blur. You can't believe you've made it this
+     far and found the truth.  But quickly, the realization strikes you…
+    """
+}
