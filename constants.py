@@ -144,7 +144,8 @@ STORY_MOMENTS = {
      that you ordered exorbitantly overpriced advertisement packages from
      a company you've never heard of, and finance flagged the transaction.
      The notice closes with a dread-inducing warning that an investigation
-     is underway.
+     is underway.  You should stop by your [coworker's desk] in finance to
+     find out more.
     """,
     "3": """With anxiety rising in your chest, you quickly glance between
      the emails and the meeting notes. The confusion mounting in your mind
