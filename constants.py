@@ -207,11 +207,11 @@ STORY_MOMENTS = {
      hope begins to wane, the lock makes an audible click and the handle shakes
      slightly.  You hesitantly grip the handle and rotate it, and it gives no
      resistance.  With your hope renewed, you swing open the door in triumph...
-     and are met with surprisingly little.
+     and are met with surprisingly little. [NL]
 
     One folder rests at the bottom of the safe.  You snatch it and open it
      quickly.  The small amount of frustration that had begun rising
-     immediately vanishes.  This is it.  This is your answer.
+     immediately vanishes.  This is it.  This is your answer. [NL]
 
     Reading down the first document answers your original question of 'who?'.
      It is a detailed list of transactions to almost comically bland business
@@ -221,7 +221,7 @@ STORY_MOMENTS = {
      off the name of the company in the discipline notice, the transaction made
      under your name is substantially larger than any of the previous.  It's
      clear why finance flagged this transaction…it's a little less clear how
-     the rest of these weren't caught.
+     the rest of these weren't caught. [NL]
 
     That question doesn't linger long in your mind as you move to the next
      page. It's a collection of messages to and from your finance coworker...
@@ -229,14 +229,14 @@ STORY_MOMENTS = {
      This definitively answers 'why?'.  The CEO is also the owner.  Well,
      founder and majority owner.  He's been defrauding the other investors by
      moving a portion of the company's profits into what you assume are shell
-     businesses he owns.
+     businesses he owns. [NL]
 
     Conveniently – although it did take some work to get here – the CEO has
      handed you the smoking gun on a silver platter between the correspondence
      and the transaction ledger.  You need to get out and get this to the
      authorities immediately.  You can't be sure how many of the previous
      transactions were falsely made under your authority or any other innocent
-     victim.
+     victim. [NL]
 
     The elevator ride down is a blur. You can't believe you've made it this
      far and found the truth.  But quickly, the realization strikes you…
