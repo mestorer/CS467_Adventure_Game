@@ -58,7 +58,7 @@ class CommandProcessor(LanguageLibrary):
                 player.item_flags.append(item_name)
                 item.remove_hints(item_list) 
             self._transfer_room_item_to_player(player.location, item_name, player, room_list)
-            print_text(f"You picked up the {item_name}.\n")
+            print_text(f"You picked up the [{item_name}].\n")
         else:
             print_text(f"You can't pick up the {item_name}.\n", color=constants.colors.RED)
 
@@ -85,7 +85,7 @@ class CommandProcessor(LanguageLibrary):
             print_text(f"You don't have a {item_name} to drop.\n", color=constants.colors.RED)
         else:
             self._transfer_player_item_to_room(player.location, item_name, player, room_list)
-            print_text(f"You dropped the {item_name} on the floor.\n")
+            print_text(f"You dropped the [{item_name}] on the floor.\n")
             
     def _throw_item(self, item_name, player, room_list, item_list):
         """
