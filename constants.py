@@ -197,7 +197,7 @@ STORY_MOMENTS = {
      appear to be anywhere around here.  You have the key to the archives...
      perhaps you can find something – anything – that the CEO might have used
      as a combination in his personal records.""",
-    "9": """Scanning through the CEO's personal infomation, you're met with
+    "9": """Scanning through the CEO's personal information, you're met with
      a wide collection of numbers ...phone numbers, significant dates like
      the CEO's birthday, and even the first day PrestoCorp started operations.
      You feel somewhat confident that something here could be the combination
