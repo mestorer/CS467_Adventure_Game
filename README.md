@@ -4,7 +4,7 @@ Corporate conspiracy is a text-based adventure game created for Oregon State Uni
 
 ## About
 
-This is where a story summary will go.
+You're getting ready for another dreadful day at the office when your morning routine is abruptly interrupted by a call from a colleague.  “You need to get down here now.  Something big happened and you might be in trouble.”  As confusion and dread fill your mind, you finish readying yourself and hustle out the door.  Anxiety consumes your commute.  As you draw nearer to the building where you surrender most of your waking life, you become determined to get to the bottom of this new business BS.  As steeled as your resolve may be, you could never have prepared yourself for the twists and turns of this new Corporate Conspiracy.
 
 ## Requirements
 
