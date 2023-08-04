@@ -1,6 +1,6 @@
 {
     "name": "meeting notes",
-    "description": "this is some missing story text",
+    "description": "The paper has a hastily composed summary of what took place in the meeting.  You can gather from context that you were intentionally left out.  There is a reference to your finance coworker and his investigation.",
     "use": "You could make a paper airplane, but you need this evidence.",
     "is_takeable": true,
     "parent": ["podium"],
@@ -12,5 +12,5 @@
     "smell": "The meeting notes carry no distinctive scent; their significance is conveyed through the words transcribed on the pages.",
     "shake": "Shaking the meeting notes yields no surprises; they are an organized and reliable source of information.",
     "break_item": "Tearing or damaging the meeting notes would hinder the ability to reference the discussions and decisions made during the meeting.",
-    "read": "this is some missing story text"
+    "read": "Most of the meeting points are focused on your 'recent transactions' without explicitly mentioning you.  Your finance coworker is involved in the investigation...you might be able to gather more information at his desk."
 }
