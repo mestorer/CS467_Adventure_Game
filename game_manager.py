@@ -128,7 +128,7 @@ class GameManager:
               constants.colors.ENDCOLOR)
 
     def show_intro(self):
-        print_slowly(constants.GAME_INTRO,color=constants.colors.PURPLE, pause=0.05)
+        print_text(constants.GAME_INTRO,color=constants.colors.PURPLE, pause=0.05)
         print(constants.colors.PURPLE + 
               constants.LINE_BREAK +
               constants.colors.ENDCOLOR)

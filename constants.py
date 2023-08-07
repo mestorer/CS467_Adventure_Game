@@ -45,25 +45,25 @@ OSU Capstone Project: Garrett Crowley, Sean Tyler, Michael Estorer
 '''
 
 GAME_INTRO = '''
-Welcome to "Corporate Conspiracy"!\n
+Welcome to "Corporate Conspiracy"! [NL]
 In the mundane world of PrestoCorp, you are just an ordinary office worker, 
 but your patience is wearing thin. Dealing with the never-ending demands of 
 your overbearing boss and navigating the treacherous corporate politics is 
-draining your enthusiasm.\n
+draining your enthusiasm. [NL]
 But today is different. As you enter the parking lot, you decide it's time 
 for a change. Your goal is simple—avoid getting fired at all costs. You've 
 had enough of being a pawn in the corporate game, and now it's time to take
-matters into your own hands.\n
+matters into your own hands. [NL]
 As you head to your desk in the Marketing Department, you discover a dreaded 
 "Notice of Disciplinary Action" waiting for you. Your heart races as you wonder 
-who might be trying to sabotage you and how you can turn the tables on them.\n
+who might be trying to sabotage you and how you can turn the tables on them. [NL]
 Welcome, and good luck!'''
 
 GAME_OUTRO = '''
 You're finally free of the corporate world. You're free of the endless
 meetings, the petty politics, the backstabbing, the gossip, the drama, the
 emails, the pointless projects, the micromanaging, the soul-crushing
-boredom, the... You're free!'''
+boredom, the... You're free! [NL]'''
 
 SCORE_RESULTS = {
   "A": "Congratulations! You have demonstrated exceptional skills and dedication throughout the game. Your performance has been truly remarkable, and you've consistently exceeded expectations. Keep up the outstanding work, and you'll continue to be a valuable asset to the team.",
