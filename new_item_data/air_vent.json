@@ -1,6 +1,6 @@
 {
     "name": "air vent",
-    "description": "a small steel grate in front of a sizeable opening that looks like it could be removed relatively easily with the help of a tool.",
+    "description": "a small steel grate in front of a sizeable opening that looks like it could be removed relatively easily with the help of a tool. I think this connects to the [server room]...",
     "use": "The only use this really has is to be taken off. You could probably do that with some sort of tool.",
     "is_takeable": false,
     "parent": [],

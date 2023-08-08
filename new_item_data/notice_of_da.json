@@ -1,6 +1,6 @@
 {
     "name": "notice of disciplinary action",
-    "description": "The paper is a threatening notice of punishments for alleged transgressions you've never committed.",
+    "description": "The paper is a threatening notice of punishments for alleged transgressions you've never committed. This looks important to [take].",
     "use": "You can't really use this right now, but you can read it.",
     "is_takeable": true,
     "parent": ["my desk"],
@@ -12,5 +12,5 @@
     "smell": "The notice of disciplinary action carries no distinct scent. It's simply paper and ink, offering no olfactory hints beyond the familiar odor of printed documents.",
     "shake": "The notice of disciplinary action remains still and silent when shaken, holding its ground as a reminder of consequences and the weight of its content.",
     "break_item": "Breaking the notice of disciplinary action doesn't alter the consequences it represents. It's a symbolic reminder that actions have repercussions, even if the physical document is damaged.",
-    "read": "It's a condemnation for things you supposedly did.  You had no hand in it, but good luck proving it."
+    "read": "It's a condemnation for things you supposedly did.  You had no hand in it, but good luck proving it. This looks important to [take]."
 }
