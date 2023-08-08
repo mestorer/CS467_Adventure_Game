@@ -19,6 +19,7 @@ class Item(GameObject):
         self.break_item = item_data['break_item']
         self.read = item_data['read']
         self.has_been_seen = False
+        # If ASCII art exists, add it, if not, set it to None
         try:
             self.ascii_art = art[self.name]
         except:

@@ -13,6 +13,7 @@ class Room(GameObject):
         self.locations = room_data['locations']
         self.doors = room_data['doors']
         self.visited = room_data['visited']
+        # If ASCII art exists, add it, if not, set it to None
         try:
             self.ascii_art = art[self.name]
         except:
