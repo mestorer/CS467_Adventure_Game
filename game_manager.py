@@ -140,15 +140,15 @@ class GameManager:
         term_size = os.get_terminal_size()
         if term_size.columns < constants.MIN_TERM_SIZE_COLS:
             print(constants.colors.RED)
-            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} columns \
-                  required for game!")
+            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} columns " +
+                  "required for game!")
             print("Please resize your terminal window and try again.")
             print(constants.colors.ENDCOLOR)
             exit(0)
         if term_size.lines < constants.MIN_TERM_SIZE_LINES:
             print(constants.colors.RED)
-            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} lines \
-                  required for game!")
+            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_LINES} lines " +
+                  "required for game!")
             print("Please resize your terminal window and try again.")
             print(constants.colors.ENDCOLOR)
             exit(0)
@@ -278,7 +278,6 @@ class GameManager:
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
-                print(command) # debug/demo
                 self.execute_user_command(command)
                 self.update_score()
             else:
