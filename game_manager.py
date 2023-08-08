@@ -278,7 +278,6 @@ class GameManager:
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
-                print(command) # debug/demo
                 self.execute_user_command(command)
                 self.update_score()
             else:
