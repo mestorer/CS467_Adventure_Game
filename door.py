@@ -13,7 +13,7 @@ class Door(GameObject):
         self.unlocked_message = data['unlocked_message']
         # 'key' is the item that unlocks the transition to the next room
         self.key = data['key']
-        self.kind = data['kind']
+        self.kind = data['kind'] # The kind of door: door, elevator, badge_door
         self.opening_count = 0
 
     def try_to_open(self, player):
@@ -38,7 +38,6 @@ class Door(GameObject):
             message = self.unlocked_message
             self.animate_door(locked=False, key=False)
             self.opening_count += 1
-
         return move_player, message
 
     def animate_door(self, locked=True, key=False):
