@@ -1,18 +1,10 @@
-from helper_functions import print_text, print_slowly
+from helper_functions import print_text
+from objects_mixin import ObjectsMixin
 import constants
 
-class StoryHandler:
+class StoryHandler(ObjectsMixin()):
     def __init__(self):
         self.story = constants.STORY_MOMENTS
-
-    def _get_game_object_by_name(self, name, obj_list):
-        """
-        Returns the actual game object with the matching name attribute or
-        None if there's no match.
-        """
-        for obj in obj_list:
-            if obj.name == name:
-                return obj
             
     def _display_story(self, player):
         """
