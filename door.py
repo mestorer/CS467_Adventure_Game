@@ -1,7 +1,6 @@
 from game_object import GameObject
 import sys
 import time
-import os
 import ascii_art.door_animation as door_anim
 
 class Door(GameObject):
