@@ -28,7 +28,7 @@ class StoryHandler(ObjectsMixin):
             player.item_flags.remove("suspicious email")
             player.item_flags.remove("meeting notes")
             cw_desk = self._get_game_object_by_name("coworker's desk", item_list)
-            cw_desk.description = "Here is a hint that points the player to explore the server room to acquire missing emails."
+            cw_desk.description = "The sent emails have been deleted. This is suspicious. Maybe I can retrieve them from the [server room]..."
         elif "deleted emails" in player.item_flags:
             player.checkpoint = 4
             player.item_flags.remove("deleted emails")
