@@ -1,20 +1,12 @@
 from language_library import LanguageLibrary
+from objects_mixin import ObjectsMixin
 from helper_functions import print_text, print_slowly
 import os
 import constants
 
-class CommandProcessor(LanguageLibrary):
+class CommandProcessor(LanguageLibrary, ObjectsMixin):
     def __init__(self):
         super().__init__()
-    
-    def _get_game_object_by_name(self, name, obj_list):
-        """
-        Returns the actual game object with the matching name attribute or
-        None if there's no match.
-        """
-        for obj in obj_list:
-            if obj.name == name:
-                return obj
             
     def _describe_location(self, player, room_list, long_desc):
         """

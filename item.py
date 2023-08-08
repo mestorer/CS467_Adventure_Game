@@ -1,7 +1,8 @@
 from game_object import GameObject
+from objects_mixin import ObjectsMixin
 from ascii_art.item_art import ascii_art as art
 
-class Item(GameObject):
+class Item(GameObject, ObjectsMixin):
     def __init__(self, file_name, item_data):
         super().__init__(file_name)
         self.name = item_data['name']
@@ -19,19 +20,11 @@ class Item(GameObject):
         self.break_item = item_data['break_item']
         self.read = item_data['read']
         self.has_been_seen = False
+        # If ASCII art exists, add it, if not, set it to None
         try:
             self.ascii_art = art[self.name]
         except:
             self.ascii_art = None
-        
-    def _get_game_object_by_name(self, name, obj_list):
-        """
-        Returns the actual game object with the matching name attribute or
-        None if there's no match.
-        """
-        for obj in obj_list:
-            if obj.name == name:
-                return obj
             
     def _remove_last_sentence(self, input_string):
         # Split the string into sentences using the period ('.') as the separator

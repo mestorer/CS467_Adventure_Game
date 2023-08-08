@@ -6,9 +6,7 @@ SAVED_DATA_DIRS = ['/saved_player_data/', '/saved_room_data/',
 
 # Terminal size
 MIN_TERM_SIZE_COLS = 80
-MIN_TERM_SIZE_LINES = 24 # useful for testing, increase later
-
-# Terminal text colors
+MIN_TERM_SIZE_LINES = 40
 class colors:
   PURPLE = '\033[95m'
   BLUE = '\033[94m'
@@ -45,44 +43,83 @@ OSU Capstone Project: Garrett Crowley, Sean Tyler, Michael Estorer
 '''
 
 GAME_INTRO = '''
-Welcome to "Corporate Conspiracy"!\n
+Welcome to "Corporate Conspiracy"! [NL]
 In the mundane world of PrestoCorp, you are just an ordinary office worker, 
 but your patience is wearing thin. Dealing with the never-ending demands of 
 your overbearing boss and navigating the treacherous corporate politics is 
-draining your enthusiasm.\n
+draining your enthusiasm. [NL]
 But today is different. As you enter the parking lot, you decide it's time 
 for a change. Your goal is simple—avoid getting fired at all costs. You've 
 had enough of being a pawn in the corporate game, and now it's time to take
-matters into your own hands.\n
+matters into your own hands. [NL]
 As you head to your desk in the Marketing Department, you discover a dreaded 
 "Notice of Disciplinary Action" waiting for you. Your heart races as you wonder 
-who might be trying to sabotage you and how you can turn the tables on them.\n
+who might be trying to sabotage you and how you can turn the tables on 
+them. [NL]
 Welcome, and good luck!'''
 
 GAME_OUTRO = '''
 You're finally free of the corporate world. You're free of the endless
 meetings, the petty politics, the backstabbing, the gossip, the drama, the
 emails, the pointless projects, the micromanaging, the soul-crushing
-boredom, the... You're free!'''
+boredom, the... You're free! [NL]'''
 
 SCORE_RESULTS = {
-  "A": "Congratulations! You have demonstrated exceptional skills and dedication throughout the game. Your performance has been truly remarkable, and you've consistently exceeded expectations. Keep up the outstanding work, and you'll continue to be a valuable asset to the team.",
-  "B": "You've shown great competence and a strong work ethic in this corporate challenge. While there's room for improvement, your performance has been commendable. Continue to focus on enhancing your skills and taking initiative to reach new heights in your game endeavors.",
-  "C": "You've met the basic requirements and completed the game with an acceptable level of competence. Your performance has been satisfactory, but there's still room for growth. Use this experience as a stepping stone to refine your abilities and contribute more effectively in future tasks.",
-  "D": "Your performance in the game has been inconsistent, and there are areas where improvement is required. Pay attention to the feedback provided, identify your weaknesses, and work diligently to enhance your skills. With determination and effort, you can turn things around and achieve better results.",
-  "F": "Unfortunately, your performance fell short of expectations. Your lack of engagement and effort has been evident throughout the game. Take this as a valuable learning experience and use it to assess your strengths and weaknesses. Set specific goals to improve your skills and make a comeback in future challenges."
+  "A": """Congratulations! You have demonstrated exceptional skills and 
+    dedication throughout the game. Your performance has been truly 
+    remarkable, and you've consistently exceeded expectations. Keep up the 
+    outstanding work, and you'll continue to be a valuable asset to the 
+    team.""",
+  "B": """You've shown great competence and a strong work ethic in this 
+    corporate challenge. While there's room for improvement, your performance 
+    has been commendable. Continue to focus on enhancing your skills and 
+    taking initiative to reach new heights in your game endeavors.""",
+  "C": """You've met the basic requirements and completed the game with an 
+    acceptable level of competence. Your performance has been satisfactory, 
+    but there's still room for growth. Use this experience as a stepping stone 
+    to refine your abilities and contribute more effectively in future 
+    tasks.""",
+  "D": """Your performance in the game has been inconsistent, and there are 
+    areas where improvement is required. Pay attention to the feedback 
+    provided, identify your weaknesses, and work diligently to enhance your 
+    skills. With determination and effort, you can turn things around and 
+    achieve better results.""",
+  "F": """Unfortunately, your performance fell short of expectations. Your 
+    lack of engagement and effort has been evident throughout the game. Take 
+    this as a valuable learning experience and use it to assess your strengths 
+    and weaknesses. Set specific goals to improve your skills and make a 
+    comeback in future challenges."""
 }
 
 LINE_BREAK = '''
 ################################################################################ 
 '''
 
-RESULT_TEXT = {"bottle of match dust": "Using the rim of the plastic bottle, you scrape the heads of the matches into the opening.  The sulfur dust settles neatly onto the bottom.",
-               "bottle of ammonia" : "You pour the ammonia into the plastic bottle.  The noxious fumes begin to make your eyes water before you quickly close the lid.",
-               "stink bomb" : "You combine the items in the plastic bottle and quickly replace the lid, but not before you catch a whiff of the foul, gut-wrenching reaction occurring within.  This will undoubtedly clear any room.",
-               "access badge" : "You swipe the access card through the card reader.  The light turns green and the door unlocks with a click.",
-               "deleted emails" : "You stick the flash drive into the first available port on the server rack. With your superior drag and drop skills, you are able to locate the missing emails from your coworker's computer and transfer them to the flash drive.",
-               "confidential information" : "You look back and forth between the Executive's information and the safe, plugging in various dates, phone numbers - even his social security number - anything that could be used in some form as a combination.  When you try the date he started at the company, the door clicks loudly and squeaks open.  You wonder how much of a tool he really is."
+RESULT_TEXT = {"bottle of match dust": """Using the rim of the plastic bottle, 
+                you scrape the heads of the matches into the opening.  
+                The sulfur dust settles neatly onto the bottom.""",
+               "bottle of ammonia" : """You pour the ammonia into the plastic 
+                bottle.  The noxious fumes begin to make your eyes water 
+                before you quickly close the lid.""",
+               "stink bomb" : """You combine the items in the plastic bottle and 
+                quickly replace the lid, but not before you catch a whiff of 
+                the foul, gut-wrenching reaction occurring within.  This will 
+                undoubtedly clear any room.""",
+               "access badge" : """You swipe the access card through the card 
+                reader.  The light turns green and the door unlocks with a 
+                click.""",
+               "deleted emails" : """You stick the flash drive into the first 
+                available port on the server rack. With your superior drag and 
+                drop skills, you are able to locate the missing emails from 
+                your coworker's computer and transfer them to the flash 
+                drive.""",
+               "confidential information" : """You look back and forth between 
+                the Executive's information and the safe, plugging in various 
+                dates, phone numbers - even his social security number - 
+                anything that could be used in some form as a combination.  
+                When you try the date he started at the company, the door 
+                clicks loudly and squeaks open.  You wonder how much of a tool 
+                he really is."""
                }
 
 HELP_GUIDE = """                                   Help Guide
@@ -124,7 +161,8 @@ HELP_GUIDE = """                                   Help Guide
 #     Also try : lg, load                                                      #
 # quitgame : quits the game                                                    #
 #     Also try : qg, quit                                                      #
-################################################################################"""
+################################################################################
+"""
 
 STORY_MOMENTS = {
     "1": """Shutting off the engine to your car, you take a deep breath, pop

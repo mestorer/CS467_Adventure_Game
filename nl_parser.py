@@ -53,7 +53,8 @@ class NlParser(LanguageLibrary):
         
         for i in range(1,len(tokens)):
             if tokens[i] == "on" or tokens[i] == "with":    
-                modified_tokens.append(item_name[0:len(item_name)-1]) #take off the extra space
+                #take off the extra space
+                modified_tokens.append(item_name[0:len(item_name)-1])
                 modified_tokens.append(tokens[i])
                 item_name = ""
                 continue
@@ -98,9 +99,11 @@ class NlParser(LanguageLibrary):
                 return tokens
         
         # movement without explicit 'go' command
-        elif len(tokens) == 1 and command in self.locations: # just a cardinal direction
+        # just a cardinal direction
+        elif len(tokens) == 1 and command in self.locations: 
             return ['go', tokens[0]]
-        elif len(tokens) == 2 and (tokens[0] + " " + tokens[1]) in self.locations: #just a location name;unsplit
+        elif len(tokens) == 2 and (tokens[0] + " " + tokens[1]) \
+            in self.locations: #just a location name;unsplit
             modified_tokens = self._unsplit_location_name(tokens)
             return modified_tokens
         

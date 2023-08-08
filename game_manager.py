@@ -8,14 +8,15 @@ from story_handler import StoryHandler
 from player import Player
 from nl_parser import NlParser
 from command_processor import CommandProcessor
-from helper_functions import print_slowly, print_text
+from helper_functions import print_text
 
 class GameManager:
     def __init__(self):
         self.cur_path = os.path.dirname(__file__)
         self.new_data_dirs = constants.NEW_DATA_DIRS
         self.saved_data_dirs = constants.SAVED_DATA_DIRS
-        self.parser = NlParser() # instance allows for potential adding/ removing from language rules
+        self.parser = NlParser() # instance allows for potential adding
+                                 # or removing from language rules
         self.command_processor = CommandProcessor()
         self.story_handler = StoryHandler()
         self.player = None
@@ -128,7 +129,8 @@ class GameManager:
               constants.colors.ENDCOLOR)
 
     def show_intro(self):
-        print_slowly(constants.GAME_INTRO,color=constants.colors.PURPLE, pause=0.05)
+        print_text(constants.GAME_INTRO,color=constants.colors.PURPLE, 
+                   pause=0.05)
         print(constants.colors.PURPLE + 
               constants.LINE_BREAK +
               constants.colors.ENDCOLOR)
@@ -138,13 +140,15 @@ class GameManager:
         term_size = os.get_terminal_size()
         if term_size.columns < constants.MIN_TERM_SIZE_COLS:
             print(constants.colors.RED)
-            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} columns required for game!")
+            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} columns " +
+                  "required for game!")
             print("Please resize your terminal window and try again.")
             print(constants.colors.ENDCOLOR)
             exit(0)
         if term_size.lines < constants.MIN_TERM_SIZE_LINES:
             print(constants.colors.RED)
-            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_COLS} lines required for game!")
+            print(f"Error: Minimum of {constants.MIN_TERM_SIZE_LINES} lines " +
+                  "required for game!")
             print("Please resize your terminal window and try again.")
             print(constants.colors.ENDCOLOR)
             exit(0)
@@ -161,7 +165,8 @@ class GameManager:
             if new_or_saved == 'new':
                 print()
                 print(constants.colors.GREEN + 
-                      "Would you like to see a short introduction to the game? (y / n):\n" +
+                      "Would you like to see a short introduction to the " + 
+                      "game? (y / n):\n" +
                       "**Recommended for first time players**" +
                       constants.colors.ENDCOLOR)
                 see_intro = input("> ")
@@ -200,7 +205,8 @@ class GameManager:
         """
         Display the player's final score and performance report.
         """
-        print_text(constants.GAME_OUTRO,color=constants.colors.GREEN, newline=False)
+        print_text(constants.GAME_OUTRO,color=constants.colors.GREEN, 
+                   newline=False)
         print_text("Press enter to continue...")
         enter = input()
         os.system('clear')  # Clear screen
@@ -248,12 +254,10 @@ class GameManager:
                 return False
             else:
                 print_text("I'm sorry, but I didn't understand your response", 
-                           color=constants.colors.RED, newline=False)
-            
+                           color=constants.colors.RED, newline=False)    
 
     def start_game(self):
-         
-        self.check_terminal_size()
+        self.check_terminal_size() # Check for minumum size and exit if not.
         os.system('clear') 
         self.show_title()
         load = self.load_prompt()
@@ -274,7 +278,6 @@ class GameManager:
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
-                print(command) # debug/demo
                 self.execute_user_command(command)
                 self.update_score()
             else:
@@ -282,4 +285,3 @@ class GameManager:
                 print(constants.colors.RED +
                       "I'm sorry, but I didn't understand your response" +
                       constants.colors.ENDCOLOR + "\n")
-
