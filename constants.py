@@ -163,7 +163,8 @@ HELP_GUIDE = """                                   Help Guide
 #     Also try : lg, load                                                      #
 # quitgame : quits the game                                                    #
 #     Also try : qg, quit                                                      #
-################################################################################"""
+################################################################################
+"""
 
 STORY_MOMENTS = {
     "1": """Shutting off the engine to your car, you take a deep breath, pop
