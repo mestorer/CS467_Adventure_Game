@@ -6,7 +6,7 @@ SAVED_DATA_DIRS = ['/saved_player_data/', '/saved_room_data/',
 
 # Terminal size
 MIN_TERM_SIZE_COLS = 80
-MIN_TERM_SIZE_LINES = 24 # useful for testing, increase later
+MIN_TERM_SIZE_LINES = 40
 
 # Terminal text colors
 class colors:
