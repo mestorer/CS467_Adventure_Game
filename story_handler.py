@@ -1,4 +1,4 @@
-from helper_functions import print_text, print_slowly
+from helper_functions import print_text
 import constants
 
 class StoryHandler:
