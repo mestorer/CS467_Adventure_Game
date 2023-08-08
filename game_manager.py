@@ -7,11 +7,13 @@ from door import Door
 from story_handler import StoryHandler
 from player import Player
 from nl_parser import NlParser
+from objects_mixin import ObjectsMixin
 from command_processor import CommandProcessor
 from helper_functions import print_text
 
-class GameManager:
+class GameManager(ObjectsMixin):
     def __init__(self):
+        super().__init__()
         self.cur_path = os.path.dirname(__file__)
         self.new_data_dirs = constants.NEW_DATA_DIRS
         self.saved_data_dirs = constants.SAVED_DATA_DIRS
@@ -170,7 +172,7 @@ class GameManager:
                       "**Recommended for first time players**" +
                       constants.colors.ENDCOLOR)
                 see_intro = input("> ")
-                os.system('clear')  # Clear screen
+                self.clear_screen()
                 if see_intro.lower() == 'y' or see_intro.lower() == 'yes':
                     self.show_intro()
                 self.instantiate_objects()
@@ -179,7 +181,7 @@ class GameManager:
                 self.execute_user_command(['loadgame'])
                 return True
             elif new_or_saved == 'exit':
-                os.system('clear')  # Clear screen 
+                self.clear_screen()
                 exit(0)
             else:
                 print(constants.colors.RED +
@@ -209,7 +211,7 @@ class GameManager:
                    newline=False)
         print_text("Press enter to continue...")
         enter = input()
-        os.system('clear')  # Clear screen
+        self.clear_screen()
         print_text(constants.LINE_BREAK)
         print_text("PERFORMANCE REPORT:", newline=False)
         if self.player.total_score < 100:
@@ -258,7 +260,7 @@ class GameManager:
 
     def start_game(self):
         self.check_terminal_size() # Check for minumum size and exit if not.
-        os.system('clear') 
+        self.clear_screen()
         self.show_title()
         load = self.load_prompt()
         
@@ -278,6 +280,7 @@ class GameManager:
             user_input = input(">")
             command = self.parse_user_input(user_input)
             if command:
+                self.clear_screen()
                 self.execute_user_command(command)
                 self.update_score()
             else:

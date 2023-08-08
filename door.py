@@ -78,26 +78,25 @@ class Door(GameObject):
         # Play the animations accordingly
         if locked and not key:
             if self.opening_count < 2:
-                self.show_animation(approaching_frames, save_curr_pos=True)
+                self.show_animation(approaching_frames)
                 flash(locked=True)
         elif locked and key:
-            self.show_animation(approaching_frames, save_curr_pos=True)
+            self.show_animation(approaching_frames)
             flash(locked=False)
-            self.show_animation(opening_frames, save_curr_pos=False)
+            self.show_animation(opening_frames)
         elif self.opening_count < 2:
-            self.show_animation(approaching_frames, save_curr_pos=True)
-            self.show_animation(opening_frames, save_curr_pos=False)
+            self.show_animation(approaching_frames)
+            self.show_animation(opening_frames)
         else:
             pass
 
-    def show_animation(self, frames, frame_duration=0.1, save_curr_pos=True):
+    def show_animation(self, frames, frame_duration=0.1):
         '''
         Displays the given animation frames with a specified frame duration.
         '''
-        if save_curr_pos:
-            sys.stdout.write("\033[s")  # Save current cursor position
+        sys.stdout.write("\033[2J")  # Clear screen
         for frame in frames:
-            sys.stdout.write("\033[u")  # Restore cursor to the saved position
+            sys.stdout.write("\033[H") # Go to top of screen
             sys.stdout.write(frame)
             sys.stdout.flush()
             time.sleep(frame_duration)
@@ -109,12 +108,12 @@ class Door(GameObject):
         '''
         color = door_anim.RED if locked else door_anim.GREEN
         for x in range(5):
-            sys.stdout.write("\033[u")
+            sys.stdout.write("\033[H") # Go to top of screen
             sys.stdout.write(f"{color}\033[6B\033[14C" + '[]')
             sys.stdout.write("\033[9B\033[1C")
             sys.stdout.flush()
             time.sleep(frame_duration)
-            sys.stdout.write("\033[u")
+            sys.stdout.write("\033[H") # Go to top of screen
             sys.stdout.write(f"{door_anim.NOCOLOR}\033[6B\033[14C" + '[]')
             sys.stdout.write("\033[9B\033[1C")
             sys.stdout.flush()
@@ -127,12 +126,12 @@ class Door(GameObject):
         '''
         color = door_anim.RED if locked else door_anim.GREEN
         for x in range(5):
-            sys.stdout.write("\033[u")
+            sys.stdout.write("\033[H") # Go to top of screen
             sys.stdout.write(f"{color}\033[6B\033[10C" + 'O')
             sys.stdout.write("\033[9B\033[1C")
             sys.stdout.flush()
             time.sleep(frame_duration)
-            sys.stdout.write("\033[u")
+            sys.stdout.write("\033[H") # Go to top of screen
             sys.stdout.write(f"{door_anim.NOCOLOR}\033[6B\033[10C" + 'O')
             sys.stdout.write("\033[9B\033[1C")
             sys.stdout.flush()

@@ -1,3 +1,5 @@
+import sys
+
 class ObjectsMixin:
     def _get_game_object_by_name(self, name, obj_list):
         """
@@ -8,3 +10,6 @@ class ObjectsMixin:
             if obj.name == name:
                 return obj
             
+    def clear_screen(self):
+        sys.stdout.write("\033[2J")
+        sys.stdout.write("\033[H")

@@ -1,7 +1,6 @@
 from language_library import LanguageLibrary
 from objects_mixin import ObjectsMixin
 from helper_functions import print_text, print_slowly
-import os
 import constants
 
 class CommandProcessor(LanguageLibrary, ObjectsMixin):
@@ -398,9 +397,9 @@ class CommandProcessor(LanguageLibrary, ObjectsMixin):
             
         elif command[0] in ['loadgame', 'lg', 'load']:
             load_game(load_saved_game=True)
-            os.system('clear')  # Clear screen
+            self.clear_screen()
             print_text("Game loaded!\n", color=constants.colors.GREEN)
             
         elif command[0] in ['quitgame', 'qg', 'quit']:
-            os.system('clear')  # Clear screen 
+            self.clear_screen()
             exit(0)
