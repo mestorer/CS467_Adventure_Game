@@ -2,7 +2,7 @@ from helper_functions import print_text
 from objects_mixin import ObjectsMixin
 import constants
 
-class StoryHandler(ObjectsMixin()):
+class StoryHandler(ObjectsMixin):
     def __init__(self):
         self.story = constants.STORY_MOMENTS
             
